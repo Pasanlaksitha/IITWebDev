@@ -1,0 +1,18 @@
+body {
+    margin: 20px 30px 20px 30px;
+    min-height: 100vh;
+    background-color: grey;
+}
+body, .dev {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+}
+img {
+    height: 50%;
+    width: 50%;
+}
+.ss{
+    background-color: darkolivegreen;
+}
