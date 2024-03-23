@@ -9,4 +9,5 @@ function showSlide(i){
         document.getElementById("slideContainer").src = document.querySelectorAll(".slideshow img:nth-child(0)")
     }
 }
+showSlide(0);
 
