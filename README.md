@@ -45,6 +45,33 @@ git push origin dev-[first-initial][last-initial]
 ### 5. Merge Changes to Main Branch
    Once a feature or task is completed and tested, merge the changes from the respective branch to the main branch. This can be done through pull requests on GitHub.
 
+
+### Conclusion 
+
+first time pushing
+-------------------
+
+git clone https://github.com/Pasanlaksitha/IITWebDev.git
+
+//do some changes in ur branch
+
+git add .      
+git commit -m "update message"
+git checkout -b dev-urbranch        //makes the new branch
+git push origin dev-urbranch	    //push to your branch.
+
+//then merge to the main
+
+
+anytime after (if you make changes in you local repo project before push do following)
+--------------
+git pull https://github.com/Pasanlaksitha/IITWebDev.git
+git add .
+git commit -m "update message"  <------ type a commit msg (eg: added h1 styles and updated the menu bar)
+git push origin dev-urbranch
+
+//then merge(merge from the github web [easy])
+
 ### Collaboration Guidelines
 * Ensure that each team member works on their assigned tasks in their respective branches.
 * Regularly pull changes from the main branch to stay updated with the latest developments. do this every time you before push code 
