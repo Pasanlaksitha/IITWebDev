@@ -1,13 +1,14 @@
-let time = 3000;
-let slideshowImages = []
-slideshowImages = document.querySelectorAll(".slideshow img")
-function showSlide(i){
-    if (i <= slideshowImages.length-1){
-        let image = document.querySelectorAll(".slideshow img:nth-child(i)")
-        document.getElementById("slideContainer").src = image.src;
-    }else {
-        document.getElementById("slideContainer").src = document.querySelectorAll(".slideshow img:nth-child(0)")
-    }
-}
-showSlide(0);
+let openCart = document.querySelector('.shopping')
+let closeCart = document.querySelector('.closeShopping')
+let list = document.querySelector('.list')
+let listCard = document.querySelector('.listCard')
+let body = document.querySelector('body')
+let netTotal = document.querySelector('.total')
+letQuantity = document.querySelector('.quantity')
 
+openCart.addEventListener('click',()=>{
+    body.classList.add('.active');
+})
+closeCart.addEventListener('click', ()=>{
+    body.classList.remove('.active');
+})
