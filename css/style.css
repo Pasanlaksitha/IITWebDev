@@ -232,10 +232,31 @@ header#top nav ul li a.nav-cta {
 
 #banner {
 	height: 840px;
-	/*background: #f1f6f4 url(../images/header-image.jpg) no-repeat center;*/
-	background: #f1f6f4;
 	position: relative;
 	padding: 1px 0 0 0;
+	overflow: hidden; /* Ensure the pseudo-element is clipped to the banner's bounds */
+}
+
+#banner::before {
+	content: '';
+	background: url(../images/header-image.jpg) no-repeat center;
+	background-size: cover;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1; /* Ensure the pseudo-element is behind the content */
+	animation: kenburns 20s infinite;
+}
+
+@keyframes kenburns {
+	0%, 100% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.5);
+	}
 }
 
 #banner h2 {
