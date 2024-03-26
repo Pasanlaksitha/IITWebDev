@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Include the navigation bar here -->
+
+    <main>
+        <h1>Gallery</h1>
+        <section class="gallery">
+            <div class="thumbnail">
+                <img src="images/thumbnail1.jpg" alt="Thumbnail 1">
+                <div class="extended-view">
+                    <img src="images/large1.jpg" alt="Large Image 1">
+                    <p>Description for image 1...</p>
+                    <div class="customization">
+                        <label for="color">Color:</label>
+                        <input type="color" id="color" name="color">
+                        <label for="font">Font:</label>
+                        <select id="font" name="font">
+                            <option value="Arial">Arial</option>
+                            <option value="Times New Roman">Times New Roman</option>
+                            <!-- Add more font options -->
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <!-- Add more thumbnails and extended views here -->
+        </section>
+    </main>
+
+    <!-- Include the footer here -->
+
+    <script src="gallery.js"></script>
+</body>
+</html>

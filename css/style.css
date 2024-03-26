@@ -156,7 +156,6 @@ header#top {
 
 h1.logo a {
 	display: inline-block;
-	float: left;
 	color: #444;
 	line-height: 2.25;
 	text-indent: -4999px;
@@ -168,7 +167,6 @@ h1.logo a {
 
 header#top nav {
 	display: inline-block;
-	float: right;
 	width: auto;
 	margin-top: 60px;
 	margin-right: 40px;
@@ -176,7 +174,6 @@ header#top nav {
 
 header#top nav ul li {
 	display: inline-block;
-	float: left;
 }
 
 header#top nav ul li a {
@@ -208,8 +205,7 @@ header#top nav ul li a.nav-cta {
 		padding-top: 20px;
 		padding-bottom: 20px;
 	}
-	h1.logo {
-	}
+	
 	header#top nav {
 		float: none;
 		text-align: center;
@@ -349,7 +345,6 @@ ul.services-list {
 
 ul.services-list li {
 	display: inline-block;
-	float: left;
 	width: 30.66%;
 	background: #fff;
 	padding: 60px 0;
@@ -449,10 +444,6 @@ ul.services-list li:last-of-type {
 	float: right;
 	width: 50%;
 	padding: 0 40px 0 10%;
-}
-
-.text-section .image.align-center {
-	
 }
 
 .text-section .text.align-center {
@@ -569,7 +560,6 @@ ul.team-list {
 
 ul.team-list li {
 	display: inline-block;
-	float: left;
 	width: 30.66%;
 	background: #fff;
 	padding: 60px 0;
@@ -604,7 +594,6 @@ ul.social-links {
 }
 
 ul.social-links li {
-	float: left;
 	display: inline-block;
 	margin: 0 5px;
 	padding: 0;
@@ -661,7 +650,6 @@ ul.team-list li:last-of-type {
 		margin-top: 0!important;
 	}
 	ul.social-links li {
-		float: left;
 		display: inline-block;
 		width: 48px;
 		margin: 0 3px!important;
@@ -689,7 +677,6 @@ ul.portfolio-list {
 
 ul.portfolio-list li {
 	display: inline-block;
-	float: left;
 	width: 30.3%;
 	background: #fff;
 	padding: 0;
@@ -778,7 +765,6 @@ ul.pricing-table {
 
 ul.pricing-table li {
 	display: inline-block;
-	float: left;
 	width: 30.66%;
 	background: #fff;
 	padding: 60px 0;
