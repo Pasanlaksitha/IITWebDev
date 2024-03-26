@@ -51,6 +51,15 @@ p.subtitle {
 	text-align: center;
 }
 
+.subtitle {
+	font-family: 'Arimo', sans-serif;
+	text-transform: uppercase;
+	font-weight: 700;
+	letter-spacing: 0.03em;
+	color: #5dae87;
+	text-align: center;
+}
+
 img, embed, object, video {
 	max-width: 100%; }
 
@@ -888,6 +897,48 @@ ul.pricing-table ul.features li:hover {
 
 /*additionally added widghts to the css file*/
 
+.services-carousel-section {
+	text-align: center;
+	padding: 100px 0;
+	background: #f9f9f9;
+}
+
+.carousel {
+	position: relative;
+	overflow: hidden;
+}
+
+.carousel-buttons {
+	position: absolute;
+	top: 50%;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	padding: 0 20px;
+}
+
+.carousel-button {
+	background: transparent;
+	border: none;
+	font-size: 2rem;
+	color: #333;
+}
+
+.slides {
+	display: flex;
+	gap: 10px;
+	padding: 10px;
+	scroll-snap-type: x mandatory;
+}
+
+.slide {
+	flex: 0 0 auto;
+	scroll-snap-align: start;
+	width: 300px; /* Adjust as needed */
+	padding: 20px;
+	background: #fff;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 
 
 /*Footer*/
