@@ -2192,8 +2192,6 @@ blockquote {
 
 }
 
-/* Mobile to Tablet Portrait
-===============================*/
 @media (min-width: 480px) and (max-width: 767px) {
 
     #wrapper {
