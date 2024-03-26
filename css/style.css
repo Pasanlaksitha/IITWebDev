@@ -232,7 +232,8 @@ header#top nav ul li a.nav-cta {
 
 #banner {
 	height: 840px;
-	background: #f1f6f4 url(../images/header-image.jpg) no-repeat center;
+	/*background: #f1f6f4 url(../images/header-image.jpg) no-repeat center;*/
+	background: #f1f6f4;
 	position: relative;
 	padding: 1px 0 0 0;
 }
@@ -862,6 +863,11 @@ ul.pricing-table ul.features li:hover {
 		margin: 20px 0!important;
 	}
 }
+
+
+/*additionally added widghts to the css file*/
+
+
 
 /*Footer*/
 
