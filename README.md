@@ -41,8 +41,8 @@ nj: Nilasi Jayathilake
 
 ```bash
 git add .
-git commit -m "Brief description of changes"
-git push origin dev-[first-initial][last-initial]
+git commit -m "<Brief description of changes>"
+git push origin dev-urbranch
 ```
 
 ### 5. Merge Changes to Main Branch
@@ -60,7 +60,7 @@ git clone https://github.com/Pasanlaksitha/IITWebDev.git
 # Do some changes in ur branch
 
 git add .      
-git commit -m "update message"
+git commit -m "<Update message>"
 git checkout -b dev-urbranch        # Makes the new branch
 git push origin dev-urbranch	      # Push to your branch.
 
@@ -70,9 +70,9 @@ git push origin dev-urbranch	      # Push to your branch.
 Anytime After (If you make changes in you local repo project before push do following)
 --------------
 ```bash
-git pull https://github.com/Pasanlaksitha/IITWebDev.git dev-urbranch
+git pull https://github.com/Pasanlaksitha/IITWebDev.git
 git add .
-git commit -m "update message"  # Type a commit msg (eg: added h1 styles and updated the menu bar)
+git commit -m "<Update message>"  # Type a commit msg (eg: added h1 styles and updated the menu bar)
 git push origin dev-urbranch
 
 # Then merge(merge from the github web [easy])
