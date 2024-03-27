@@ -1,10 +1,11 @@
-/*Basics*/
+/*Basics structer */
 
 * {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box; 
 }
+
 
 html, html a {
 	-webkit-font-smoothing: antialiased;
@@ -19,7 +20,8 @@ body {
 	font-size: 17px;
 	color: #444;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-	background: #fff; 
+	background: #fff;
+	scroll-behavior: smooth;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -131,11 +133,13 @@ a.button-1, a.button-2, button {
 	margin: 10px;
 	text-align: center;
 	padding: 18px 0;
+	transition: all 0.3s ease; /* Smooth transition effect */
 }
 
 a.button-1:hover {
 	border-color: #42966e;
 	background: #42966e;
+	box-shadow: 0 0 10px #42966e, 0 0 20px #42966e, 0 0 30px #42966e; /* Glow  */
 }
 
 a.button-2 {
@@ -147,6 +151,7 @@ a.button-2 {
 a.button-2:hover {
 	background: #444;
 	color: #fff;
+	box-shadow: 0 0 10px #444, 0 0 20px #444, 0 0 30px #444; /* Glow  */
 }
 
 @media only screen and (max-width: 640px) {
@@ -237,6 +242,13 @@ header#top nav ul li a.nav-cta {
 	}
 }
 
+
+/*IMPORTED SETTINGS (LOTTIE)*/
+
+#lottie-player {
+	display: none;
+}
+
 /*Banner*/
 
 #banner {
@@ -248,7 +260,7 @@ header#top nav ul li a.nav-cta {
 
 #banner::before {
 	content: '';
-	background: url(../images/header-image.jpg) no-repeat center;
+	background: url(../assets/header-image.jpg) no-repeat center;
 	background-size: cover;
 	position: absolute;
 	top: 0;
@@ -338,25 +350,25 @@ header#top nav ul li a.nav-cta {
 	margin: 60px auto 0 auto;
 }
 
-/*Services Section*/
+/*Card Section*/
 
-.services-section {
+.card-section {
 	text-align: center;
 	padding: 100px 0;
 	background: #f9f9f9;
 }
 
-.services-section p.subtitle {
+.card-section p.subtitle {
 	color: #5dae87;
 	font-size: 17px;
 }
 
-ul.services-list {
+ul.card-list {
 	width: 90%;
 	margin: 100px auto 60px;
 }
 
-ul.services-list li {
+ul.card-list li {
 	display: inline-block;
 	float: left;
 	width: 30.66%;
@@ -365,11 +377,11 @@ ul.services-list li {
 	margin: 0 2%;
 }
 
-ul.services-list li:hover {
+ul.card-list li:hover {
 	box-shadow: 0px 0px 40px rgba(0,0,0,.1);
 }
 
-ul.services-list li .image-container {
+ul.card-list li .image-container {
 	width: 100px;
 	height: 100px;
 	margin: 0 auto 40px auto;
@@ -378,38 +390,38 @@ ul.services-list li .image-container {
 	position: relative;
 }
 
-ul.services-list li .image-container img {
+ul.card-list li .image-container img {
 	position: absolute;
 	top: 28px;
 	left: 28px;
 }
 
-ul.services-list li p {
+ul.card-list li p {
 	width: 80%;
 	margin: 20px auto 40px auto;
 }
 
-ul.services-list li a {
+ul.card-list li a {
 	font-family: 'Arimo', sans-serif;
 	text-transform: uppercase;
 	font-weight: 700;
 	color: #5dae87;
 }
 
-ul.services-list li a:hover {
+ul.card-list li a:hover {
 	color: #42966e;
 }
 
-ul.services-list li:first-of-type {
+ul.card-list li:first-of-type {
 	margin-left: 0;
 }
 
-ul.services-list li:last-of-type {
+ul.card-list li:last-of-type {
 	margin-right: 0;
 }
 
 @media only screen and (max-width: 960px) {
-	ul.services-list li {
+	ul.card-list li {
 		display: block;
 		width: 100%;
 		margin: 20px 0!important;
@@ -481,7 +493,7 @@ ul.services-list li:last-of-type {
 ul.list-checkmarks li {
 	text-align: left;
 	list-style-image: none;
-	background: url(../images/checkmark.png) top left no-repeat;
+	background: url(../assets/checkmark.png) top left no-repeat;
 	background-position: 0 2px;
 	margin: 10px 0;
 	padding: 0 10px 10px 40px;
@@ -635,13 +647,13 @@ ul.social-links li a:hover {
 }
 
 ul.social-links li a.facebook {
-	background-image: url(../images/social-facebook.png);
+	background-image: url(../assets/social-facebook.png);
 }
 ul.social-links li a.twitter {
-	background-image: url(../images/social-twitter.png);
+	background-image: url(../assets/social-twitter.png);
 }
 ul.social-links li a.google {
-	background-image: url(../images/social-google.png);
+	background-image: url(../assets/social-google.png);
 }
 
 ul.social-links li:hover {
@@ -731,7 +743,7 @@ ul.portfolio-list li a:hover {
 	padding: 100px 0;
 	color: #fff;
 }
-	
+
 .email-list-section h3 {
 	color: #fff;
 	text-align: center;
@@ -748,15 +760,15 @@ ul.portfolio-list li a:hover {
 	margin: 40px auto 0 auto;
 }
 
-.email-list-section input[type=text] {
+.email-list-section input[type=text]{
 	background: #5dae87;
 	color: #fff;
-	color: rgba(255, 255, 255, .75);
+	color: rgba(255, 255, 255, 0.75);
 	border: 2px solid #eee;
 	margin: 10px 5px;
 }
 
-.email-list-section input[type=text]:focus {
+.email-list-section input[type=text]:focus{
 	outline: none;
 	color: #fff;
 }
@@ -766,6 +778,9 @@ ul.portfolio-list li a:hover {
 	color: #5dae87;
 	margin: 10px 5px;
 }
+
+
+
 
 /*Pricing Section*/
 
@@ -897,48 +912,7 @@ ul.pricing-table ul.features li:hover {
 
 /*additionally added widghts to the css file*/
 
-.services-carousel-section {
-	text-align: center;
-	padding: 100px 0;
-	background: #f9f9f9;
-}
 
-.carousel {
-	position: relative;
-	overflow: hidden;
-}
-
-.carousel-buttons {
-	position: absolute;
-	top: 50%;
-	width: 100%;
-	display: flex;
-	justify-content: space-between;
-	padding: 0 20px;
-}
-
-.carousel-button {
-	background: transparent;
-	border: none;
-	font-size: 2rem;
-	color: #333;
-}
-
-.slides {
-	display: flex;
-	gap: 10px;
-	padding: 10px;
-	scroll-snap-type: x mandatory;
-}
-
-.slide {
-	flex: 0 0 auto;
-	scroll-snap-align: start;
-	width: 300px; /* Adjust as needed */
-	padding: 20px;
-	background: #fff;
-	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
 
 
 /*Footer*/
@@ -956,7 +930,7 @@ footer a.logo {
 	float: left;
 	color: #fff;
 	text-indent: -4999px;
-	background: url(../images/logo-footer.png) no-repeat;
+	background: url(../assets/logo-footer.png) no-repeat;
 	margin: 0 0 0 40px;
 	padding: 0 0 40px 0;
 	width: 56px;
@@ -1022,13 +996,13 @@ footer .footer-right a.social:hover {
 }
 
 footer a.social.facebook {
-	background-image: url(../images/social-facebook.png);
+	background-image: url(../assets/social-facebook.png);
 }
 footer a.social.twitter {
-	background-image: url(../images/social-twitter.png);
+	background-image: url(../assets/social-twitter.png);
 }
 footer a.social.google {
-	background-image: url(../images/social-google.png);
+	background-image: url(../assets/social-google.png);
 }
 
 @media only screen and (max-width: 960px) {
