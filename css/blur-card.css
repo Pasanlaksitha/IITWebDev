@@ -1,87 +1,88 @@
-
 .hero-section {
-    align-items: flex-start;
-    display: flex;
-    min-height: 100%;
-    justify-content: center;
-    padding: 64px 24px;
+  align-items: flex-start;
+  display: flex;
+  min-height: 100%;
+  justify-content: center;
+  padding: 64px 24px;
 }
 
 .blurcard-grid {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-column-gap: 24px;
-    grid-row-gap: 24px;
-    max-width: 1200px;
-    width: 100%;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-column-gap: 24px;
+  grid-row-gap: 24px;
+  max-width: 1200px;
+  width: 100%;
 }
 
 @media (min-width: 540px) {
-    .blurcard-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+  .blurcard-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (min-width: 960px) {
-    .blurcard-grid {
-        grid-template-columns: repeat(4, 1fr);
-    }
+  .blurcard-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 .blurcard {
-    list-style: none;
-    position: relative;
+  list-style: none;
+  position: relative;
 }
 
 .blurcard:before {
-    content: '';
-    display: block;
-    padding-bottom: 150%;
-    width: 100%;
+  content: "";
+  display: block;
+  padding-bottom: 150%;
+  width: 100%;
 }
 
 .blurcard__background {
-    background-size: cover;
-    background-position: center;
-    border-radius: 24px;
-    bottom: 0;
-    filter: brightness(0.75) saturate(1.2) contrast(0.85);
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    transform-origin: center;
-    transform: scale(1) translateZ(0);
-    transition: filter 200ms linear, transform 200ms linear;
+  background-size: cover;
+  background-position: center;
+  border-radius: 24px;
+  bottom: 0;
+  filter: brightness(0.75) saturate(1.2) contrast(0.85);
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform-origin: center;
+  transform: scale(1) translateZ(0);
+  transition:
+    filter 200ms linear,
+    transform 200ms linear;
 }
 
 .blurcard:hover .blurcard__background {
-    transform: scale(1.05) translateZ(0);
+  transform: scale(1.05) translateZ(0);
 }
 
 .blurcard-grid:hover > .blurcard:not(:hover) .blurcard__background {
-    filter: brightness(0.5) saturate(0) contrast(1.2) blur(20px);
+  filter: brightness(0.5) saturate(0) contrast(1.2) blur(20px);
 }
 
 .blurcard__content {
-    left: 0;
-    padding: 24px;
-    position: absolute;
-    top: 0;
+  left: 0;
+  padding: 24px;
+  position: absolute;
+  top: 0;
 }
 
 .blurcard__category {
-    color: rgba(255, 255, 255, 0.9);
-    font-size: 1rem;
-    font-weight: 700;
-    margin-bottom: 8px;
-    text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  text-transform: uppercase;
 }
 
 .blurcard__heading {
-    color: rgba(255, 255, 255, 0.9);
-    font-size: 1.9rem;
-    text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
-    line-height: 1.4;
-    word-spacing: 100vw;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.9rem;
+  text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
+  line-height: 1.4;
+  word-spacing: 100vw;
 }
