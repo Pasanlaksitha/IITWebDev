@@ -263,11 +263,7 @@ header#top nav ul li a.nav-cta {
 }
 
 
-/*IMPORTED SETTINGS (LOTTIE)*/
 
-#lottie-player {
-    display: none;
-}
 
 /*Banner*/
 
@@ -619,6 +615,7 @@ ul.team-list li {
     background: #fff;
     padding: 60px 0;
     margin: 0 2%;
+    border-radius: 24px
 }
 
 ul.team-list li:hover {
@@ -634,7 +631,7 @@ ul.team-list li .image-container img {
     width: 220px;
     height: 220px;
     background: #222;
-    border-radius: 999px;
+    border-radius: 24px;
 }
 
 ul.team-list li p {
@@ -663,7 +660,7 @@ ul.social-links li a {
     width: 48px;
     height: 48px;
     text-indent: -4999px;
-    border-radius: 999px;
+    border-radius: 24px;
 }
 
 ul.social-links li a:hover {

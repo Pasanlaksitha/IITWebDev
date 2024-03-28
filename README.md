@@ -31,52 +31,46 @@ git push -u origin main
 ```bash
 git checkout -b dev-pl
 ```
-pl: Pasan laksitha, 
-md: Mahima Dharmasena, 
-dp: Dasun Perera, 
-nj: Nilasi Jayathilake
+pl (pasan laksitha)
 
 ### 4. Push Work to Respective Branches
    Each team member should push their work to their respective branch using the following commands:
 
 ```bash
 git add .
-git commit -m "<Brief description of changes>"
-git push origin dev-urbranch
+git commit -m "Brief description of changes"
+git push origin dev-[first-initial][last-initial]
 ```
 
 ### 5. Merge Changes to Main Branch
    Once a feature or task is completed and tested, merge the changes from the respective branch to the main branch. This can be done through pull requests on GitHub.
 
 
-## Conclusion 
+### Conclusion 
 
-First time pushing
+first time pushing
 -------------------
-```bash
+
 git clone https://github.com/Pasanlaksitha/IITWebDev.git
 
-
-# Do some changes in ur branch
+//do some changes in ur branch
 
 git add .      
-git commit -m "<Update message>"
-git checkout -b dev-urbranch        # Makes the new branch
-git push origin dev-urbranch	      # Push to your branch.
+git commit -m "update message"
+git checkout -b dev-urbranch        //makes the new branch
+git push origin dev-urbranch	    //push to your branch.
 
-# Then merge to the main
-```
+//then merge to the main
 
-Anytime After (If you make changes in you local repo project before push do following)
+
+anytime after (if you make changes in you local repo project before push do following)
 --------------
-```bash
 git pull https://github.com/Pasanlaksitha/IITWebDev.git
 git add .
-git commit -m "<Update message>"  # Type a commit msg (eg: added h1 styles and updated the menu bar)
+git commit -m "update message"  <------ type a commit msg (eg: added h1 styles and updated the menu bar)
 git push origin dev-urbranch
 
-# Then merge(merge from the github web [easy])
-```
+//then merge(merge from the github web [easy])
 
 ### Collaboration Guidelines
 * Ensure that each team member works on their assigned tasks in their respective branches.
