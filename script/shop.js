@@ -1,7 +1,7 @@
 let openCart = document.querySelector('.shopping');
 let closeCart = document.querySelector('.closeShopping');
 let list = document.querySelector('.list');
-let listCard = document.querySelector('.listCard');
+let listCart = document.querySelector('.listCard');
 let body = document.querySelector('body');
 let netTotal = document.querySelector('.total');
 let quantity = document.querySelector('.quantity');
@@ -24,34 +24,34 @@ let products = [
         id: 2,
         name: 'PRODUCT NAME 2',
         assets: 'necklace.jpg',
-        price: 120000
+        price: 1200
     },
     {
         id: 3,
         name: 'PRODUCT NAME 3',
         assets: 'necklace.jpg',
-        price: 220000
+        price: 2200
     },
     {
         id: 4,
         name: 'PRODUCT NAME 4',
         assets: 'necklace.jpg',
-        price: 123000
+        price: 1300
     },
     {
         id: 5,
         name: 'PRODUCT NAME 5',
         assets: 'necklace.jpg',
-        price: 320000
+        price: 3500
     },
     {
         id: 6,
         name: 'PRODUCT NAME 6',
         assets: 'necklace.jpg',
-        price: 120000
+        price: 2400
     }
 ];
-let listCards  = [];
+let listCarts  = [];
 function initApp(){
     products.forEach((value, key) =>{
         let newDiv = document.createElement('div');
@@ -66,18 +66,18 @@ function initApp(){
 }
 initApp();
 function addToCard(key){
-    if(listCards[key] == null){
+    if(listCarts[key] == null){
         // copy product form list to list card
-        listCards[key] = JSON.parse(JSON.stringify(products[key]));
-        listCards[key].quantity = 1;
+        listCarts[key] = JSON.parse(JSON.stringify(products[key]));
+        listCarts[key].quantity = 1;
     }
-    reloadCard();
+    reloadCart();
 }
-function reloadCard(){
-    listCard.innerHTML = '';
+function reloadCart(){
+    listCart.innerHTML = '';
     let count = 0;
     let totalPrice = 0;
-    listCards.forEach((value, key)=>{
+    listCarts.forEach((value, key)=>{
         totalPrice = totalPrice + value.price;
         count = count + value.quantity;
         if(value != null){
@@ -91,7 +91,7 @@ function reloadCard(){
                     <div class="count">${value.quantity}</div>
                     <button onclick="changeQuantity(${key}, ${value.quantity + 1})">+</button>
                 </div>`;
-            listCard.appendChild(newDiv);
+            listCart.appendChild(newDiv);
         }
     })
     netTotal.innerText = totalPrice.toLocaleString();
@@ -99,10 +99,10 @@ function reloadCard(){
 }
 function changeQuantity(key, quantity){
     if(quantity === 0){
-        delete listCards[key];
+        delete listCarts[key];
     }else{
-        listCards[key].quantity = quantity;
-        listCards[key].price = quantity * products[key].price;
+        listCarts[key].quantity = quantity;
+        listCarts[key].price = quantity * products[key].price;
     }
-    reloadCard();
+    reloadCart();
 }

@@ -63,16 +63,16 @@ header .shopping span{
     padding: 10px;
     width: 100%;
 }
-.card{
+.cart{
     position: fixed;
     top:0;
     left: 100%;
     width: 500px;
-    background-color: darkolivegreen;
+    background-color: black;
     height: 100vh;
     transition: 0.5s;
 }
-.card h1 {
+.cart h1 {
     color: honeydew;
     font-weight: 100;
     margin: 0;
@@ -81,14 +81,14 @@ header .shopping span{
     display: flex;
     align-items: center;
 }
-.card .checkout{
+.cart .checkout{
     position: absolute;
-    bottom: 0;
+    bottom: 40px;
     width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
-.card .checkout div{
+.cart .checkout div{
     background-color: aliceblue;
     width: 100%;
     height: 70px;
@@ -98,11 +98,24 @@ header .shopping span{
     font-weight: bold;
     cursor: pointer;
 }
-.card .checkout div:nth-child(2){
-    background-color: grey;
-    color: aliceblue;
+.cart .checkout div:nth-child(2){
+    background-color: darkolivegreen;
+    color: white;
 }
-.active .card{
+.cart .closeShopping{
+    position: absolute;
+    bottom: 0;
+    background-color: yellow;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.active .cart{
     left: calc(100% - 500px);
 
 }
