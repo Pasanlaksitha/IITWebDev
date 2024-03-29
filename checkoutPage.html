@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>checkout</title>
+    <link rel="stylesheet" href="css/checkoutPage.css" />
+  </head>
+  <body>
+    <h1>Checkout Page</h1>
+    <div class="container">
+      <div class="checkoutLayout">
+        <div class="returnCart">
+          <a href="/">Keep Shopping</a>
+          <h1>Products Added To Cart</h1>
+          <div class="list">
+            <div class="item">
+              <img src="assets/necklace.jpg" alt="product" />
+              <div class="info">
+                <div class="name">Product 1</div>
+                <div class="price">$22</div>
+              </div>
+              <div class="quantity">1</div>
+              <div class="returnPrice">$50</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="right">
+      <h1>Checkout</h1>
+      <div class="form">
+        <fieldset>
+          <legend>Personal Details</legend>
+          <div class="group">
+            <label for="fullname">Full Name: </label>
+            <input type="text" name="fullname" id="fullname" />
+            <br />
+          </div>
+          <div class="group">
+            <label for="contact">Contact Number: </label>
+            <input type="text" name="contact" id="contact" />
+            <br />
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Delivery Details</legend>
+          <div class="group">
+            <label for="Ad1">Address Line no 1: </label>
+            <input type="text" name="Ad1" id="Ad1" />
+            <br />
+          </div>
+          <div class="group">
+            <label for="Ad2">City: </label>
+            <input type="text" name="Ad2" id="Ad2" />
+          </div>
+          <div class="group">
+            <label for="postCode">PostCode: </label>
+            <input type="text" name="postCode" id="postCode" />
+          </div>
+          <div class="group">
+            <label for="district">PostCode: </label>
+            <select name="district" id="district">
+              <option value="default">Colombo</option>
+              <option value="1">Galle</option>
+              <option value="2">Kandy</option>
+              <option value="3">Gampaha</option>
+              <option value="4">Trincomalee</option>
+              <option value="5">Jafna</option>
+              <option value="6">NuwaraEliya</option>
+              <option value="7">Kegalle</option>
+            </select>
+          </div>
+        </fieldset>
+      </div>
+    </div>
+    <script src="script/checkoutPage.js"></script>
+  </body>
+</html>
