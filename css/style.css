@@ -21,9 +21,10 @@ body {
     font-size: 17px;
     color: #444;
     font-family: "Montserrat", Helvetica, Arial, sans-serif;
-    background: #fff;
+    background: whitesmoke;
     scroll-behavior: smooth;
 }
+
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Montserrat', sans-serif;
@@ -450,7 +451,7 @@ ul.card-list li:last-of-type {
 
 .text-section {
     text-align: left;
-    padding: 100px 0;
+    padding: 50px 0;
     background: #fff;
 }
 
@@ -467,7 +468,7 @@ ul.card-list li:last-of-type {
 
 .text-section .image.align-left {
     float: left;
-    width: 50%;
+    width: 30%;
     padding: 0 20px;
 }
 
@@ -479,7 +480,7 @@ ul.card-list li:last-of-type {
 
 .text-section .image.align-right {
     float: right;
-    width: 50%;
+    width: 30%;
     padding: 0 20px;
 }
 
@@ -490,7 +491,7 @@ ul.card-list li:last-of-type {
 }
 
 .text-section .image.align-center {
-
+    width: 50%;
 }
 
 .text-section .text.align-center {
@@ -1052,4 +1053,9 @@ footer a.social.google {
         margin: 0 5px !important;
         font-size: 14px;
     }
+}
+
+nav ul li{
+    color: white;
+    font-weight: bold;
 }
