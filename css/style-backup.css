@@ -767,29 +767,29 @@ ul.portfolio-list li a:hover {
 
 /*Email List Section*/
 
-.email-list-section {
+.form-section {
     background: #5dae87;
     padding: 100px 0;
     color: #fff;
 }
 
-.email-list-section h3 {
+.form-section h3 {
     color: #fff;
     text-align: center;
 }
 
-.email-list-section p.subtitle {
+.form-section p.subtitle {
     color: #bfeed7;
     font-size: 17px;
 }
 
-.email-list-section form {
+.form-section form {
     width: auto;
     text-align: center;
     margin: 40px auto 0 auto;
 }
 
-.email-list-section input[type=text] {
+.form-section input[type=text] {
     background: #5dae87;
     color: #fff;
     color: rgba(255, 255, 255, 0.75);
@@ -797,12 +797,12 @@ ul.portfolio-list li a:hover {
     margin: 10px 5px;
 }
 
-.email-list-section input[type=text]:focus {
+.form-section input[type=text]:focus {
     outline: none;
     color: #fff;
 }
 
-.email-list-section button {
+.form-section button {
     background: #fff;
     color: #5dae87;
     margin: 10px 5px;
