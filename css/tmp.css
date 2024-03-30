@@ -1,9 +1,129 @@
+/*Basics structer */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+:root{
+    --background-color: #678d68;
+    --background-colorB: black ;
+    --text-color1: #f1f1f1;
+
+    --button-color: #f1f1f1;
+    --button-color-hover: #f1f1f1;
+    --button-background-color: #678d68;
+    --button-text-color-green: #5dae87;
+    --button-text-color-white: #ff5c5c;
+    --button-text-color-black: #1c1c1c;
+
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    padding: 0 5%;
+    position: absolute;
+    width: 100%;
+    z-index: 100;
+}
+
+header nav {
+    display: flex;
+    gap: 30px;
+}
+header nav a {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 99px;
+    transition: 0.3s;
+    color: white;
+}
+header nav a.active {
+    background: #5247B9;
+}
+header nav a:hover {
+    background: #5247B9;
+}
+header nav:hover > a:not(:hover) {
+    background: none;
+}
+
+.home {
+    display: flex;
+    height: 100dvh;
+    background: linear-gradient(to top, #D2E2FB 30%, #86A8DB);
+    position: relative;
+    overflow: hidden;
+}
+
+.home img {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    pointer-events: none;
+}
+
+.home .title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 80px;
+    text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+}
+
+.about {
+    padding: 50px;
+    /*background: #000000;*/
+    color: white;
+    position: relative;
+    z-index: 100;
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 40%, rgba(28,59,43,1) 100%);
+}
+.about h1 {
+    font-size: 40px;
+}
+
+@media (max-width: 768px) {
+    header {
+        height: 80px; /* Adjust header height for smaller screens */
+    }
+}
+
+html, html a {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+}
+
+html, body {
+    min-height: 100%;
+}
+
+body {
+    font-size: 17px;
+    color: #444;
+    font-family: "Montserrat", Helvetica, Arial, sans-serif;
+    background: #fff;
+    scroll-behavior: smooth;
+}
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
     font-weight: 700;
-    color: #444;
+    color: #ffffff;
     margin: 0;
     padding: 0;
 }
@@ -27,6 +147,9 @@ h5 {
 h6 {
     font-size: 18px;
 }
+
+
+
 
 p {
     line-height: 1.4;
@@ -60,7 +183,6 @@ ul, li {
     list-style: none;
     margin: 0;
     padding: 0;
-    color: var(--text-section-color);
 }
 
 a {
@@ -109,9 +231,9 @@ input[type=text] {
 }
 
 a.button-1, a.button-2, button {
-    color: #fff;
-    background: #5dae87;
-    border: 2px solid #5dae87;
+    color: #212121;
+    background: #c7c7c7;
+    border: 2px solid #ffffff;
     border-radius: 999px;
     margin-top: -2px;
     margin-left: 10px;
@@ -129,9 +251,9 @@ a.button-1, a.button-2, button {
 }
 
 a.button-1:hover {
-    border-color: #42966e;
-    background: #42966e;
-    box-shadow: 0 0 10px #42966e, 0 0 20px #42966e, 0 0 30px #42966e; /* Glow  */
+    border-color: #fafafa;
+    background: #eaeaea;
+    box-shadow: 0 0 10px #fafafa, 0 0 20px #fafafa, 0 0 30px #1c3b2b; /* Glow  */
 }
 
 a.button-2 {
@@ -154,62 +276,122 @@ a.button-2:hover {
 }
 /*Header*/
 
-
 header#top {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 80px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    background-color: transparent;
-    z-index: 1000;
+    background: transparent;
+    height: 160px;
+    border-radius: 24px;
+    position: absolute;
+    z-index: 999;
 }
 
 header#top .wrapper {
-    background-color: transparent;    height: 100%;
-    padding: 0 20px;
+    display: flex;
+    justify-content: center; /* Center the navigation */
+    align-items: center;
+    width: 100%;
 }
 
-header#top .logo a {
-    color: #f6eded;
-    text-decoration: none;
-    font-size: 24px;
-    background-image: url('/Home/HomeImages/logo.png');
+h1.logo a {
+    color: #444;
+    line-height: 2.25;
+    text-indent: -4999px;
+    background-image: url(../assets/logo2.png);
     background-size: contain;
     background-repeat: no-repeat;
-    padding-left: 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    padding-left: 200px;
     display: inline-block;
+    margin: 40px 0 0 40px;
+    width: 56px;
+    height: 74px;
 }
 
-header#top h1 {
-    color: #f6eded;
+header#top nav {
+    display: flex;
+    width: auto;
+    margin-top: 60px;
+    margin-right: 40px;
+    justify-content: center;
 }
 
 header#top nav ul#navigation {
-    list-style: none;
-    display: flex;
+    display: flex; /* Use Flexbox for the navigation items */
     gap: 20px; /* Adjust gap as needed */
+    justify-content: center; /* Center the items within the navigation */
+}
+
+header#top nav ul#navigation li {
+    display: inline-block;
 }
 
 header#top nav ul#navigation li a {
-    color: #131313; /* Text color */
-    text-decoration: none;
-    padding: 10px 20px; /* Padding to create pill shape */
-    border-radius: 25px; /* Rounded corners for pill shape */
-    background-color: #e8ece8; /* Background color */
-    transition: background-color 0.5s ease, color 0.5s ease; /* Smooth transition for hover effect */
+    display: inline-block;
+    background: none;
+    padding: 10px 15px;
+    color: #777;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
 }
 
-header#top nav ul#navigation li a:hover {
-    background-color: #0a0a0a; /* Darker green on hover */
-    color: #fff; /* Keep text color white on hover */
+header#top nav ul li {
+    display: inline-block;
 }
 
+header#top nav ul li a {
+    display: inline-block;
+    background: none;
+    padding: 10px 15px;
+    color: #777;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+header#top nav ul li a:hover {
+    color: #444;
+}
+
+header#top nav ul li a.nav-cta {
+    color: #5dae87;
+    border: 2px solid #5dae87;
+    border-radius: 999px;
+    margin-top: -2px;
+    margin-left: 10px;
+}
+
+@media only screen and (max-width: 1024px) {
+    header#top {
+        height: auto;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    h1.logo {
+    }
+
+    header#top nav {
+        text-align: center;
+        width: 100%;
+        margin: 20px auto 0 auto;
+    }
+
+    header#top nav ul li {
+        font-size: 15px;
+    }
+
+    h1.logo a {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+
+
+/*IMPORTED SETTINGS (LOTTIE)*/
+
+#lottie-player {
+    display: none;
+}
 
 /*Banner*/
 
@@ -318,7 +500,8 @@ header#top nav ul#navigation li a:hover {
 .card-section {
     text-align: center;
     padding: 100px 0;
-    background: #f9f9f9;
+    background: #1c3b2b;
+
 }
 
 .card-section p.subtitle {
@@ -329,6 +512,7 @@ header#top nav ul#navigation li a:hover {
 ul.card-list {
     width: 90%;
     margin: 100px auto 60px;
+
 }
 
 ul.card-list li {
@@ -338,6 +522,7 @@ ul.card-list li {
     background: #fff;
     padding: 60px 0;
     margin: 0 2%;
+    border-radius: 24px;
 }
 
 ul.card-list li:hover {
@@ -349,7 +534,7 @@ ul.card-list li .image-container {
     height: 100px;
     margin: 0 auto 40px auto;
     background: #f9f9f9;
-    border-radius: 999px;
+    border-radius: 24px;
     position: relative;
 }
 
@@ -390,74 +575,27 @@ ul.card-list li:last-of-type {
         margin: 20px 0 !important;
     }
 }
-/*section*/
-
-.text-image-section {
-    display: flex;
-    justify-content: space-between; /* Aligns items to the left and right */
-    align-items: center; /* Centers items vertically */
-    padding: 20px; /* Adds some padding around the section */
-}
-
-.text-content {
-    flex: 1; /* Takes up the available space */
-    padding-right: 20px; /* Adds some space between the text and the image */
-}
-
-.image-content {
-    flex: 1; /* Takes up the available space */
-    padding-left: 20px; /* Adds some space between the image and the text */
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .text-image-section {
-        flex-direction: column; /* Stacks items vertically on smaller screens */
-    }
-
-    .text-content, .image-content {
-        flex: none; /* Removes the flex grow and shrink properties */
-        width: 100%; /* Takes up the full width */
-        padding: 0; /* Removes padding */
-    }
-}
 
 
 /*Text Section*/
 
-.text-section  {
+.text-section {
     text-align: left;
     padding: 100px 0;
-    color: var(--text-section-color);
-    /* Ensure the wrapper is set up for Flexbox */
-    display: flex;
-    flex-wrap: wrap; /* Allows the items to wrap onto multiple lines */
-}
+    background: #1c3b2b;
 
-.text-section h3 {
-    color: var(--text-section-color);
+
 }
 
 .text-section p.subtitle {
     text-align: left;
-    color: var(--text-section-color);
+    color: #5dae87;
     font-size: 17px;
     margin-bottom: 40px;
 }
 
 .text-section .image {
     text-align: center;
-    /* Adjust the width as needed */
-    width: 50%;
-    padding: 0 20px;
-    /* Remove float */
-}
-
-.text-section .text {
-    /* Adjust the width as needed */
-    width: 50%;
-    padding: 0 10% 0 40px;
-    /* Remove float */
 }
 
 .text-section .image.align-left {
@@ -512,14 +650,10 @@ ul.list-checkmarks li {
 }
 
 @media only screen and (max-width: 720px) {
-    .text-section .text,
-    .text-section .image {
-        width: 100%;
+    .text-section .text {
+        float: none !important;
+        text-align: center;
     }
-    /*.text-section .text {*/
-    /*    float: none !important;*/
-    /*    text-align: center;*/
-    /*}*/
 
     .text-section .text.align-right,
     .text-section .text.align-left,
@@ -763,7 +897,7 @@ ul.portfolio-list li a:hover {
 /*Email List Section*/
 
 .email-list-section {
-    background: #5dae87;
+    background: #1c3b2b;
     padding: 100px 0;
     color: #fff;
 }
@@ -938,7 +1072,7 @@ ul.pricing-table ul.features li:hover {
 /*Footer*/
 
 footer {
-    background: #444;
+    background: #000000;
     margin-top: 0px;
     color: #fff;
     text-align: center;
