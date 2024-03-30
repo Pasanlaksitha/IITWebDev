@@ -35,3 +35,7 @@ node_modules/
 
 # Ignore Windows thumbnail cache files
 Thumbs.db
+
+# ignore directory
+/template/
+

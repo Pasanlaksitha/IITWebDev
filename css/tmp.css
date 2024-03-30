@@ -1,11 +1,105 @@
 /*Basics structer */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
-* {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+:root{
+    --background-color: #678d68;
+    --background-colorB: black ;
+    --text-color1: #f1f1f1;
+
+    --button-color: #f1f1f1;
+    --button-color-hover: #f1f1f1;
+    --button-background-color: #678d68;
+    --button-text-color-green: #5dae87;
+    --button-text-color-white: #ff5c5c;
+    --button-text-color-black: #1c1c1c;
+
 }
 
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    padding: 0 5%;
+    position: absolute;
+    width: 100%;
+    z-index: 100;
+}
+
+header nav {
+    display: flex;
+    gap: 30px;
+}
+header nav a {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 99px;
+    transition: 0.3s;
+    color: white;
+}
+header nav a.active {
+    background: #5247B9;
+}
+header nav a:hover {
+    background: #5247B9;
+}
+header nav:hover > a:not(:hover) {
+    background: none;
+}
+
+.home {
+    display: flex;
+    height: 100dvh;
+    background: linear-gradient(to top, #D2E2FB 30%, #86A8DB);
+    position: relative;
+    overflow: hidden;
+}
+
+.home img {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    pointer-events: none;
+}
+
+.home .title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 80px;
+    text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+}
+
+.about {
+    padding: 50px;
+    /*background: #000000;*/
+    color: white;
+    position: relative;
+    z-index: 100;
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 40%, rgba(28,59,43,1) 100%);
+}
+.about h1 {
+    font-size: 40px;
+}
+
+@media (max-width: 768px) {
+    header {
+        height: 80px; /* Adjust header height for smaller screens */
+    }
+}
 
 html, html a {
     -webkit-font-smoothing: antialiased;
@@ -29,7 +123,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
     font-weight: 700;
-    color: #444;
+    color: #ffffff;
     margin: 0;
     padding: 0;
 }
@@ -53,6 +147,9 @@ h5 {
 h6 {
     font-size: 18px;
 }
+
+
+
 
 p {
     line-height: 1.4;
@@ -134,9 +231,9 @@ input[type=text] {
 }
 
 a.button-1, a.button-2, button {
-    color: #fff;
-    background: #5dae87;
-    border: 2px solid #5dae87;
+    color: #212121;
+    background: #c7c7c7;
+    border: 2px solid #ffffff;
     border-radius: 999px;
     margin-top: -2px;
     margin-left: 10px;
@@ -154,9 +251,9 @@ a.button-1, a.button-2, button {
 }
 
 a.button-1:hover {
-    border-color: #42966e;
-    background: #42966e;
-    box-shadow: 0 0 10px #42966e, 0 0 20px #42966e, 0 0 30px #42966e; /* Glow  */
+    border-color: #fafafa;
+    background: #eaeaea;
+    box-shadow: 0 0 10px #fafafa, 0 0 20px #fafafa, 0 0 30px #1c3b2b; /* Glow  */
 }
 
 a.button-2 {
@@ -403,7 +500,8 @@ header#top nav ul li a.nav-cta {
 .card-section {
     text-align: center;
     padding: 100px 0;
-    background: #f9f9f9;
+    background: #1c3b2b;
+
 }
 
 .card-section p.subtitle {
@@ -484,7 +582,9 @@ ul.card-list li:last-of-type {
 .text-section {
     text-align: left;
     padding: 100px 0;
-    background: #fff;
+    background: #1c3b2b;
+
+
 }
 
 .text-section p.subtitle {
@@ -797,7 +897,7 @@ ul.portfolio-list li a:hover {
 /*Email List Section*/
 
 .email-list-section {
-    background: #5dae87;
+    background: #1c3b2b;
     padding: 100px 0;
     color: #fff;
 }
@@ -972,7 +1072,7 @@ ul.pricing-table ul.features li:hover {
 /*Footer*/
 
 footer {
-    background: #444;
+    background: #000000;
     margin-top: 0px;
     color: #fff;
     text-align: center;
