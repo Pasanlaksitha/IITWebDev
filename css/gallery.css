@@ -1,0 +1,63 @@
+/* Basic Styles */
+.elementor-widget-container {
+    max-width: 100%;
+    overflow: hidden;
+    background-color: #1c3b2b;
+    position: relative
+}
+
+.elementor-image-carousel-wrapper {
+    position: relative;
+}
+
+.swiper-slide {
+    position: relative;
+    display: block;
+    width: 100%;
+    overflow: hidden;
+}
+
+.swiper-slide-inner {
+    position: relative;
+    display: block;
+    overflow: hidden;
+}
+
+.swiper-slide-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+/* Pagination Buttons */
+.elementor-swiper-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    cursor: pointer;
+    background-color: aquamarine;
+    padding: 10px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+    font-size: 24px;
+    color: #000;
+}
+
+.elementor-swiper-button:hover {
+    background-color: aquamarine;
+}
+
+.elementor-swiper-button-prev {
+    left: 10px;
+}
+
+.elementor-swiper-button-next {
+    right: 10px;
+}
+
+/* Autoplay and Pause on Hover */
+.swiper-container:hover .elementor-swiper-button {
+    background-color: aquamarine;
+}

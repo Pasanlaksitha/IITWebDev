@@ -190,7 +190,7 @@ h1.logo a {
     color: #444;
     line-height: 2.25;
     text-indent: -4999px;
-    background: url(../../assets/icon/logo2.png) no-repeat;
+    background: url(../assets/logo2.png) no-repeat;
     margin: 40px 0 0 40px;
     width: 56px;
     height: 74px;
@@ -280,7 +280,7 @@ header#top nav ul li a.nav-cta {
 
 #banner::before {
     content: '';
-    background: url(../../assets/header-image.jpg) no-repeat center;
+    background: url(../assets/header-image.jpg) no-repeat center;
     background-size: cover;
     position: absolute;
     top: 0;
@@ -955,7 +955,7 @@ footer a.logo {
     float: left;
     color: #fff;
     text-indent: -4999px;
-    background: url(../../assets/icon/logo3.png) no-repeat;
+    background: url(../assets/logo3.png) no-repeat;
     margin: 0 0 0 40px;
     padding: 0 0 40px 0;
     width: 56px;
