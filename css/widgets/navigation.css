@@ -32,7 +32,7 @@ input[type="radio"] {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 54px;
+    height: 40px;
     width: 200px;
     font-size: 1.25rem;
     font-weight: 500;
@@ -50,7 +50,7 @@ input[type="radio"]:checked + label {
 .selector {
     position: absolute;
     display: flex;
-    height: 54px;
+    height: 40px;
     width: 200px;
     background-color: #e6ffef;
     z-index: 1;
