@@ -22,7 +22,7 @@ header .shopping img {
   width: 40px;
 }
 header .shopping span {
-
+ background-color: #5fa284;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -43,10 +43,11 @@ header .shopping span {
 
 .list .item {
   text-align: center;
-  background-color: #6a6fc9;
+  background-color: seagreen;
   padding: 20px;
-  box-shadow: 0 50px 50px honeydew;
+  box-shadow: 0 50px 50px gray;
   letter-spacing: 1px;
+  color: white;
 }
 .list .item img {
   width: 90%;

@@ -1,25 +1,25 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const intro = document.querySelector('.intro');
-    const logo = document.querySelectorAll('.logo');
-    const logoHeader = document.querySelector('.logo-header');
+// selecting and creating variables
+let project = document.querySelector('.project');
+let mission = document.querySelector('.mission');
+let Team = document.querySelector('.team');
+let names = document.querySelector('.name');
 
-    //animate the logo
-    function animateLogo() {
-        logo.forEach((letter, index) => {
-            setTimeout(() => {
-                letter.classList.add('active');
-            }, index * 200); // Adjust the timing as needed
-        });
-    }
+// Initially hide mission and team elements
 
-    // hide the splash screen
-    function hideSplash() {
-        setTimeout(() => {
-            intro.style.top = '-100%';
-            logoHeader.classList.add('fade');
-        }, 3000); // Adjust the duration as needed
-    }
+Team.style.display = 'none';
 
-    animateLogo();
-    hideSplash();
-});
+// Function to show elements with a delay
+function showElementWithDelay(element, delay) {
+    setTimeout(function() {
+        element.style.display = 'flex';
+    }, delay);
+}
+
+// Show project immediately
+project.style.display = 'block';
+mission.style.display = 'block';
+
+
+
+showElementWithDelay(Team, 3000);
+

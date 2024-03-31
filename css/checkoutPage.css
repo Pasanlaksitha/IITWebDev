@@ -1,11 +1,11 @@
 .checkoutLayout {
     display: grid;
-
+    width: 700px;
     gap: 50px;
     padding: 20px;
 }
 .checkoutLayout .right{
-    background-color: #5358B3;
+    background-color: #3A775D;
     border-radius: 20px;
     padding: 40px;
     color: honeydew;
@@ -32,7 +32,7 @@
     border-radius: 20px;
     margin-top: 10px;
     border: none;
-    background-color: #6a6fc9;
+    background-color: #5fa284;
 }
 .checkoutLayout row{
     display: flex;
