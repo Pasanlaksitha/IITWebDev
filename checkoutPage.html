@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout Page</title>
+  <link rel="stylesheet" href="css/checkoutPage.css">
+</head>
+<body>
+
+<div class="container">
+  <div class="checkoutLayout">
+    <div class="returnCart">
+      <a href="shop.html">keep shopping</a>
+
+      <div class="list">
+        <div class="item">
+
+
+        </div>
+
+      </div>
+    </div>
+
+
+    <div class="right">
+      <h1>Checkout</h1>
+
+      <div class="form">
+
+        <fieldset>
+          <legend>Personal Details</legend>
+          <div class="group">
+            <label for="fullname">Full Name: </label>
+            <input type="text" name="fullname" id="fullname">
+            <br>
+          </div>
+          <div class="group">
+            <label for="contact">Contact Number: </label>
+            <input type="text" name="contact" id="contact">
+            <br>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Delivery Details</legend>
+          <div class="group">
+            <label for="Ad1">Address Line no 1: </label>
+            <input type="text" name="Ad1" id="Ad1">
+            <br>
+          </div>
+          <div class="group">
+            <label for="Ad2">City: </label>
+            <input type="text" name="Ad2" id="Ad2">
+          </div>
+          <div class="group">
+            <label for="postCode">PostCode: </label>
+            <input type="text" name="postCode" id="postCode">
+          </div>
+          <div class="group">
+            <label for="district">District: </label>
+            <select name="district" id="district">
+              <option value="default">Colombo</option>
+              <option value="1">Galle</option>
+              <option value="2">Kandy</option>
+              <option value="3">Gampaha</option>
+              <option value="4">Trincomalee</option>
+              <option value="5">Jafna</option>
+              <option value="6">NuwaraEliya</option>
+              <option value="7">Kegalle</option>
+            </select>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Payment Option</legend>
+          <div class="group" id="radio">
+            <label for="payment1">VISA Card</label>
+            <input type="radio" id="payment1">
+            <label for="payment2">Master Card</label>
+            <input type="radio" id="payment2">
+            <label for="payment3">COD</label>
+            <input type="radio" id="payment3">
+          </div>
+
+        </fieldset>
+        <fieldset>
+          <legend>Order Details</legend>
+          <div class="return">
+            <div class="row">
+              <div>Total Quantity</div>
+              <div class="totalQuantity">6</div>
+            </div>
+            <div class="row">
+              <div>Total Price</div>
+              <div class="totalPrice">60</div>
+            </div>
+          </div>
+        </fieldset>
+        <button class="buttonCheckout">CHECKOUT</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+<script src="checkout.js"></script>
+
+</body>
+</html>
+
+
+
