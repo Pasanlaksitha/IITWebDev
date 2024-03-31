@@ -3,15 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="assets/feedback.css" rel="stylesheet" type="text/css">
+    <link href="css/feedback.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet">
     <title>Feedback Form</title>
 </head>
-<body class="body_feedback">
-<!-- Title -->
-<h2 class="title_feedback">Feedback Form</h2>
 
+<body>
+<header style="background-color: rgba(51,51,51,0.2);border-radius: 24px;">
+    <h1>GIYA</h1>
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="home.html">About</a>
+        <a href="home.html">Projects</a>
+        <a href="home.html">Blog</a>
+    </nav>
+</header>
+
+<section id="bg-image" >
+    <h2>Feedback Form</h2>
 <!-- Form -->
-<form class="form-container_feedback" action="#.php" method="POST">
+
+
+        <form class="feedback" action="" method="POST">
 
     <!-- Name -->
     <label class="label_feedback" for="name">*Enter your name:</label><br>
@@ -23,17 +36,21 @@
 
     <!-- first time visiting -->
     <p class="center_feedback">Was this your first time visiting?</p>
+            <center>
     <input type="radio" id="yes" name="visit" value="yes">
     <label class="label_feedback" for="yes">Yes</label>
     <input type="radio" id="no" name="visit" value="no">
     <label class="label_feedback" for="yes">No</label><br>
+            </center>
 
     <!-- Suggestion -->
     <p class="center_feedback">If "No", Suggest any improvements for the future : </p>
     <textarea class="input-field_feedback" id="suggestion" name="suggestion" rows="3" cols="50"></textarea><br><br>
 
     <!-- Satisfaction -->
-    <p class="center_feedback">How satisfied are you with our service? Choose from 0 to 10, with 1 being "Not satisfied at all" and 10 being "Extremely satisfied!"</p>
+            <p class="center_feedback">How satisfied are you with our service? Choose from 0 to 10, with 1 being "Not
+                satisfied
+                at all" and 10 being "Extremely satisfied!"</p>
     <!-- Radio buttons for satisfaction -->
     <!-- Labels have unique for attributes corresponding to the radio button IDs -->
     <input class="radio-feedback" type="radio" name="satisfaction" value="1" id="satisfaction_1">
@@ -68,10 +85,12 @@
 
     <!-- recommendation -->
     <p class="center_feedback">Would you recommend our services?</p>
-    <input type="radio" id="recommendation" name="recommendation" value="yes">
+            <center>
+    <input type="radio" name="recommendation" value="yes">
     <label class="label_feedback" for="yes">Yes</label>
-    <input type="radio" id="recommendation" name="recommendation" value="no">
+    <input type="radio"  name="recommendation" value="no">
     <label class="label_feedback" for="yes">No</label><br>
+            </center>
 
     <!-- updates -->
     <p class="center_feedback">Would you like to receive updates about the website and any offers?</p>
@@ -87,5 +106,9 @@
     <!-- Submit Button -->
     <input class="submit-button_feedback" type="submit" value="Submit">
 </form>
+
+    </section>
 </body>
+
+
 </html>
