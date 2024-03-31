@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="assets/feedback.css" rel="stylesheet" type="text/css">
+    <title>Feedback Form</title>
+</head>
+<body class="body_feedback">
+<!-- Title -->
+<h2 class="title_feedback">Feedback Form</h2>
+
+<!-- Form -->
+<form class="form-container_feedback" action="#.php" method="POST">
+
+    <!-- Name -->
+    <label class="label_feedback" for="name">*Enter your name:</label><br>
+    <input class="input-field_feedback" type="text" id="name" name="name" required><br>
+
+    <!-- Email -->
+    <label class="label_feedback" for="email">*Enter your email:</label><br>
+    <input class="input-field_feedback" type="email" id="email" name="email" required><br>
+
+    <!-- first time visiting -->
+    <p class="center_feedback">Was this your first time visiting?</p>
+    <input type="radio" id="yes" name="visit" value="yes">
+    <label class="label_feedback" for="yes">Yes</label>
+    <input type="radio" id="no" name="visit" value="no">
+    <label class="label_feedback" for="yes">No</label><br>
+
+    <!-- Suggestion -->
+    <p class="center_feedback">If "No", Suggest any improvements for the future : </p>
+    <textarea class="input-field_feedback" id="suggestion" name="suggestion" rows="3" cols="50"></textarea><br><br>
+
+    <!-- Satisfaction -->
+    <p class="center_feedback">How satisfied are you with our service? Choose from 0 to 10, with 1 being "Not satisfied at all" and 10 being "Extremely satisfied!"</p>
+    <!-- Radio buttons for satisfaction -->
+    <!-- Labels have unique for attributes corresponding to the radio button IDs -->
+    <input class="radio-feedback" type="radio" name="satisfaction" value="1" id="satisfaction_1">
+    <label class="label-feedback" for="satisfaction_1">1</label>
+
+    <input class="radio-feedback" type="radio" name="satisfaction" value="2" id="satisfaction_2">
+    <label class="label-feedback" for="satisfaction_2">2</label>
+
+    <input class="radio-feedback" type="radio" name="satisfaction" value="3" id="satisfaction_3">
+    <label class="label-feedback" for="satisfaction_3">3</label>
+
+    <input class="radio-feedback" type="radio" name="satisfaction" value="4" id="satisfaction_4">
+    <label class="label-feedback" for="satisfaction_4">4</label>
+
+    <input class="radio-feedback" type="radio" name="satisfaction" value="5" id="satisfaction_5">
+    <label class="label-feedback" for="satisfaction_5">5</label>
+
+    <input class="radio-feedback" type="radio" name="satisfaction" value="6" id="satisfaction_6">
+    <label class="label-feedback" for="satisfaction_6">6</label>
+
+    <input class="radio-feedback" type="radio" name="satisfaction" value="7" id="satisfaction_7">
+    <label class="label-feedback" for="satisfaction_7">7</label>
+
+    <input class="radio-feedback" type="radio" name="satisfaction" value="8" id="satisfaction_8">
+    <label class="label-feedback" for="satisfaction_8">8</label>
+
+    <input class="radio-feedback" type="radio" name="satisfaction" value="9" id="satisfaction_9">
+    <label class="label-feedback" for="satisfaction_9">9</label>
+
+    <input class="radio-feedback" type="radio" name="satisfaction" value="10" id="satisfaction_10">
+    <label class="label-feedback" for="satisfaction_10">10</label>
+
+    <!-- recommendation -->
+    <p class="center_feedback">Would you recommend our services?</p>
+    <input type="radio" id="recommendation" name="recommendation" value="yes">
+    <label class="label_feedback" for="yes">Yes</label>
+    <input type="radio" id="recommendation" name="recommendation" value="no">
+    <label class="label_feedback" for="yes">No</label><br>
+
+    <!-- updates -->
+    <p class="center_feedback">Would you like to receive updates about the website and any offers?</p>
+    <select class="select-feedback" name="updates" id="updates">
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+    </select><br>
+
+    <!-- questions or requests -->
+    <p class="center_feedback">Do you have additional questions or requests?</p>
+    <textarea class="input-field_feedback" id="qor" name="qor" rows="4" cols="50"></textarea><br><br>
+
+    <!-- Submit Button -->
+    <input class="submit-button_feedback" type="submit" value="Submit">
+</form>
+</body>
+</html>
