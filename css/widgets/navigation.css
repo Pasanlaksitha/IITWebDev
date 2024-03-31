@@ -1,0 +1,71 @@
+
+input[type="radio"] {
+    display: none;
+}
+
+.menu {
+    position: absolute;
+    display: flex;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.tabs {
+    display: flex;
+    position: relative;
+    background-color: #ffffff;
+    box-shadow: 0 10px 20px 0 rgba(7, 41, 19,.1),
+    0 0 20px 0 rgba(7, 41, 19,.1);
+    padding: 10px;
+    border-radius: 100px;
+}
+
+.tabs > *{
+    z-index: 2;
+}
+
+.tab{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 54px;
+    width: 200px;
+    font-size: 1.25rem;
+    font-weight: 500;
+    border-radius: 99px;
+    cursor: pointer;
+    transition: color .5s, text-shadow .5s, font-size .5s;
+}
+
+input[type="radio"]:checked + label {
+    color: #1db555;
+    text-shadow: 0 0 20px #21d964;
+    font-size: 1.5rem;
+}
+
+.selector {
+    position: absolute;
+    display: flex;
+    height: 54px;
+    width: 200px;
+    background-color: #e6ffef;
+    z-index: 1;
+    border-radius: 100px;
+    transition: transform .5s ease-in-out;
+}
+
+input[id="tab1"]:checked ~ .selector {
+    transform: translateX(0);
+}
+
+input[id="tab2"]:checked ~ .selector {
+    transform: translateX(100%);
+}
+
+input[id="tab3"]:checked ~ .selector {
+    transform: translateX(200%);
+}
