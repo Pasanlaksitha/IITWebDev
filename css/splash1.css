@@ -1,0 +1,41 @@
+html {
+    min-height: 100%;
+}
+
+body {
+    background: linear-gradient(180deg, forestgreen 0%, lime 100%);
+    margin: 0;
+    height: 100vh;
+    background-attachment: fixed;
+}
+
+h1, h3 {
+    color: white;
+    text-align: center;
+}
+
+h1 {
+    font-size: xxx-large;
+}
+
+.team span {
+    height: 120px;
+    width: 120px;
+    background-color: white;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0px 4px 0px 4px;
+}
+
+.team {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.names span {
+    height: 20px;
+    width: 40px;
+    display: flex;
+}
