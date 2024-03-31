@@ -1,4 +1,24 @@
 
+
+
+
+/*<!--    <div class="menu">-->*/
+/*<!--        <div class="tabs">-->*/
+/*<!--            <input type="radio" name="tabs" id="tab1" checked>-->*/
+/*<!--            <label for="tab1" class="tab">Home</label>-->*/
+/*<!--            </input>-->*/
+/*<!--            <input type="radio" name="tabs" id="tab2">-->*/
+/*<!--            <label for="tab2" class="tab">About</label>-->*/
+/*<!--            </input>-->*/
+/*<!--            <input type="radio" name="tabs" id="tab3">-->*/
+/*<!--            <label for="tab3" class="tab">Project</label>-->*/
+/*<!--            </input>-->*/
+/*<!--            <input type="radio" name="tabs" id="tab4">-->*/
+/*<!--            <label for="tab4" class="tab">blog</label>-->*/
+/*<!--            </input>-->*/
+/*<!--            <span class="selector"></span>-->*/
+/*<!--        </div>-->*/
+/*<!--    </div>-->*/
 input[type="radio"] {
     display: none;
 }
