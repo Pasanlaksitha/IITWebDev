@@ -1,5 +1,5 @@
 body {
-  background-color: grey;
+ background-color: whitesmoke;
 }
 a {
   text-decoration: none;
@@ -22,7 +22,7 @@ header .shopping img {
   width: 40px;
 }
 header .shopping span {
-  background-color: darkolivegreen;
+
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -43,7 +43,7 @@ header .shopping span {
 
 .list .item {
   text-align: center;
-  background-color: darkolivegreen;
+  background-color: #6a6fc9;
   padding: 20px;
   box-shadow: 0 50px 50px honeydew;
   letter-spacing: 1px;
