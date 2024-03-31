@@ -1,0 +1,177 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.question-container {
+    display: none;
+}
+
+.question-container.active {
+    display: block;
+}
+
+.button-container {
+    margin-top: 20px;
+}
+#summary{
+    padding: 20px;
+
+}
+#name{
+    text-transform: capitalize;
+}
+span{
+    font-weight: bold;
+    text-transform: capitalize;
+}
+fieldset {
+    border: 2px solid #444;
+    border-radius: 10px;
+    padding: 25px;
+    margin: 25px 50px 25px 50px;
+}
+
+input[type=text], input[type=number], input[type=date], select, textarea {
+    border: 2px solid #444;
+    background: #fff;
+    font-size: 17px;
+    color: #444;
+    padding: 16px;
+    border-radius: 999px;
+    width: 280px;
+    font-family: 'Arimo', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+input[type=radio]{
+    border: 2px solid #444;
+    background: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    color: #444;
+    padding: 5px;
+    border-radius: 5px;
+    width: 5px;
+    font-family: 'Arimo', sans-serif;
+    text-transform: uppercase;
+    transform: scale(200%) ;
+}
+.gender_dis{
+    font-size: 20px;
+    font-weight: 700;
+    color: #444;
+    padding: 5px;
+    border-radius: 5px;
+    width: 5px;
+    font-family: 'Arimo', sans-serif;
+    text-transform: uppercase;
+}
+
+
+.buttons {
+    width: auto;
+    margin: 0 auto;
+    text-align: center;
+}
+
+a.button-1, a.button-2, button {
+    color: #fff;
+    background: #5dae87;
+    border: 2px solid #5dae87;
+    border-radius: 999px;
+    margin-top: -2px;
+    margin-left: 10px;
+    font-family: 'Arimo', sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 0.03em;
+    display: inline-block;
+    width: 220px;
+    margin: 10px;
+    text-align: center;
+    padding: 18px 0;
+}
+
+a.button-1:hover {
+    border-color: #42966e;
+    background: #42966e;
+}
+
+a.button-2 {
+    border-color: #444;
+    background: none;
+    color: #444;
+}
+
+a.button-2:hover {
+    background: #444;
+    color: #fff;
+}
+.progress-container {
+    width: 100%;
+    background-color: #f3f3f3;
+    border-radius: 5px;
+    margin: 25px 50px 25px 50px;
+}
+
+.progress-bar {
+    height: 20px;
+    background-color: #47ff58;
+    width: 0;
+    border-radius: 10px;
+
+}
+
+
+.team-member {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Adjust as needed */
+    gap: 20px; /* Spacing between thumbnails */
+}
+
+.thumbnail {
+    position: relative;
+    overflow: hidden;
+    /* Other thumbnail styling */
+}
+
+.thumbnail img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease; /* Add hover effect */
+}
+
+.thumbnail:hover img {
+    transform: scale(1.1); /* Enlarge on hover */
+}
+
+.details {
+    position: absolute;
+    overflow: hidden;
+    bottom: 0;
+    left: 0;
+    background-color: #283618;
+    color: #fff;
+    padding: 10px;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.15s ease;
+}
+.details:hover{
+    background-color: #283618;
+    color: #fff;
+    opacity: 10%;
+}
+.thumbnail:hover .details {
+    opacity: 1; /* Show details on hover */
+}
+.team-cards {
+    padding: 50px;
+}
+#submit{
+    padding: 50px 50px 50px 50px;
+    margin: 50px 50px 50px 50px;
+    text-align: center;
+    align-items: center;
+}
