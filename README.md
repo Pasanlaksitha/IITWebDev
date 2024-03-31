@@ -1,37 +1,85 @@
-# IITWebDev Branch: dev-md
+# IITWebDev
 
-Welcome to our IIT/UoW Web Design & Development Coursework project repository! This branch is maintained by Mahima Dharmasena.
+# University Web Development Coursework Project
 
-# Project GAIA: Wildlife Conservation at WILD TRAILS - Hotel & Spa
+Welcome to our University Web Development Coursework project repository! This README will guide you through the process of setting up the project and collaborating with your team members.
 
-Welcome to Project GAIA by WILD TRAILS - Hotel & Spa, situated alongside the mesmerizing Yala National Park. As champions of sustainability, we are deeply committed to fostering a harmonious relationship between humans and wildlife.
+## Getting Started
 
-At the heart of Project GAIA lies our advanced Wildlife Vet Clinic, dedicated to ensuring the well-being of the park's diverse fauna. Our mission extends beyond medical care; we are passionate about educating the public on wildlife conservation. Seasonal volunteer opportunities allow participants to engage hands-on, from assisting in our vet clinic to immersive wildlife tours.
+Follow these instructions to set up the project:
 
-Support our cause by exploring our curated range of merchandise at our on-site shop, featuring volunteer t-shirts, safari-themed apparel, eco-friendly bags, and more. Every purchase directly contributes to our conservation efforts.
+### 1. Clone the Repository
 
-Check out our online gallery to witness our conservation journey through captivating images of our vet clinic, rescue operations, beach cleanups, and the dedicated volunteers who drive our mission forward.
+First, clone the repository to your local machine using the following command:
 
-Join us in making a difference. Visit our website to create a volunteer profile or make a donation, and help us protect the future of Yala's magnificent wildlife through Project GAIA.
+```bash
+git clone <repository-url>
+```
 
-### As Student 4, my responsibilities in this project include:
+Replace <repository-url> with the actual URL of your GitHub repository.
 
-1. **Gallery Page**
-   - Implement an interactive gallery page with thumbnails
-   - Display an extended view with larger images and descriptions
-   - Allow users to customize the color and font within the extended view
+### 2. Initialize the Main Branch
+   Once the repository is cloned, navigate into the project directory and initialize the main branch:
 
-2. **Sitemap Page**
-   - Create a sitemap page using Scalable Vector Graphics (SVG)
-   - Make the sitemap interactive, responsive, and accessible
-   - Provide keyboard navigation and hover effects
+```bash
+cd <project-directory>
+git checkout -b main
+git push -u origin main
+```
+### 3. Create Branches for Team Members
+   Create branches for each team member using the following naming convention: dev-[first-initial][last-initial]. For example, if a team member's name is John Doe, the branch name would be dev-jd.
+```bash
+git checkout -b dev-pl
+```
+pl: Pasan laksitha, 
+md: Mahima Dharmasena, 
+dp: Dasun Perera, 
+nj: Nilasi Jayathilake
 
-3. **Content Page**
-   - Develop a content page related to the website's theme (Wildlife Conservation)
-   - Ensure sufficient length for internal linking
-   - Include top navigation links for longer pages
+### 4. Push Work to Respective Branches
+   Each team member should push their work to their respective branch using the following commands:
 
-4. **Page Editor**
-   - Create a personal page editor with my name, role, completed tasks, and links to my work
-   - Ensure the page opens in a new tab and includes links back to the main website
+```bash
+git add .
+git commit -m "Brief description of changes"
+git push origin dev-[first-initial][last-initial]
+```
 
+### 5. Merge Changes to Main Branch
+   Once a feature or task is completed and tested, merge the changes from the respective branch to the main branch. This can be done through pull requests on GitHub.
+
+
+## Conclusion 
+
+First time pushing
+-------------------
+```bash
+git clone https://github.com/Pasanlaksitha/IITWebDev.git
+
+
+# Do some changes in ur branch
+
+git add .      
+git commit -m "update message"
+git checkout -b dev-urbranch        # Makes the new branch
+git push origin dev-urbranch	      # Push to your branch.
+
+# Then merge to the main
+```
+
+Anytime After (If you make changes in you local repo project before push do following)
+--------------
+```bash
+git pull https://github.com/Pasanlaksitha/IITWebDev.git dev-urbranch
+git add .
+git commit -m "update message"  # Type a commit msg (eg: added h1 styles and updated the menu bar)
+git push origin dev-urbranch
+
+# Then merge(merge from the github web [easy])
+```
+
+### Collaboration Guidelines
+* Ensure that each team member works on their assigned tasks in their respective branches.
+* Regularly pull changes from the main branch to stay updated with the latest developments. do this every time you before push code 
+* Use descriptive commit messages to track changes effectively.
+* Review each other's code and provide feedback through pull requests.
