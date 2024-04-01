@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    background: linear-gradient(180deg, forestgreen 0%, lime 100%);
+    background: image('assets/');
     margin: 0;
     height: 100vh;
     background-attachment: fixed;

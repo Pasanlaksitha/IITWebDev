@@ -1,3 +1,4 @@
+//Declaring all t
 let openCart = document.querySelector('.shopping');
 let closeCart = document.querySelector('.closeShopping');
 let list = document.querySelector('.list');
@@ -5,11 +6,11 @@ let listCart = document.querySelector('.listCard');
 let body = document.querySelector('body');
 let netTotal = document.querySelector('.total');
 let quantity = document.querySelector('.quantity');
-
+let checkout = document.querySelector('.proceedCheckout')
 openCart.addEventListener('click', ()=>{
     body.classList.add('active');
 })
-closeCart.addEventListener('click', ()=>{
+closeCart.addEventListener('click', ()=>{21021998
     body.classList.remove('active');
 })
 
@@ -87,11 +88,17 @@ function reloadCart(){
                 <div>${value.name}</div>
                 <div>${value.price.toLocaleString()}</div>
                 <div>
-                    <button onclick="changeQuantity(${key}, ${value.quantity - 1})">-</button>
+                    <button class="change_Q_button" onclick="changeQuantity(${key}, ${value.quantity - 1})">-</button>
                     <div class="count">${value.quantity}</div>
-                    <button onclick="changeQuantity(${key}, ${value.quantity + 1})">+</button>
+                    <button class="change_Q_button" onclick="changeQuantity(${key}, ${value.quantity + 1})">+</button>
                 </div>`;
             listCart.appendChild(newDiv);
+            checkout.addEventListener('click',() =>{
+                window.location.href = "checkoutPage.html";
+            })
+        }else{
+                document.getElementById('checkout').disabled=true;
+
         }
     })
     netTotal.innerText = totalPrice.toLocaleString();

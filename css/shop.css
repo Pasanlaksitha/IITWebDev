@@ -145,3 +145,17 @@ header .shopping span {
 .listCard .count {
   margin: 0 10px;
 }
+button .change_Q_button {
+  background-color: white; /* Already set in your code */
+  border: 1px solid #ccc; /* Adds a border around the button */
+  border-radius: 4px; /* Rounds the corners of the button */
+  padding: 8px 12px; /* Adds padding inside the button for better clickability */
+  font-size: 14px; /* Adjusts the font size */
+  color: #333; /* Sets the text color */
+  cursor: pointer; /* Changes the cursor to a pointer when hovering over the button */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.change_Q_button:hover {
+  background-color: #f5f5f5; /* Changes the background color on hover */
+}
