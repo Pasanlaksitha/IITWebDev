@@ -50,18 +50,67 @@ let products = [
         name: 'PRODUCT NAME 6',
         assets: 'necklace.jpg',
         price: 2400
-    }
+    },
+    {
+    id: 7,
+    name: 'PRODUCT NAME 1',
+    assets: 'necklace.jpg',
+    price: 120000
+    },
+    {
+    id: 8,
+        name: 'PRODUCT NAME 2',
+    assets: 'necklace.jpg',
+    price: 1200
+},
+{
+    id: 9,
+        name: 'PRODUCT NAME 3',
+    assets: 'necklace.jpg',
+    price: 2200
+},
+{
+    id: 10,
+        name: 'PRODUCT NAME 4',
+    assets: 'necklace.jpg',
+    price: 1300
+},
+    {
+        id: 11,
+        name: 'PRODUCT NAME 3',
+        assets: 'necklace.jpg',
+        price: 2200
+    },
+    {
+        id: 12,
+        name: 'PRODUCT NAME 4',
+        assets: 'necklace.jpg',
+        price: 1300
+    },
 ];
 let listCarts  = [];
 function initApp(){
     products.forEach((value, key) =>{
         let newDiv = document.createElement('div');
         newDiv.classList.add('item');
+
         newDiv.innerHTML = `
-            <img src="assets/${value.assets}" alt="products">
-            <div class="title">${value.name}</div>
-            <div class="price">${value.price.toLocaleString()}</div>
-            <button onclick="addToCard(${key})">Add To Card</button>`;
+           
+            <div class="PImage">
+                 <img src="assets/${value.assets}" alt="products">            
+            </div>
+            <div class="title">
+            <h3> ${value.name}</h3>
+                   
+            </div>
+            <div class="price">
+                ${value.price.toLocaleString()}
+            </div>
+            <div class="addToCart">
+                 <button onclick="addToCard(${key})">Add To Card</button>
+            </div>
+           
+            `
         list.appendChild(newDiv);
     })
 }
@@ -88,9 +137,9 @@ function reloadCart(){
                 <div>${value.name}</div>
                 <div>${value.price.toLocaleString()}</div>
                 <div>
-                    <button class="change_Q_button" onclick="changeQuantity(${key}, ${value.quantity - 1})">-</button>
+                    <button class="button-1" onclick="changeQuantity(${key}, ${value.quantity - 1})">-</button>
                     <div class="count">${value.quantity}</div>
-                    <button class="change_Q_button" onclick="changeQuantity(${key}, ${value.quantity + 1})">+</button>
+                    <button class="button-1" onclick="changeQuantity(${key}, ${value.quantity + 1})">+</button>
                 </div>`;
             listCart.appendChild(newDiv);
             checkout.addEventListener('click',() =>{
