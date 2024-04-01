@@ -387,7 +387,6 @@ header#top nav ul li a.nav-cta {
     }
 
     h1.logo {
-        
     }
 
     header#top nav {
@@ -516,6 +515,7 @@ ul.card-list {
 
 ul.card-list li {
     display: inline-block;
+    float: left;
     width: 30.66%;
     background: #fff;
     padding: 60px 0;
@@ -524,7 +524,7 @@ ul.card-list li {
 }
 
 .card-section ul.card-list li a:hover {
-    background-color: rgba(0, 0, 0, 0);
+    /*background-color: rgba(0, 0, 0, 0); !* Dark background *!*/
     color: var(--button-text-color-green);
     text-shadow: 0 0 10px #5dae87, 0 0 20px #5dae87, 0 0 30px #5dae87;
     transition: background-color 0.8s ease, text-shadow 0.8s ease;
@@ -771,6 +771,7 @@ ul.team-list {
 
 ul.team-list li {
     display: inline-block;
+    float: left;
     width: 30.66%;
     background: #fff;
     padding: 60px 0;
@@ -805,6 +806,7 @@ ul.social-links {
 }
 
 ul.social-links li {
+    float: left;
     display: inline-block;
     margin: 0 5px;
     padding: 0;
@@ -865,6 +867,7 @@ ul.team-list li:last-of-type {
     }
 
     ul.social-links li {
+        float: left;
         display: inline-block;
         width: 48px;
         margin: 0 3px !important;
