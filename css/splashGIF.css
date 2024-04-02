@@ -24,12 +24,12 @@ body{
     width: 200px;
     height: 200px;
 }
-h1, h2, h3 {
+h1, h2, h3, h5 {
     color: white;
     text-align: center;
 }
-h1{
-    font-size: xxx-large;
+h5{
+    font-size: medium;
 }
 .project{
     padding: 90px;

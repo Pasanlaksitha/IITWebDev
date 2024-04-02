@@ -22,4 +22,5 @@ document.addEventListener('DOMContentLoaded', function() {
 
     animateLogo();
     hideSplash();
+
 });

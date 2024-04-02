@@ -1,12 +1,13 @@
 /*Splash screen*/
 .intro {
     position: fixed;
+    display: flex;
     z-index: 1;
     left: 0;
     top: 0;
     width: 100%;
     height: 100vh;
-    background-color: #7ce7b4;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(28, 59, 43, 1) 60%, rgba(28, 59, 43, 1) 100%);
     transition: 1s;
 }
 
@@ -15,11 +16,17 @@
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: #222e44;
-    font-family: Montserrat;
+    color: white;
+    font-family: Montserrat, Serif, serif;
     font-size: 50px;
 
 
+}
+.team{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .logo {
@@ -28,47 +35,51 @@
     bottom: -20px;
     opacity: 0;
 }
-
-
-.logo.active {
-    bottom: 0;
-    opacity: 1;
-    transition: ease-in-out 0.5s;
-
-}
-
-.logo.fade {
-    bottom: 150px;
-    opacity: 0;
-    transition: ease-in-out 0.5s;
-}
-
-.mission {
-    text-align: center;
-    font-size: medium;
-    font: 1em 'Montserrat', sans-serif;
-    padding-top: 30rem;
-    /*look this when going to mobile*/
-    padding-left: 10rem;
-    padding-right: 10rem;
-
-}
-
-
-.members li {
-    display: inline;
-    font-size: medium;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
 .members {
-    position: absolute;
-    /*top: 50%; /* Place the top edge of the element at the vertical center */
-    left: 50%; /* Place the left edge of the element at the horizontal center */
-    transform: translate(-50%, -50%); /* Move the element up and left by half of its own width and height */
-    text-align: center; /* Center the text inside the div */
+    position: relative;
+    display: inline-block;
+    bottom: -20px;
+    opacity: 0;
+    border-radius: 50%;
+    background-color: white;
 }
+.logo.active, .team.active {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.logo.fade, .team.fade {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+
+/*.logo.active {*/
+/*    position: relative;*/
+/*    display: inline-block;*/
+/*    bottom: -20px;*/
+/*    opacity: 0;*/
+
+/*}*/
+/*.team.active{*/
+/*    position: relative;*/
+/*    display: inline-block;*/
+/*    bottom: -20px;*/
+/*    opacity: 0;*/
+/*}*/
+
+
+/*.logo.fade {*/
+/*    bottom: 150px;*/
+/*    opacity: 0;*/
+/*    transition: ease-in-out 0.5s;*/
+/*}*/
+/*.team.fade{*/
+/*    bottom: 150px;*/
+/*    opacity: 0;*/
+/*    transition: ease-in-out 0.5s;*/
+/*}*/
+
 
 
 
