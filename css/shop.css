@@ -143,7 +143,7 @@ header .shopping span {
 .cart .closeShopping {
   position: absolute;
   bottom: 0;
-  background-color: yellow;
+  background-color: lightgreen;
   width: 100%;
   height: 50px;
   display: flex;
@@ -181,7 +181,10 @@ header .shopping span {
 .listCard .count {
   margin: 0 10px;
 }
-
+.proceedCheckout{
+  color: white;
+  background-color: darkgreen;
+}
 
 
 /*button .change_Q_button {*/
