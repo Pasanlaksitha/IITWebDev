@@ -264,10 +264,12 @@ a.button-2:hover {
 
 .team-member {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Adjust as needed */
-    gap: 20px; /* Spacing between thumbnails */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
 }
-
+#t_1{
+    background-image: url("assets/seaTurtles.jpg");
+}
 .thumbnail {
     position: relative;
     overflow: hidden;
@@ -291,7 +293,7 @@ a.button-2:hover {
     left: 0;
     background-color: #283618;
     color: #fff;
-    padding: 10px;
+    padding: 5px 10px;
     width: 100%;
     opacity: 0;
     transition: opacity 0.15s ease;
