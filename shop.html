@@ -1,37 +1,116 @@
 <!doctype html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <title>Shop</title>
+
     <link rel="stylesheet" href="css/shop.css" />
-  </head>
-  <body class="">
-    <div class="container">
-      <header>
-        <h1>Your Shopping Cart</h1>
+    <link rel="stylesheet" href="css/header_&_footer.css">
+
+    <style>
+        html{
+            scroll-behavior: smooth;
+            margin: -4% 0 0 0;
+            padding: 0;
+            display: block;
+        }
+        body{
+            margin: 0;
+            background-color: #ffffff;
+        }
+        header{
+            background-color: #1c3b2b;
+            padding: 60px 50px 50px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: static;!important;
+            width: 100%;
+            z-index: 100;
+        }
+        .cart h1 {
+            color: black;
+            font-weight: bold;
+            margin: 0 0 0 25%;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            font-family: "Montserrat", Helvetica, Arial, sans-serif, "Imprint MT Shadow";
+        }
+        .cart {
+            position: fixed;
+            top: 0;
+            left: 100%;
+            color: black;
+            width: 500px;
+            background-image: url("assets/leaf4.jpeg");
+            background-color: black;
+            height: 100vh;
+            transition: 0.5s;
+        }
+        footer{
+            position: static;
+            display: flex;
+        }
+
+    </style>
+
+</head>
+<body>
+<header>
+
+    <img src="assets/icon/Untitled-1-Recovered-Recovered.png" id="nav-logo" alt="">
+    <nav>
+        <a href="#home" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#project">Projects</a>
+        <a href="#blog">Blog</a>
         <div class="shopping">
-          <img src="assets/shoppingBag.jpg" alt="shopping" />
-          <span class="quantity">0</span>
+            <img src="assets/shopping-cart.png" alt="shopping" />
+            <span class="quantity">0</span>
 
         </div>
-      </header>
+    </nav>
+</header>
+<section>
+<div class="container">
+    <div class="list"></div>
+</div>
 
-      <div class="list"></div>
-    </div>
+<div class="cart">
+    <h1>Shopping Cart</h1>
+    <ul class="listCard"></ul>
 
-    <div class="cart">
-      <h1>Shopping Cart</h1>
-      <ul class="listCard"></ul>
-
-      <div class="checkout">
+    <div class="checkout">
         <div class="total">Net Total: 0</div>
-        <div class="proceedCheckout">
-          <a href="checkoutPage.html">CheckOut</a>
-        </div>
-      </div>
-      <div class="closeShopping">Close</div>
+        <button class="proceedCheckout" id="checkout">
+            <h2> CheckOut</h2>
+        </button>
     </div>
+    <div class="closeShopping">Close Cart</div>
+</div>
+</section>
+<footer>
+    <div class="wrapper_footer">
 
-    <script src="script/shop.js"></script>
-  </body>
+        <div class="footer-left">
+            <img src="assets/icon/ftguyfiu.jpg">
+            <img src="assets/icon/projectlogo.jpg">
+
+            <p class="footer-nav"><a href="index.html">HOME </a> | <a href="shop.html">SHOP</a> | <a href="volunteer.html">VOLUNTEER REGISTER</a> | <a href="#">GALLERY</a> | <a href="team.html">OUR TEAM</a></p>
+
+            <p class="footer-links"><a href="#">Contact Us</a> I <a href="#">Terms &amp; Conditions</a> I<a href="#">Privacy</a>
+            </p>
+        </div>
+        <div class="footer-right">
+            <a href="#" class="social facebook">Facebook</a>
+            <a href="#" class="social twitter">Facebook</a>
+            <a href="#" class="social google">Facebook</a>
+        </div>
+        <div class="clear"></div>
+    </div>
+</footer>
+
+<script src="js/shop.js"></script>
+</body>
 </html>
