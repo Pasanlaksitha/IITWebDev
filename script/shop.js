@@ -17,74 +17,74 @@ closeCart.addEventListener('click', ()=>{21021998
 let products = [
     {
         id: 1,
-        name: 'PRODUCT NAME 1',
-        assets: 'necklace.jpg',
+        name: 'Project Gaia Cap',
+        assets: 'cap.jpg',
         price: 120000
     },
     {
         id: 2,
-        name: 'PRODUCT NAME 2',
-        assets: 'necklace.jpg',
+        name: 'Deer Print Mug',
+        assets: 'deerprintMug.jpeg',
         price: 1200
     },
     {
         id: 3,
-        name: 'PRODUCT NAME 3',
-        assets: 'necklace.jpg',
+        name: 'Husk Print Mug',
+        assets:'mugE.jpeg',
         price: 2200
     },
     {
         id: 4,
-        name: 'PRODUCT NAME 4',
-        assets: 'necklace.jpg',
+        name: 'Natural Stones Bracelet(V)',
+        assets: 'blueBracelet.jpeg',
         price: 1300
     },
     {
         id: 5,
-        name: 'PRODUCT NAME 5',
-        assets: 'necklace.jpg',
+        name: "Women's T Shirt-White",
+        assets: 'WomenTshirt.jpeg',
         price: 3500
     },
     {
         id: 6,
-        name: 'PRODUCT NAME 6',
-        assets: 'necklace.jpg',
+        name: "Women's T shirt-Cream",
+        assets: 'womenTshirt2.jpg',
         price: 2400
     },
     {
     id: 7,
-    name: 'PRODUCT NAME 1',
-    assets: 'necklace.jpg',
+    name: "Men's T shirt-Green",
+    assets: 'menTshirt.jpg',
     price: 120000
     },
     {
     id: 8,
-        name: 'PRODUCT NAME 2',
-    assets: 'necklace.jpg',
+        name: "Men's T shirt-Blue",
+    assets: 'menTshirt2.jpg',
     price: 1200
 },
 {
     id: 9,
-        name: 'PRODUCT NAME 3',
-    assets: 'necklace.jpg',
+    name: 'Turtle Printed Sustainable Bottle',
+    assets: 'turtleBottle.jpg',
     price: 2200
 },
 {
     id: 10,
-        name: 'PRODUCT NAME 4',
-    assets: 'necklace.jpg',
+        name: 'Lepoard Printed Sustainable Bottle',
+    assets: 'leapordBottle.jpeg',
     price: 1300
 },
     {
         id: 11,
-        name: 'PRODUCT NAME 3',
-        assets: 'necklace.jpg',
+        name: 'Clay Beads Necklace(V)',
+        assets: 'clayBeadNecklace.jpeg',
         price: 2200
     },
     {
         id: 12,
-        name: 'PRODUCT NAME 4',
-        assets: 'necklace.jpg',
+        name: 'Clay NeckLace(V)',
+        assets: 'clayNecklace.jpeg',
         price: 1300
     },
 ];

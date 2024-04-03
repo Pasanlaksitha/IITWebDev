@@ -5,29 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Checkout Page</title>
   <link rel="stylesheet" href="css/checkoutPage.css">
+
+  <style>
+    body{
+      background: url("assets/leaves.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+    }
+
+  </style>
 </head>
 <body>
 
-<div class="container">
   <div class="checkoutLayout">
-    <div class="returnCart">
-      <a href="shop.html">keep shopping</a>
-
-      <div class="list">
-        <div class="item">
-
-
-        </div>
-
-      </div>
-    </div>
-
-
+    <a href="shop.html">keep shopping</a>
     <div class="right">
       <h1>Checkout</h1>
-
       <div class="form">
-
         <fieldset>
           <legend>Personal Details</legend>
           <div class="group">
@@ -68,28 +63,17 @@
         </fieldset>
         <fieldset>
           <legend>Payment Option</legend>
-          <div class="group" id="radio">
+          <div class="group" >
             <label for="payment1">VISA Card</label>
-            <input type="radio" id="payment1">
+            <img src="assets/Visa-logo.jpg" alt="VISA Card">
+            <input type="radio" id="payment1" name="payment">
             <label for="payment2">Master Card</label>
-            <input type="radio" id="payment2">
+            <img src="assets/mastercard (1).jpg" alt="MasterCard">
+            <input type="radio" id="payment2"  name="payment">
             <label for="payment3">COD</label>
-            <input type="radio" id="payment3">
+            <input type="radio" id="payment3"  name="payment">
           </div>
 
-        </fieldset>
-        <fieldset>
-          <legend>Order Details</legend>
-          <div class="return">
-            <div class="row">
-              <div>Total Quantity</div>
-              <div class="totalQuantity">6</div>
-            </div>
-            <div class="row">
-              <div>Total Price</div>
-              <div class="totalPrice">60</div>
-            </div>
-          </div>
         </fieldset>
         <button class="buttonCheckout">CHECKOUT</button>
       </div>

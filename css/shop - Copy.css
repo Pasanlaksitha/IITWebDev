@@ -1,4 +1,5 @@
 body{
+  background-color: white;
   margin: 0;
   display: block;
   justify-content: center;
@@ -66,10 +67,10 @@ header .shopping span {
 
 .list .title h3{
   text-align: center;
-  font-family: "Montserrat", Helvetica, Arial, sans-serif;
+  font-family: "Arial Rounded MT Bold", system-ui;
   margin: 0px;
   color: black;
-  height: 50px;
+  height: 40px;
 }
 .list .PImage{
   border: none;
@@ -117,39 +118,34 @@ header .shopping span {
   height: 80px;
   display: flex;
   align-items: center;
-  font-family: "Montserrat", Helvetica, Arial, sans-serif, "Imprint MT Shadow";
 }
 .cart .checkout {
   position: absolute;
   bottom: 40px;
   width: 100%;
   display: grid;
-  /*grid-template-columns: repeat(2, 1fr);*/
+  grid-template-columns: repeat(2, 1fr);
 }
 .cart .checkout div {
   background-color: aliceblue;
   width: 100%;
-  height: 50px;
+  height: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-weight: bold;
   cursor: pointer;
 }
-.cart .checkout .proceedCheckout {
-  background-color: #498600;
-  font-family: "Arial Rounded MT Bold", serif;
+.cart .checkout div:nth-child(2) {
+  background-color: darkolivegreen;
   color: white;
-  font-weight: bold;
-  height: 50px;
-
 }
 .cart .closeShopping {
   position: absolute;
   bottom: 0;
-  background-color: yellow;
+  background-color: lightgreen;
   width: 100%;
-  height: 40px;
+  height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -185,7 +181,10 @@ header .shopping span {
 .listCard .count {
   margin: 0 10px;
 }
-
+.proceedCheckout{
+  color: white;
+  background-color: darkgreen;
+}
 
 
 /*button .change_Q_button {*/
