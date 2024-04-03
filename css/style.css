@@ -8,7 +8,7 @@
 
     --button-color: #f1f1f1;
     --button-color-hover: #f1f1f1;
-    --button-text-color-green: #5fa284;
+    --button-text-color-green: #5a7240;
     --button-text-color-white: #fcf7f7;
     --button-text-color-black: #000000;
 
@@ -34,48 +34,18 @@ header {
     justify-content: space-between;
     align-items: center;
     height: 100px;
-    padding: 0 5%;
+    padding: 0 4%;
     position: fixed;
     width: 100%;
     z-index: 100;
 
 }
 
-header nav {
-    display: flex;
-    gap: 30px;
-}
-
-header nav a {
-    text-decoration: none;
-    font-size: 20px;
-    font-weight: 600;
-    padding: 8px 16px;
-    border-radius: 99px;
-    transition: 0.3s;
-    color: var(--button-text-color-white);
-}
-
-header nav a.active {
-    background: var(--button-text-color-white);
-    color: var(--button-text-color-green);
-}
-
-header nav a:hover {
-    background: #9dffd3;
-}
-
-header nav:hover > a:not(:hover) {
-    background: none;
-}
-
-
-
 
 .home {
     display: flex;
     height: 100dvh;
-    background: linear-gradient(to top, #000000 30%, #5dae87);
+    background: linear-gradient(to top, #000000 30%, #5a7240);
     position: relative;
     overflow: hidden;
 }
@@ -185,7 +155,7 @@ p.subtitle {
     text-transform: uppercase;
     font-weight: 700;
     letter-spacing: 0.03em;
-    color: #5dae87;
+    color: #5a7240;
     text-align: center;
 }
 
@@ -202,12 +172,12 @@ ul, li {
 
 a {
     text-decoration: none;
-    color: #5dae87;
+    color: #5a7240;
 }
 
 a:hover {
     text-decoration: none;
-    color: #42966e;
+    color: #5a7240;
 }
 
 ::selection {
@@ -372,8 +342,8 @@ header#top nav ul li a:hover {
 }
 
 header#top nav ul li a.nav-cta {
-    color: #5dae87;
-    border: 2px solid #5dae87;
+    color: #5a7240;
+    border: 2px solid #5a7240;
     border-radius: 999px;
     margin-top: -2px;
     margin-left: 10px;
@@ -503,7 +473,7 @@ header#top nav ul li a.nav-cta {
 }
 
 .card-section p.subtitle {
-    color: #5dae87;
+    color: #5a7240;
     font-size: 17px;
 }
 
@@ -526,7 +496,7 @@ ul.card-list li {
 .card-section ul.card-list li a:hover {
     /*background-color: rgba(0, 0, 0, 0); !* Dark background *!*/
     color: var(--button-text-color-green);
-    text-shadow: 0 0 10px #5dae87, 0 0 20px #5dae87, 0 0 30px #5dae87;
+    text-shadow: 0 0 10px #5a7240, 0 0 20px #5a7240, 0 0 30px #5a7240;
     transition: background-color 0.8s ease, text-shadow 0.8s ease;
 }
 
@@ -550,6 +520,8 @@ ul.card-list li .image-container {
 
 ul.card-list li .image-container img {
     position: absolute;
+    width: 500px;
+    height: 500px;
     top: 28px;
     left: 28px;
 }
@@ -559,15 +531,20 @@ ul.card-list li p {
     margin: 20px auto 40px auto;
 }
 
-ul.card-list li a {
+ul.card-list li h5 {
+    color: #1d4408;
+    width: 100%;
+    margin: 20px auto 40px auto;
+}
+.txt_link {
     font-family: 'Arimo', sans-serif;
     text-transform: uppercase;
     font-weight: 700;
-    color: #5dae87;
+    color: #5a7240;
 }
 
 ul.card-list li a:hover {
-    color: #42966e;
+    color: #5a7240;
 }
 
 ul.card-list li:first-of-type {
@@ -585,6 +562,7 @@ ul.card-list li:last-of-type {
         margin: 20px 0 !important;
     }
 }
+
 
 
 /*Text Section*/
@@ -705,7 +683,7 @@ ul.list-checkmarks li {
 /*Features Section*/
 
 .features-section {
-    background: #5dae87;
+    background: #5a7240;
     padding: 100px 0;
     color: #fff;
 }
@@ -760,7 +738,7 @@ ul.list-checkmarks li {
 }
 
 .team-section p.subtitle {
-    color: #5dae87;
+    color: #5a7240;
     font-size: 17px;
 }
 
@@ -824,7 +802,7 @@ ul.social-links li a {
 }
 
 ul.social-links li a:hover {
-    background-color: #5dae87;
+    background-color: #5a7240;
 }
 
 ul.social-links li a.facebook {
@@ -844,7 +822,7 @@ ul.social-links li:hover {
 }
 
 ul.team-list li a:hover {
-    color: #42966e;
+    color: #5a7240;
 }
 
 ul.team-list li:first-of-type {
@@ -901,7 +879,7 @@ ul.team-list li:last-of-type {
 
 .form-section input[type=text],
 .form-section input[type=email] {
-    background: #5dae87;
+    background: #5a7240;
     color: #fff;
     color: rgb(248, 248, 248);
     border: 2px solid #eee;
@@ -920,7 +898,7 @@ input[type=email]::placeholder {
 
 .form-section button {
     background: #fff;
-    color: #5dae87;
+    color: #5a7240;
     margin: 10px 5px;
 }
 
@@ -944,122 +922,3 @@ input[type=email]::placeholder {
 /*additionally added widghts to the css file*/
 
 
-/*Footer*/
-
-footer {
-    background: var(--background-colorG);
-    background: var(--background-liner-gradientGB);
-    margin-top: 0px;
-    color: #fff;
-    text-align: center;
-    padding: 60px 0;
-}
-
-footer a.logo {
-    display: block;
-    float: left;
-    color: #fff;
-    text-indent: -4999px;
-    background: url(../assets/icon/logo2.png) no-repeat;
-    margin: 0 0 0 40px;
-    padding: 0 0 40px 0;
-    width: 56px;
-    height: 74px;
-}
-
-footer .footer-left {
-    float: left;
-    text-align: left;
-    margin-top: 5px;
-    margin-left: 50px;
-}
-
-footer .footer-right {
-    float: right;
-    margin-top: 20px;
-    text-align: right;
-}
-
-footer p {
-    font-size: 17px;
-    margin: 5px;
-}
-
-footer p.copyright {
-    font-family: 'Arimo', sans-serif;
-    text-transform: uppercase;
-    font-weight: 700;
-}
-
-footer .footer-links {
-    color: #777;
-}
-
-footer .footer-links a {
-    color: #777;
-    margin: 0 20px;
-}
-
-footer .footer-links a:hover {
-    color: #5dae87;
-}
-
-footer .footer-links a:first-of-type {
-    margin: 0 20px 0 0;
-}
-
-footer .footer-right a.social {
-    display: inline-block;
-    width: 44px;
-    height: 44px;
-    background: no-repeat center;
-    text-indent: -4999px;
-    overflow: hidden;
-    text-align: left;
-    background-color: var(--button-text-color-black);
-    border-radius: 999px;
-    margin-left: 10px;
-    transition: background-color 0.3s ease;
-}
-
-
-footer .footer-right a.social:hover {
-    background-color: var(--button-text-color-green);
-}
-
-footer a.social.facebook {
-    background-image: url(../assets/icon/social-facebook.png);
-}
-
-footer a.social.twitter {
-    background-image: url(../assets/icon/social-twitter.png);
-}
-
-footer a.social.google {
-    background-image: url(../assets/icon/social-google.png);
-}
-
-@media only screen and (max-width: 960px) {
-    footer {
-        padding: 30px 0;
-    }
-
-    footer .footer-left, footer .footer-right, footer a.logo {
-        float: none;
-        text-align: center;
-        margin: 0 auto;
-    }
-
-    footer .footer-left {
-        margin-bottom: 20px;
-    }
-
-    footer a.logo {
-        margin: 10px auto 40px auto;
-    }
-
-    footer .footer-links a {
-        margin: 0 5px !important;
-        font-size: 14px;
-    }
-}

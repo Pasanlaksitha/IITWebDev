@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate to Charity</title>
+    <link rel="stylesheet" href="css/donation.css">
+    <link rel="stylesheet" href="css/header_&_footer.css">
+
+</head>
+
+<body>
+<header>
+
+    <img src="assets/icon/Untitled-1-Recovered-Recovered.png" id="nav-logo" alt="">
+    <nav>
+        <a href="index.html" class="active">Home</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#project">Projects</a>
+        <a href="index.html#blog">Blog</a>
+    </nav>
+</header>
+
+<main>
+    <section class="donation-form">
+        <h2>Make a Donation</h2>
+        <form action="#" method="POST">
+            <!-- Donation Amount -->
+            <label for="donation-amount">Select Donation Amount:</label>
+            <select id="donation-amount" name="donation-amount">
+                <option value="10">$10</option>
+                <option value="20">$20</option>
+                <option value="50">$50</option>
+                <option value="100">$100</option>
+                <!-- Add more options as needed -->
+            </select>
+
+            <!-- Contact Information -->
+            <h3>Contact Information</h3>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone">
+
+            <!-- Donation Purpose -->
+            <h3>Donation Purpose</h3>
+            <label for="purpose">Select Purpose:</label>
+            <select id="purpose" name="purpose">
+                <option value="general">General Donation</option>
+                <option value="specific">Specific Cause</option>
+            </select>
+
+            <!-- Message -->
+            <label for="message">Message (optional):</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+
+            <!-- Proceed to Payment -->
+            <div class="proceed-to-pay">
+                <button type="submit">Proceed to Payment</button>
+            </div>
+        </form>
+        <div id="thank-you" class="hidden">
+            <h2>Thank You for Your Donation!</h2>
+            <p>Your support means a lot to us.</p>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="wrapper_footer">
+
+        <div class="footer-left">
+            <img src="assets/icon/ftguyfiu.jpg">
+            <img src="assets/icon/projectlogo.jpg">
+
+            <p class="footer-nav"><a href="index.html">HOME </a> | <a href="shop.html">SHOP</a> | <a href="volunteer.html">VOLUNTEER REGISTER</a> | <a href="#">GALLERY</a> | <a href="team.html">OUR TEAM</a></p>
+
+            <p class="footer-links"><a href="#">Contact Us</a> I <a href="#">Terms &amp; Conditions</a> I<a href="#">Privacy</a>
+            </p>
+        </div>
+        <div class="footer-right">
+            <a href="#" class="social facebook">Facebook</a>
+            <a href="#" class="social twitter">Facebook</a>
+            <a href="#" class="social google">Facebook</a>
+        </div>
+        <div class="clear"></div>
+    </div>
+</footer>
+<script src="js/donation.js"></script>
+</body>
+
+</html>

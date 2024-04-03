@@ -182,11 +182,14 @@ const step2 = {
 
     askSkippedQuestions: function() {
         if (this.skippedQuestions.length > 0) {
-            const nextSkippedQuestionId = this.skippedQuestions.shift();
+            const nextSkippedQuestionId = this.skippedQuestions.shift(); // Get the next skipped question
             const skippedQuestionElement = document.getElementById(`question2_${nextSkippedQuestionId}`);
+            const buttonContainer = skippedQuestionElement.querySelector('.button-container');
             if (skippedQuestionElement) {
-                skippedQuestionElement.classList.add('active');
+                buttonContainer.style.display = 'none';
+                skippedQuestionElement.classList.add('active'); // Show the skipped question
             }
+            // If there are more skipped questions, ask them again
             if (this.skippedQuestions.length > 0) {
                 this.askSkippedQuestions();
             }
@@ -273,11 +276,14 @@ const step3 = {
 
     askSkippedQuestions: function() {
         if (this.skippedQuestions.length > 0) {
-            const nextSkippedQuestionId = this.skippedQuestions.shift();
+            const nextSkippedQuestionId = this.skippedQuestions.shift(); // Get the next skipped question
             const skippedQuestionElement = document.getElementById(`question3_${nextSkippedQuestionId}`);
+            const buttonContainer = skippedQuestionElement.querySelector('.button-container');
             if (skippedQuestionElement) {
-                skippedQuestionElement.classList.add('active');
+                buttonContainer.style.display = 'none';
+                skippedQuestionElement.classList.add('active'); // Show the skipped question
             }
+            // If there are more skipped questions, ask them again
             if (this.skippedQuestions.length > 0) {
                 this.askSkippedQuestions();
             }
@@ -314,8 +320,6 @@ const step3 = {
     `;
     },
 
-
-
     showSummary: function() {
         this.updateSummary();
         if (this.skippedQuestions.length > 0) {
@@ -343,45 +347,48 @@ const step4 = {
 
     nextQuestion: function() {
         const currentQuestionElement = document.getElementById(`question4_${this.currentQuestion}`);
-        const inputField = currentQuestionElement.querySelector('input[type="text"], input[type="number"]');
+        const inputField = currentQuestionElement.querySelector('input[type="text"], input[type="number"], textarea, select');
 
         if (inputField && inputField.value === "") {
             this.skippedQuestions.push(this.currentQuestion);
             const skipConfirmation = confirm("The current question is unanswered. Do you want to skip it?");
             if (skipConfirmation) {
-                this.moveToNextQuestion();
+                currentQuestionElement.classList.remove('active');
+                if (this.currentQuestion <= 5) {
+                    const nextQuestionElement = document.getElementById(`question4_${this.currentQuestion}`);
+                    nextQuestionElement.classList.add('active');
+                } else {
+                    this.showSummary();
+                }
             }
         } else {
-            this.moveToNextQuestion();
-        }
-    },
-
-    moveToNextQuestion: function() {
-        const currentQuestionElement = document.getElementById(`question4_${this.currentQuestion}`);
-        currentQuestionElement.classList.remove('active');
-        this.currentQuestion++;
-        this.updateQuestionCounter();
-
-        if (this.currentQuestion <= 5) {
-            const nextQuestionElement = document.getElementById(`question4_${this.currentQuestion}`);
-            nextQuestionElement.classList.add('active');
-        } else {
-            this.showSummary();
+            currentQuestionElement.classList.remove('active');
+            this.currentQuestion++;
+            this.updateQuestionCounter();
+            if (this.currentQuestion <= 5) {
+                const nextQuestionElement = document.getElementById(`question4_${this.currentQuestion}`);
+                nextQuestionElement.classList.add('active');
+            } else {
+                this.showSummary();
+            }
         }
     },
 
     skipQuestion: function() {
         this.skippedQuestions.push(this.currentQuestion);
-        this.moveToNextQuestion();
+        this.nextQuestion();
     },
 
     askSkippedQuestions: function() {
         if (this.skippedQuestions.length > 0) {
-            const nextSkippedQuestionId = this.skippedQuestions.shift();
+            const nextSkippedQuestionId = this.skippedQuestions.shift(); // Get the next skipped question
             const skippedQuestionElement = document.getElementById(`question4_${nextSkippedQuestionId}`);
+            const buttonContainer = skippedQuestionElement.querySelector('.button-container');
             if (skippedQuestionElement) {
-                skippedQuestionElement.classList.add('active');
+                buttonContainer.style.display = 'none';
+                skippedQuestionElement.classList.add('active'); // Show the skipped question
             }
+            // If there are more skipped questions, ask them again
             if (this.skippedQuestions.length > 0) {
                 this.askSkippedQuestions();
             }
@@ -417,10 +424,12 @@ const step4 = {
         }
         document.getElementById('summary-4').classList.add('active');
     },
+
     nextstep: function () {
         if (this.skippedQuestions.length > 0) {
             this.askSkippedQuestions();
         } else {
+            // Modify the following lines according to your requirements for proceeding to the next step
             step4Container.style.display = 'none';
             main_summary.combineSummaries();
             completed_steps++;
@@ -429,6 +438,8 @@ const step4 = {
         }
     }
 };
+
+
 
 const main_summary = {
     combineSummaries: function() {
