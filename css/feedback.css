@@ -3,29 +3,63 @@
 body{
     background-image: url("assets/parallax/sky.png");
     background-color: #222e44;
+    color: black;
 }
 
-/*.body_feedback {*/
-/*    text-align: center;*/
-/*    background-color: #000000;*/
+.body_feedback{
+    text-align: center;
+    color: black;
+    background-color: #ffffff;
+    background-image: url("assets/parallax/sky.png");
+    /*font-family: "Poppins", sans-serif;*/
+    /*color: #000000;*/
+}
+
+
+.body_feedback h2{
+    font-size: 2.5rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: black;
+}
+
+
+
+
+.split-form {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.form-labels {
+    width: 45%;
+}
+
+.form-inputs {
+    width: 45%;
+}
+
+.form-preview {
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+
+
+
+/*body {*/
 /*    background-image: url("assets/parallax/sky.png");*/
-/*    !*font-family: "Poppins", sans-serif;*!*/
-/*    !*color: #000000;*!*/
+/*    background-color: #222e44; !* Fallback color in case the image doesn't load *!*/
+/*    background-size: cover; !* Cover the entire body *!*/
+/*    background-repeat: no-repeat; !* Prevent the image from repeating *!*/
 /*}*/
 
 
-
-
-body {
-    background-image: url("assets/parallax/sky.png");
-    background-color: #222e44; /* Fallback color in case the image doesn't load */
-    background-size: cover; /* Cover the entire body */
-    background-repeat: no-repeat; /* Prevent the image from repeating */
-}
-
-
 .title_feedback {
-    color: #fff;
+    color: #000000;
 }
 
 .feedback {
@@ -49,7 +83,7 @@ body {
 }
 
 .submit-button_feedback {
-    background-color: #007bff; /* Blue submit button */
+    background-color: #5dae87; /* Blue submit button */
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
@@ -61,7 +95,7 @@ body {
 }
 
 .submit-button_feedback:hover {
-    background-color: #0056b3; /* Darker blue on hover */
+    background-color: #5dae87; /* Darker blue on hover */
 }
 
 .label_feedback {
@@ -98,7 +132,7 @@ body {
 /* Styling for labels */
 .label-feedback {
     display: inline-block;
-    background-color: #007bff; /* Blue color for labels */
+    background-color: #5dae87; /* Blue color for labels */
     color: rgb(255, 255, 255);
     padding: 10px 20px;
     margin: 5px;
@@ -109,10 +143,10 @@ body {
 
 /* Hover effect for labels */
 .label-feedback:hover {
-    background-color: #0056b3; /* Darker blue on hover */
+    background-color: #5dae87; /* Darker blue on hover */
 }
 
 .radio-feedback:checked + .label-feedback {
-    background-color: #00356d;
+    background-color: #98de28;
     color: white; /* Change text color to white */
 }

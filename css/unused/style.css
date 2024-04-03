@@ -1032,7 +1032,7 @@ footer .footer-links a:first-of-type {
     margin: 0 20px 0 0;
 }
 
-footer .footer-right a.social {
+footer .footer-right a.logo {
     display: inline-block;
     width: 44px;
     height: 44px;
@@ -1045,19 +1045,19 @@ footer .footer-right a.social {
     margin-left: 10px;
 }
 
-footer .footer-right a.social:hover {
+footer .footer-right a.logo:hover {
     background-color: #5dae87;
 }
 
-footer a.social.facebook {
+footer a.logo.facebook {
     background-image: url(../assets/social-facebook.png);
 }
 
-footer a.social.twitter {
+footer a.logo.twitter {
     background-image: url(../assets/social-twitter.png);
 }
 
-footer a.social.google {
+footer a.logo.google {
     background-image: url(../assets/social-google.png);
 }
 

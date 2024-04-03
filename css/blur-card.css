@@ -40,7 +40,7 @@
     width: 100%;
 }
 
-.blurcard__background {
+.blurcard-background {
     background-size: cover;
     background-position: center;
     border-radius: 24px;
@@ -55,22 +55,22 @@
     transition: filter 200ms linear, transform 200ms linear;
 }
 
-.blurcard:hover .blurcard__background {
+.blurcard:hover .blurcard-background {
     transform: scale(1.05) translateZ(0);
 }
 
-.blurcard-grid:hover > .blurcard:not(:hover) .blurcard__background {
+.blurcard-grid:hover > .blurcard:not(:hover) .blurcard-background {
     filter: brightness(0.5) saturate(0) contrast(1.2) blur(20px);
 }
 
-.blurcard__content {
+.blurcard-content {
     left: 0;
     padding: 24px;
     position: absolute;
     top: 0;
 }
 
-.blurcard__category {
+.blurcard-category {
     color: rgba(255, 255, 255, 0.9);
     font-size: 1rem;
     font-weight: 700;
@@ -78,7 +78,7 @@
     text-transform: uppercase;
 }
 
-.blurcard__heading {
+.blurcard-heading {
     color: rgba(255, 255, 255, 0.9);
     font-size: 1.9rem;
     text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
