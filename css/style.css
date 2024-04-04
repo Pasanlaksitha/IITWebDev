@@ -111,7 +111,7 @@ header nav:hover > a:not(:hover) {
     /*background: #000000;*/
     color: var(--text-colorW);
     position: relative;
-    z-index: 100;
+    z-index: 1;
     background: var(--background-colorB);
     background: var(--background-liner-gradientBG);
 }
