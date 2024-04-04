@@ -69,6 +69,11 @@ header nav:hover > a:not(:hover) {
     background: none;
 }
 
+#nav-logo{
+    width: 200px;
+    height: 200px;
+}
+
 .spacer {
     height: 120px;
 }
@@ -106,7 +111,7 @@ header nav:hover > a:not(:hover) {
     /*background: #000000;*/
     color: var(--text-colorW);
     position: relative;
-    z-index: 100;
+    z-index: 1;
     background: var(--background-colorB);
     background: var(--background-liner-gradientBG);
 }
@@ -519,6 +524,11 @@ ul.card-list {
 
 }
 
+ul.card-list h5 {
+    color: #5dae87;
+    font-size: 24px;
+    margin: 0 0 20px 0;
+}
 ul.card-list li {
     display: inline-block;
     float: left;
@@ -852,6 +862,8 @@ input[type=email]::placeholder {
 /*additionally added widghts to the css file*/
 
 
+/*Footer*/
+
 footer {
     background: var(--background-colorG);
     background: var(--background-liner-gradientGB);
@@ -934,6 +946,19 @@ footer .footer-links a:first-of-type {
     margin: 0 20px 0 0;
 }
 
+footer .footer-right a.social {
+    display: inline-block;
+    width: 44px;
+    height: 44px;
+    background: no-repeat center;
+    text-indent: -4999px;
+    overflow: hidden;
+    text-align: left;
+
+    border-radius: 999px;
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
+}
 footer .footer-left ul {
 
     padding: 10px 0 200px 50px;
@@ -946,6 +971,22 @@ footer .footer-left ul li {
 
     color: white;
     display: inline-block;
+}
+footer .footer-right a.social:hover {
+    background-color: var(--button-text-color-green);
+}
+
+
+footer a.social.facebook {
+    background-image: url(../assets/icon/social-facebook.png);
+}
+
+footer a.social.twitter {
+    background-image: url(../assets/icon/social-twitter.png);
+}
+
+footer a.social.google {
+    background-image: url(../assets/icon/social-google.png);
 }
 
 @media only screen and (max-width: 960px) {
@@ -963,6 +1004,9 @@ footer .footer-left ul li {
         margin-bottom: 20px;
     }
 
+    footer a.logo {
+        margin: 10px auto 40px auto;
+    }
 
     footer .footer-links a {
         margin: 0 5px !important;
@@ -973,6 +1017,5 @@ footer .footer-left ul li {
         font-size: 14px;
     }
 }
-
 
 
