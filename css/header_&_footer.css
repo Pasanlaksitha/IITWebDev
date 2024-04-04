@@ -8,7 +8,7 @@
     --button-color: #f1f1f1;
     --button-color-hover: #f1f1f1;
     --button-text-color-green: #5a7240;
-    --button-text-color-white: #fcf7f7;
+    --button-text-color-white: #ffffff;
     --button-text-color-black: #000000;
 
     --background-liner-gradientBG: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 40%, rgba(28, 59, 43, 1) 100%);
@@ -67,7 +67,7 @@ header nav a.active {
 }
 
 header nav a:hover {
-    background: #5a7240;
+    background: #ffffff;
 }
 
 header nav:hover > a:not(:hover) {

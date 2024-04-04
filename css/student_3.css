@@ -5,11 +5,12 @@ body {
 }
 
 .student-3 {
-    background-color: #f3f3f3;
+    background-color: #1f2b13;
     padding: 50px;
     margin: 50px;
     border-radius: 10px;
     box-shadow: 0 10px 20px 0 rgba(7, 41, 19, .1), 0 0 20px 0 rgba(7, 41, 19, .1);
+
 }/* Main container */
 .questionnaire-container {
     max-width: 600px;
@@ -226,11 +227,12 @@ a.button-2:hover {
     width: 100%;
     background-color: #f3f3f3;
     border-radius: 5px;
-    margin: 25px 50px 25px 50px;
+
 }
 
 .progress-bar {
     height: 20px;
+    margin: 0 0 0 25px;
     background-color: #47ff58;
     width: 0;
     border-radius: 10px;
@@ -318,7 +320,7 @@ a.button-2:hover {
 .s3{
     text-align: center;
     font-size: 25px;
-    color: #1c3b2b;
+    color: #ffffff;
     font-weight: bold;
 }
 .s4{

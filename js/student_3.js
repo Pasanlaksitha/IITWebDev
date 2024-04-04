@@ -148,13 +148,15 @@ const step2 = {
 
     nextQuestion: function() {
         const currentQuestionElement = document.getElementById(`question2_${this.currentQuestion}`);
-        const inputField = currentQuestionElement.querySelector('input[type="text"], input[type="number"], input[type="radio"]:checked');
+        const inputField = currentQuestionElement.querySelector('input[type="text"], input[type="email"]');
 
         if (inputField && inputField.value === "") {
             this.skippedQuestions.push(this.currentQuestion);
             const skipConfirmation = confirm("The current question is unanswered. Do you want to skip it?");
             if (skipConfirmation) {
                 currentQuestionElement.classList.remove('active');
+                this.currentQuestion++;
+                this.updateQuestionCounter();
                 if (this.currentQuestion <= 3) {
                     const nextQuestionElement = document.getElementById(`question2_${this.currentQuestion}`);
                     nextQuestionElement.classList.add('active');
@@ -244,11 +246,13 @@ const step3 = {
         const currentQuestionElement = document.getElementById(`question3_${this.currentQuestion}`);
         const inputField = currentQuestionElement.querySelector('input[type="text"], input[type="number"], textarea, select');
 
-        if (inputField && inputField.value === "") {
+        if (inputField && (inputField.value === "" || (inputField.tagName.toLowerCase() === "textarea" && inputField.value === ""))){
             this.skippedQuestions.push(this.currentQuestion);
             const skipConfirmation = confirm("The current question is unanswered. Do you want to skip it?");
             if (skipConfirmation) {
                 currentQuestionElement.classList.remove('active');
+                this.currentQuestion++;
+                this.updateQuestionCounter();
                 if (this.currentQuestion <= 4) {
                     const nextQuestionElement = document.getElementById(`question3_${this.currentQuestion}`);
                     nextQuestionElement.classList.add('active');
@@ -346,14 +350,17 @@ const step4 = {
     completed: false,
 
     nextQuestion: function() {
-        const currentQuestionElement = document.getElementById(`question4_${this.currentQuestion}`);
-        const inputField = currentQuestionElement.querySelector('input[type="text"], input[type="number"], textarea, select');
 
-        if (inputField && inputField.value === "") {
+        const currentQuestionElement = document.getElementById(`question4_${this.currentQuestion}`);
+        const inputField = currentQuestionElement.querySelector('input[type="text"], input[type="number"]');
+
+        if (inputField && (inputField.value === "")){
             this.skippedQuestions.push(this.currentQuestion);
             const skipConfirmation = confirm("The current question is unanswered. Do you want to skip it?");
             if (skipConfirmation) {
                 currentQuestionElement.classList.remove('active');
+                this.currentQuestion++;
+                this.updateQuestionCounter();
                 if (this.currentQuestion <= 5) {
                     const nextQuestionElement = document.getElementById(`question4_${this.currentQuestion}`);
                     nextQuestionElement.classList.add('active');
@@ -449,13 +456,13 @@ const main_summary = {
         const summary4 = document.getElementById('answers_4').innerHTML;
 
         const combinedSummary = `
-            <h2>Step 1 Summary</h2>
+            <p class="s4">Step 1 Summary</p>
             ${summary1}
-            <h2>Step 2 Summary</h2>
+            <p class="s4">Step 2 Summary</p>
             ${summary2}
-            <h2>Step 3 Summary</h2>
+            <p class="s4">Step 3 Summary</p>
             ${summary3}
-            <h2>Step 4 Summary</h2>
+            <p class="s4">Step 4 Summary</p>
             ${summary4}
         `;
         document.getElementById('answers_all').innerHTML = combinedSummary;
