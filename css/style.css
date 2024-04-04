@@ -69,6 +69,11 @@ header nav:hover > a:not(:hover) {
     background: none;
 }
 
+#nav-logo{
+    width: 200px;
+    height: 200px;
+}
+
 .spacer {
     height: 120px;
 }
