@@ -101,14 +101,14 @@ header nav:hover > a:not(:hover) {
     transform: translate(-50%, -50%);
     color: var(--text-colorW);
     font-size: 90px;
-    text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
 }
 
 
 
 .about {
     padding: 50px;
-    /*background: #000000;*/
+
     color: var(--text-colorW);
     position: relative;
     z-index: 1;
@@ -122,7 +122,7 @@ header nav:hover > a:not(:hover) {
 
 @media (max-width: 768px) {
     header {
-        height: 80px; /* Adjust header height for smaller screens */
+        height: 80px;
     }
 }
 
@@ -140,7 +140,6 @@ html, body {
 body {
     font-size: 17px;
     color: #444;
-    font-family: "Montserrat", Helvetica, Arial, sans-serif;
     background: #fff;
     scroll-behavior: smooth;
 }
@@ -265,9 +264,7 @@ a.button-1, a.button-2, button {
     background: var(--button-color);
     border: 2px solid #ffffff;
     border-radius: var(--border-radiusHigh);
-    margin-top: -2px;
-    margin-left: 10px;
-    font-family: 'Arimo', sans-serif;
+    font-family: 'Poppins', sans-serif;
     text-transform: uppercase;
     font-weight: 700;
     font-size: 18px;
@@ -418,91 +415,6 @@ header#top nav ul li a.nav-cta {
 }
 
 
-/*IMPORTED SETTINGS (LOTTIE)*/
-
-#lottie-player {
-    display: none;
-}
-
-/*Banner*/
-
-#banner {
-    height: 840px;
-    position: relative;
-    padding: 1px 0 0 0;
-    overflow: hidden;
-}
-
-#banner::before {
-    content: '';
-    background: url(../assets/header-image.jpg) no-repeat center;
-    background-size: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    animation: kenburns 20s infinite;
-}
-
-@keyframes kenburns {
-    0%, 100% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.5);
-    }
-}
-
-#banner h2 {
-    margin: 220px auto 0;
-    padding: 0 5%;
-    opacity: 0.9;
-    color: var(--text-colorW);
-    font-size: 108px;
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: 700;
-    letter-spacing: 0.03em;
-}
-
-#banner p.subtitle {
-    font-size: 20px;
-    margin: 10px 0 50px 0;
-}
-
-@media only screen and (max-width: 1024px) {
-    #banner h2 {
-        font-size: 400%;
-        margin-top: 100px;
-        padding: 0;
-        width: 100%;
-    }
-}
-
-@media only screen and (max-width: 480px) {
-    #banner h2 {
-        font-size: 64px;
-        margin-top: 64px;
-    }
-
-    #banner p.subtitle {
-        font-size: 16px;
-    }
-}
-
-@media only screen and (max-width: 1024px) {
-    #banner {
-        height: 420px;
-    }
-}
-
-@media only screen and (max-width: 480px) {
-    #banner {
-        height: 400px;
-    }
-}
 
 /*Card Section*/
 
@@ -540,7 +452,6 @@ ul.card-list li {
 }
 
 .card-section ul.card-list li a:hover {
-    /*background-color: rgba(0, 0, 0, 0); !* Dark background *!*/
     color: var(--button-text-color-green);
     text-shadow: 0 0 10px #5dae87, 0 0 20px #5dae87, 0 0 30px #5dae87;
     transition: background-color 0.8s ease, text-shadow 0.8s ease;
@@ -690,8 +601,7 @@ ul.card-list li:last-of-type {
 ul.list-checkmarks li {
     text-align: left;
     list-style-image: none;
-    background: url(../assets/icon/checkmark.png) top left no-repeat;
-    background-position: 0 2px;
+    background: url(../assets/icon/checkmark.png) no-repeat 0 2px;
     margin: 10px 0;
     padding: 0 10px 10px 40px;
 }
@@ -718,78 +628,6 @@ ul.list-checkmarks li {
 
     .text-section .text p.subtitle {
         text-align: center;
-    }
-}
-
-/*Features Section*/
-
-.features-section {
-    background: #5dae87;
-    padding: 100px 0;
-    color: #fff;
-}
-
-.features-section h5 {
-    color: #fff;
-}
-
-.features-section p {
-    color: #bfeed7;
-}
-
-.features-section ul.feature-squares {
-    width: 90%;
-    margin: 0 auto;
-}
-
-.features-section ul.feature-squares li {
-    width: 50%;
-    padding: 3%;
-    float: left;
-}
-
-.features-section ul.feature-squares li .image {
-    float: left;
-    width: 20%;
-    margin-right: 5%;
-    margin-top: 20px;
-    text-align: center;
-}
-
-.features-section ul.feature-squares li .text {
-    float: left;
-    width: 75%;
-}
-
-@media only screen and (max-width: 960px) {
-    .features-section ul.feature-squares li {
-        display: block;
-        width: 100%;
-        margin: 20px 0 !important;
-    }
-}
-
-
-
-
-
-
-@media only screen and (max-width: 960px) {
-    ul.team-list li {
-        display: block;
-        width: 100%;
-        margin: 80px 0 !important;
-    }
-
-    ul.team-list li:first-of-type {
-        margin-top: 0 !important;
-    }
-
-    ul.social-links li {
-        float: left;
-        display: inline-block;
-        width: 48px;
-        margin: 0 3px !important;
     }
 }
 
@@ -859,7 +697,7 @@ input[type=email]::placeholder {
 
 
 
-/*additionally added widghts to the css file*/
+
 
 
 /*Footer*/
@@ -876,7 +714,7 @@ footer img {
     display: block;
     float: left;
     margin: 0 10px 0 10px;
-    padding: 0 0 0px 0px;
+    padding: 0 0 0 0;
     width: 100px;
     height: 100px;
     border-radius: 20px 20px 20px 20px;
@@ -921,12 +759,6 @@ footer p {
     margin: 5px;
 }
 
-footer p.copyright {
-    font-family: 'Arimo', sans-serif;
-    text-transform: uppercase;
-    font-weight: 700;
-}
-
 footer .footer-links {
     color: #777;
     padding: 50px 0 0 0;
@@ -946,19 +778,7 @@ footer .footer-links a:first-of-type {
     margin: 0 20px 0 0;
 }
 
-footer .footer-right a.social {
-    display: inline-block;
-    width: 44px;
-    height: 44px;
-    background: no-repeat center;
-    text-indent: -4999px;
-    overflow: hidden;
-    text-align: left;
 
-    border-radius: 999px;
-    margin-left: 10px;
-    transition: background-color 0.3s ease;
-}
 footer .footer-left ul {
 
     padding: 10px 0 200px 50px;
@@ -972,22 +792,7 @@ footer .footer-left ul li {
     color: white;
     display: inline-block;
 }
-footer .footer-right a.social:hover {
-    background-color: var(--button-text-color-green);
-}
 
-
-footer a.social.facebook {
-    background-image: url(../assets/icon/social-facebook.png);
-}
-
-footer a.social.twitter {
-    background-image: url(../assets/icon/social-twitter.png);
-}
-
-footer a.social.google {
-    background-image: url(../assets/icon/social-google.png);
-}
 
 @media only screen and (max-width: 960px) {
     footer {
