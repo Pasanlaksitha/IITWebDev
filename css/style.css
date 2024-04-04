@@ -519,6 +519,11 @@ ul.card-list {
 
 }
 
+ul.card-list h5 {
+    color: #5dae87;
+    font-size: 24px;
+    margin: 0 0 20px 0;
+}
 ul.card-list li {
     display: inline-block;
     float: left;
