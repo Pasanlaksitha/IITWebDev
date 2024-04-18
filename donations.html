@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project GAIA - Donations</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Reset default margin and padding */
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Global Styles */
+        body {
+            display: block;
+
+            font-family: 'Poppins', sans-serif; /* Apply Poppins font to the whole document */
+            color: #333; /* Default text color */
+        }
+
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            text-transform: none;
+            font-weight: bold;
+            color: #000000;
+            margin: 0;
+            padding: 0;
+        }
+
+        h2 {
+            font-size: x-large;
+        }
+
+        h3 {
+            font-size: large;
+        }
+
+        h4 {
+            font-size: normal;
+        }
+
+        h5 {
+            font-size: normal;
+        }
+
+        h6 {
+            font-size: normal;
+        }
+
+
+        main {
+            padding: 200px;
+            background-image: url(https://images.unsplash.com/photo-1558791985-4241e4011215?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+        }
+
+        .donation-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff; /* White background color for the form */
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Box shadow for the form */
+        }
+
+        .donation-form h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .donation-form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .donation-form input[type="text"],
+        .donation-form input[type="email"],
+        .donation-form input[type="tel"],
+        .donation-form textarea,
+        .donation-form select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        .donation-form select {
+            appearance: none;
+            background-image: url('data:image/svg+xml;utf8,<svg fill="%23000000" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>');
+            background-repeat: no-repeat;
+            background-position: right 10px top 50%;
+            background-size: 24px auto;
+        }
+
+        .donation-form textarea {
+            resize: none; /* Disable textarea resizing */
+        }
+
+        .donation-form button[type="submit"] {
+            background-color: #007bff; /* Blue submit button */
+            color: #fff;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .donation-form button[type="submit"]:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        /* Thank you message styling */
+        #thank-you {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #thank-you h2 {
+            color: #007bff; /* Blue heading color */
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        #thank-you p {
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        /* Additional styles for responsiveness */
+        @media (max-width: 768px) {
+            #thank-you h2 {
+                font-size: 20px;
+            }
+
+            #thank-you p {
+                font-size: 16px;
+            }
+        }
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .donation-form {
+                padding: 20px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <a href="#"><img src="assets/icons/nav-logo.png" id="nav-logo" alt="Logo"></a>
+        <!-- Navigation links -->
+        <nav>
+            <a href="home.html#home">Home</a>
+            <a href="home.html#about">About</a>
+            <a href="home.html#project">Projects</a>
+            <a href="home.html#blog">Blog</a>
+            <a href="form.html">Volunteer</a>
+            <a href="shop.html">Shop</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="donations.html" class="active">Donate</a>
+        </nav>
+    </header>
+    <!-- Main Content -->
+    <main>
+        <section class="donation-form">
+            <h2>Make a Donation</h2>
+            <form action="#" method="POST">
+                <!-- Donation Amount -->
+                <label for="donation-amount">Select Donation Amount:</label>
+                <select id="donation-amount" name="donation-amount">
+                    <option value="10">$10</option>
+                    <option value="20">$20</option>
+                    <option value="50">$50</option>
+                    <option value="100">$100</option>
+                    <!-- Add more options as needed -->
+                </select>
+    
+                <!-- Contact Information -->
+                <h3>Contact Information</h3>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+    
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+    
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone">
+    
+                <!-- Donation Purpose -->
+                <h3>Donation Purpose</h3>
+                <label for="purpose">Select Purpose:</label>
+                <select id="purpose" name="purpose">
+                    <option value="general">General Donation</option>
+                    <option value="specific">Specific Cause</option>
+                </select>
+    
+                <!-- Message -->
+                <label for="message">Message (optional):</label>
+                <textarea id="message" name="message" rows="4"></textarea>
+    
+                <!-- Proceed to Payment -->
+                <div class="proceed-to-pay">
+                    <button type="submit">Proceed to Payment</button>
+                </div>
+            </form>
+            <div id="thank-you" class="hidden">
+                <h2>Thank You for Your Donation!</h2>
+                <p>Your support means a lot to us.</p>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer>
+        <div class="wrapper">
+            <a class="logo" href="#"><img src="assets/icons/hotel-logo.png" alt=""></a>
+            <div class="footer-left">
+                <p class="copyright">GAIA Team</p>
+                <p class="footer-links"><a href="team.html">About Us</a> &vert; <a href="feedback.html">Feedback</a> &vert; <a href="sitemap.html">Sitemap</a></p>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </footer>
+    <script src="js/donations.js"></script>
+</body>
+</html>

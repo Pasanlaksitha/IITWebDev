@@ -1,0 +1,331 @@
+body {
+    font-family: Arial, sans-serif;
+    color: #d78c00;
+    background-color: #1c3b2b;
+}
+
+.student-3 {
+    background-color: #1f2b13;
+    padding: 50px;
+    margin: 50px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px 0 rgba(7, 41, 19, .1), 0 0 20px 0 rgba(7, 41, 19, .1);
+
+}/* Main container */
+.questionnaire-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Question container */
+.question-container {
+    display: none;
+    margin-bottom: 20px;
+}
+
+.question-container.active {
+    display: block;
+    animation: slideIn 0.5s ease forwards;
+}
+
+/* Slide-in animation */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Input field styles */
+input[type="text"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-top: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Button container */
+.button-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Button styles */
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #45a049;
+}
+input[type="number"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-top: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Date input */
+input[type="date"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-top: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Textarea */
+textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-top: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Radio buttons */
+input[type="radio"] {
+    margin-top: 8px;
+    margin-right: 5px;
+}
+
+/* Checkbox */
+input[type="checkbox"] {
+    margin-top: 8px;
+    margin-right: 5px;
+}
+
+#summary{
+    padding: 20px;
+
+}
+#name{
+    text-transform: capitalize;
+}
+span{
+    font-weight: bold;
+    text-transform: capitalize;
+}
+fieldset {
+    border: 2px solid #444;
+    border-radius: 10px;
+    padding: 25px;
+    margin: 25px 50px 25px 50px;
+
+}
+fieldset .step{
+    background-color: #f3f3f3;
+    opacity: 1;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px 0 rgba(7, 41, 19, .1), 0 0 20px 0 rgba(7, 41, 19, .1);
+}
+
+input[type=text], input[type=number], input[type=date], select, textarea {
+    border: 2px solid #444;
+    background: #fff;
+    font-size: 17px;
+    color: #444;
+    padding: 16px;
+    border-radius: 999px;
+    width: 280px;
+    font-family: 'Arimo', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+input[type=radio]{
+    border: 2px solid #444;
+    background: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    color: #444;
+    padding: 5px;
+    border-radius: 5px;
+    width: 5px;
+    font-family: 'Arimo', sans-serif;
+    text-transform: uppercase;
+    transform: scale(200%) ;
+}
+.gender_dis{
+    font-size: 20px;
+    font-weight: 700;
+    color: #444;
+    padding: 5px;
+    border-radius: 5px;
+    width: 5px;
+    font-family: 'Arimo', sans-serif;
+    text-transform: uppercase;
+}
+
+
+.buttons {
+    width: auto;
+    margin: 0 auto;
+    text-align: center;
+}
+
+a.button-1, a.button-2, button {
+    color: #fff;
+    background: #5dae87;
+    border: 2px solid #5dae87;
+    border-radius: 999px;
+    margin-top: -2px;
+    margin-left: 10px;
+    font-family: 'Arimo', sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 0.03em;
+    display: inline-block;
+    width: 220px;
+    margin: 10px;
+    text-align: center;
+    padding: 18px 0;
+}
+
+a.button-1:hover {
+    border-color: #42966e;
+    background: #42966e;
+}
+
+a.button-2 {
+    border-color: #444;
+    background: none;
+    color: #444;
+}
+
+a.button-2:hover {
+    background: #444;
+    color: #fff;
+}
+.progress-container {
+    width: 100%;
+    background-color: #f3f3f3;
+    border-radius: 5px;
+
+}
+
+.progress-bar {
+    height: 20px;
+    margin: 0 0 0 25px;
+    background-color: #47ff58;
+    width: 0;
+    border-radius: 10px;
+
+}
+/* Volunteer task summary */
+#summary {
+    padding: 20px;
+}
+
+.summary {
+    background-color: #f3f3f3;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px 0 rgba(7, 41, 19, .1), 0 0 20px 0 rgba(7, 41, 19, .1);
+}
+
+.summary h2 {
+    color: #1c3b2b;
+}
+
+.summary p {
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.summary #answers_4 {
+    margin-top: 10px;
+}
+
+
+.team-member {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+#t_1{
+    background-image: url("assets/seaTurtles.jpg");
+}
+.thumbnail {
+    position: relative;
+    overflow: hidden;
+    /* Other thumbnail styling */
+}
+
+.thumbnail img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease; /* Add hover effect */
+}
+
+.thumbnail:hover img {
+    transform: scale(1.1); /* Enlarge on hover */
+}
+
+.details {
+    position: absolute;
+    overflow: hidden;
+    bottom: 0;
+    left: 0;
+    background-color: #283618;
+    color: #fff;
+    padding: 5px 10px;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.15s ease;
+}
+.details:hover{
+    background-color: #283618;
+    color: #fff;
+    opacity: 10%;
+}
+.thumbnail:hover .details {
+    opacity: 1; /* Show details on hover */
+}
+.team-cards {
+    padding: 50px;
+}
+#submit{
+    padding: 50px 50px 50px 50px;
+    margin: 50px 50px 50px 50px;
+    text-align: center;
+    align-items: center;
+}
+.s3{
+    text-align: center;
+    font-size: 25px;
+    color: #ffffff;
+    font-weight: bold;
+}
+.s4{
+    text-align: center;
+    font-size: 25px;
+    color: #1c3b2b;
+    font-weight: bold;
+}

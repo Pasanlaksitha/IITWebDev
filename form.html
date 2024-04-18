@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project GAIA - Volunteer</title>
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body{
+        background-color: #1c3b2b;
+        }
+        h1{
+        font-family: 'Montserrat', sans-serif;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: #1d4408;
+        margin: 0;
+        padding: 0;
+        }
+        .title{
+            width: 250px;
+            height: 120px;
+
+        }
+        .title a{
+            display: inline-block;
+            text-align: center;
+            font-size: 30px;
+            padding-bottom: 100px;
+            color: #ffffff;
+        }
+        .home .title {
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: var(--text-colorW);
+            font-size: 80px;
+            text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+        }
+        input[type=text], input[type=number], input[type=date], select, textarea {
+            border: 2px solid #444;
+            background: #fff;
+            font-size: 17px;
+            color: #444;
+            padding: 16px;
+            border-radius: 999px;
+            width: 280px;
+            font-family: 'Arimo', sans-serif;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        button {
+            color: #fff;
+            background: #1c3b2b;
+            border: 2px solid #1c3b2b;
+            border-radius: 999px;
+            margin-top: -2px;
+            margin-left: 10px;
+            font-family: 'Arimo', sans-serif;
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 18px;
+            letter-spacing: 0.03em;
+            display: inline-block;
+            width: 220px;
+            margin: 10px;
+            text-align: center;
+            padding: 18px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <a href="#"><img src="assets/icons/nav-logo.png" id="nav-logo" alt="Logo"></a>
+        <!-- Navigation links -->
+        <nav>
+            <a href="home.html#home">Home</a>
+            <a href="home.html#about">About</a>
+            <a href="home.html#project">Projects</a>
+            <a href="home.html#blog">Blog</a>
+            <a href="form.html" class="active">Volunteer</a>
+            <a href="shop.html">Shop</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="donations.html">Donate</a>
+        </nav>
+    </header>
+    <!-- Main Content -->
+    <main>
+        <!--HOME HERE-->
+        <section id="home" class="home">
+            <img src="assets/parallax/sky.png" class="mount2">
+            <img src="assets/parallax/back.png" class="mount1">
+            <button class="title"> <a href="#step1">Register Now</a> </button>
+            <img src="assets/parallax/front.png" class="bush1">
+
+        </section>
+        <br><br>
+        <section class="student-3">
+        <h1 class="s3">Volunteer Registration</h1>
+        <br>
+        <div class="progress-container">
+            <div id="progress-bar" class="progress-bar"></div>
+        </div>
+
+
+        <section id="step1" name="Step 1">
+            <fieldset>
+                <div class="step">
+                <p class="s4">PERSONAL INFORMATION</p>
+                <p>Fill in the form below to register as a volunteer</p>
+                <div id="step-info">
+                    <p>STEP 1 | Personal Details | <span id="current-question">Question 1</span>/6</p>
+                </div>
+
+                <div id="question1" class="question-container active" >
+                    <p>What is your Full Name?</p>
+                    <input type="text" id="name" required oninput="step1.updateSummary()">
+                    <div class="button-container">
+                        <button onclick="step1.skipQuestion()">Skip</button>
+                        <button onclick="step1.nextQuestion()">Next</button>
+                    </div>
+                </div>
+
+                <div id="question2" class="question-container ">
+                    <p>What is your Name with Initials?</p>
+                    <input type="text" id="namewithinitial" oninput="step1.updateSummary()">
+                    <div class="button-container">
+                        <button onclick="step1.skipQuestion()">Skip</button>
+                        <button onclick="step1.nextQuestion()">Next</button>
+                    </div>
+                </div>
+
+                <div id="question3" class="question-container">
+                    <p>Preferred name?</p>
+                    <input type="text" id="preferredname" oninput="step1.updateSummary()">
+                    <div class="button-container">
+                        <button onclick="step1.skipQuestion()">Skip</button>
+                        <button onclick="step1.nextQuestion()">Next</button>
+                    </div>
+
+                </div>
+
+                <div id="question4" class="question-container">
+                    <p>How old are you?</p>
+                    <input type="number" id="age" oninput="step1.updateSummary()">
+                    <div class="button-container">
+                        <button onclick="step1.skipQuestion()">Skip</button>
+                        <button onclick="step1.nextQuestion()">Next</button>
+                    </div>
+                </div>
+
+                <div id="question5" class="question-container">
+                    <p>Date of Birth</p>
+                    <input type="date" name="dateofbirth" id="dateofbirth" oninput="step1.updateSummary()">
+                    <div class="button-container">
+                        <button onclick="step1.skipQuestion()">Skip</button>
+                        <button onclick="step1.nextQuestion()">Next</button>
+                    </div>
+                </div>
+                <div id="question6" class="question-container">
+                    <p>Gender</p>
+                    <div oninput="step1.updateSummary();">
+
+                        <input type="radio" name="gender" id="m-gender" value="Male">
+                        <label for="m-gender" class="gender_dis"> Male </label>
+                        <input type="radio" name="gender" id="f-gender" value="Female" >
+                        <label for="f-gender" class="gender_dis"> Female </label>
+                    </div>
+
+                    <div class="button-container" >
+                        <button onclick="step1.nextstep()" id="next-step-button">Next Step</button>
+
+                    </div>
+                </div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <div class="summary">
+                    <p class="s4"> PERSONAL INFORMATION SUMMARY</p>
+                    <div id="answers_1"></div>
+                </div>
+            </fieldset>
+
+        </section>
+        <section id="step2" name="Step 2" style="display:none;">
+            <fieldset>
+                <div class="step">
+                <p class="s4">CONTACT INFORMATION</p>
+
+                <div id="step-info-2">
+                    <p>STEP 2 | Contact Information | <span id="current-question-2">Question 1</span>/3</p>
+                </div>
+
+                <div id="question2_1" class="question-container active">
+                    <p>Telephone Number?</p>
+                    <input type="text" id="tp_no" oninput="step2.updateSummary()">
+                    <div class="button-container">
+                        <button onclick="step2.skipQuestion()">Skip</button>
+                        <button onclick="step2.nextQuestion()">Next</button>
+                    </div>
+                </div>
+
+                <div id="question2_2" class="question-container">
+                    <p>Email</p>
+                    <input type="email" id="email" oninput="step2.updateSummary()">
+                    <div class="button-container">
+                        <button onclick="step2.skipQuestion()">Skip</button>
+                        <button onclick="step2.nextQuestion()">Next</button>
+                    </div>
+                </div>
+
+                <div id="question2_3" class="question-container">
+                    <p>Address?</p>
+                    <input type="text" id="address" oninput="step2.updateSummary()">
+                    <div class="button-container">
+                        <button onclick="step2.nextstep()" id="next-step-button2">Next Step</button>
+                    </div>
+                </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <p class="s4">CONTACT TASK SUMMARY</p>
+                <div class="summary">
+                    <div id="answers_2"></div>
+                </div>
+            </fieldset>
+        </section>
+
+        <section id="step3" name="Step 3" style="display:none;">
+            <fieldset><div class="step">
+                <p class="s4">VOLUNTEERING</p>
+
+                <div id="step-info-3">
+                    <p>STEP 3 | Volunteering Task | <span id="current-question-3">Question 1</span>/4</p>
+                </div>
+
+                <div id="question3_1" class="question-container active">
+                    <p>Why do you want to Volunteer with Project Gaia?</p>
+                    <input type="text" id="volwithgaia" oninput="step3.updateSummary()">
+                    <div class="button-container">
+                        <button onclick="step3.skipQuestion()">Skip</button>
+                        <button onclick="step3.nextQuestion()">Next</button>
+                    </div>
+                </div>
+
+                <div id="question3_2" class="question-container">
+                    <p>Do you have any Volunteering experience before? If so give a brief description on them:</p>
+                    <textarea id="description" oninput="step3.updateSummary()"> </textarea>
+                    <div class="button-container">
+                        <button onclick="step3.skipQuestion()">Skip</button>
+                        <button onclick="step3.nextQuestion()">Next</button>
+                    </div>
+                </div>
+
+                <div id="question3_3" class="question-container">
+                    <p>Which Volunteering Batch are you applying for? Choose one or more from below</p>
+                    <label><input type="checkbox" name="vol-batch" value="Batch 1" onchange="step3.updateSummary()"> July - August (2024)</label><br>
+                    <label><input type="checkbox" name="vol-batch" value="Batch 2" onchange="step3.updateSummary()"> December- January(2025)</label><br>
+                    <div class="button-container">
+                        <button onclick="step3.skipQuestion()">Skip</button>
+                        <button onclick="step3.nextQuestion()">Next</button>
+                    </div>
+                </div>
+
+                <div id="question3_4" class="question-container">
+                    <p>Mainly, which Volunteering Activities do you prefer to Volunteer in?</p>
+                    <label><input type="checkbox" name="activity" value="1 vet clinic" onchange="step3.updateSummary()">1 WildLife Vet Clinic</label><br>
+                    <label><input type="checkbox" name="activity" value="2 Research" onchange="step3.updateSummary()">2 Wild Life Research</label><br>
+                    <label><input type="checkbox" name="activity" value="3 Conservation" onchange="step3.updateSummary()">3 Wild Life Conservation</label><br>
+                    <label><input type="checkbox" name="activity" value="4 Education" onchange="step3.updateSummary()">4 Wild Life Education</label><br>
+                    <label><input type="checkbox" name="activity" value="5 Beach cleaning" onchange="step3.updateSummary()">5 Beach Clean Ups</label><br>
+                    <div class="button-container">
+                        <button onclick="step3.nextstep()" id="next-step-button3">Next Step</button>
+                    </div>
+                </div>
+
+            </div>
+            </fieldset>
+            <fieldset>
+                <p class="s4">VOLUNTEERING SUMMARY</p>
+                <div class="summary">
+                    <div id="answers_3"></div>
+                </div>
+            </fieldset>
+        </section>
+
+        <section id="step4" name="Step 4" style="display:none;">
+            <fieldset><div class="step">
+                <p class="s4">QUALIFICATION</p>
+
+
+                <div id="step-info-4">
+                    <p>STEP 4 | Qualifications | <span id="current-question-4">Question 1</span>/5</p>
+                </div>
+
+                <div id="question4_1" class="question-container active">
+                    <p>Area of Study?</p>
+                    <input type="text" id="AoS" oninput="step4.updateSummary()">
+                    <div class="button-container">
+                        <button onclick="step4.skipQuestion()">Skip</button>
+                        <button onclick="step4.nextQuestion()">Next</button>
+                    </div>
+                </div>
+
+                <div id="question4_2" class="question-container">
+                    <p>Highest qualification</p>
+                    <input type="text" id="H_qualification" oninput="step4.updateSummary()">
+                    <div class="button-container">
+                        <button onclick="step4.skipQuestion()">Skip</button>
+                        <button onclick="step4.nextQuestion()">Next</button>
+                    </div>
+                </div>
+
+                <div id="question4_3" class="question-container">
+                    <p>University/Institution</p>
+                    <input type="text" id="uni_insti" oninput="step4.updateSummary()">
+                    <div class="button-container">
+                        <button onclick="step4.skipQuestion()">Skip</button>
+                        <button onclick="step4.nextQuestion()">Next</button>
+                    </div>
+                </div>
+
+                <div id="question4_4" class="question-container">
+                    <p>Completion Year</p>
+                    <input type="text" id="completion_year" oninput="step4.updateSummary()">
+                    <div class="button-container">
+                        <button onclick="step4.skipQuestion()">Skip</button>
+                        <button onclick="step4.nextQuestion()">Next</button>
+                    </div>
+                </div>
+
+                <div id="question4_5" class="question-container">
+                    <p>Country</p>
+                    <input type="text" id="country" oninput="step4.updateSummary()">
+                    <div class="button-container">
+                        <button onclick="step4.nextstep()" id="next-step-button4">Next Step</button>
+                    </div>
+                </div>
+            </div>
+            </fieldset>
+            <fieldset>
+                <p  class="s4">QUALIFICATION SUMMARY</p><br>
+                <div class="summary">
+                    <div id="answers_4"></div>
+                </div>
+            </fieldset>
+        </section>
+
+        <section id="main_summary" name="main_summary" style="display:none;">
+            <fieldset>
+                <p class="s4">MAIN SUMMARY</p>
+                <div class="summary">
+                    <div id="answers_all"> </div>
+
+                    <button onclick="main_summary.submit()" id="submit_button">Submit</button>
+                    <div id="submit"> </div>
+                </div>
+            </fieldset>
+        </section>
+
+        </section>
+
+        <script src="js/form.js"></script>
+        <script src="js/parallax.js"></script>
+    </main>
+    <!-- Footer -->
+    <footer>
+        <div class="wrapper">
+            <a class="logo" href="#"><img src="assets/icons/hotel-logo.png" alt=""></a>
+            <div class="footer-left">
+                <p class="copyright">GAIA Team</p>
+                <p class="footer-links"><a href="team.html">About Us</a> &vert; <a href="feedback.html">Feedback</a> &vert; <a href="sitemap.html">Sitemap</a></p>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </footer>
+</body>
+</html>

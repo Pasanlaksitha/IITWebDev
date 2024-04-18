@@ -1,0 +1,319 @@
+
+
+
+
+/* This is used for the image carousel */
+.elementor-widget-container {
+    max-width: 100%;
+    overflow: hidden;
+    background-color: #1c3b2b;
+    position: relative
+}
+
+.elementor-image-carousel-wrapper {
+    position: relative;
+}
+
+.swiper-slide {
+    position: relative;
+    display: block;
+    width: 100%;
+    overflow: hidden;
+}
+
+.swiper-slide-inner {
+    position: relative;
+    display: block;
+    overflow: hidden;
+}
+
+.swiper-slide-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.swiper-container:hover .elementor-swiper-button {
+    background-color: aquamarine;
+}
+
+/* This is used for the blur card gallery menu */
+.card-section {
+    text-align: center;
+    padding: 100px 0;
+    background: #1c3b2b;
+
+}
+
+.blurcard-section {
+    align-items: flex-start;
+    display: flex;
+    min-height: 100%;
+    justify-content: center;
+    padding: 64px 24px;
+}
+
+.blurcard-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-column-gap: 24px;
+    grid-row-gap: 24px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+@media (min-width: 540px) {
+    .blurcard-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 960px) {
+    .blurcard-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.blurcard {
+    list-style: none;
+    position: relative;
+}
+
+.blurcard:before {
+    content: '';
+    display: block;
+    padding-bottom: 150%;
+    width: 100%;
+}
+
+.blurcard__background {
+    background-size: cover;
+    background-position: center;
+    border-radius: 24px;
+    bottom: 0;
+    filter: brightness(0.75) saturate(1.2) contrast(0.85);
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform-origin: center;
+    transform: scale(1) translateZ(0);
+    transition: filter 200ms linear, transform 200ms linear;
+}
+
+.blurcard:hover .blurcard__background {
+    transform: scale(1.05) translateZ(0);
+}
+
+.blurcard-grid:hover > .blurcard:not(:hover) .blurcard__background {
+    filter: brightness(0.5) saturate(0) contrast(1.2) blur(20px);
+}
+
+.blurcard__content {
+    left: 0;
+    padding: 24px;
+    position: absolute;
+    top: 0;
+}
+
+.blurcard__category {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.blurcard__heading {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.9rem;
+    text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
+    line-height: 1.4;
+    word-spacing: 100vw;
+}
+
+/* sub-gallery */
+.sub-gallery {
+    text-align: center;
+    padding: 100px 0;
+    background: #1c3b2b;
+}
+
+/* Thumbnails */
+.thumbnails-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin: 10px;
+}
+
+.thumbnail {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin: 10px;
+    cursor: pointer;
+    position: relative;
+}
+
+.thumbnail-image {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    transform-origin: center;
+    transform: scale(1) translateZ(0);
+    transition: filter 200ms linear, transform 200ms linear;
+}
+
+.thumbnail:hover .thumbnail-image {
+    transform: scale(1.05) translateZ(0);
+}
+
+/* Extended view */
+.extended-view {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    z-index: 1000;
+    overflow: auto;
+}
+
+.extended-view img {
+    width: auto;
+    height: 90%;
+    margin: 20px;
+    border-radius: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.extended-description {
+    display: block;
+    text-align: right;
+    margin: 20px;
+    width: 20%;
+    height: 90%;
+}
+
+/* Back to top button */
+#top-button {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    left: 30px;
+    z-index: 99; 
+    border: none;
+    outline: none;
+    background-color: #5dae87; 
+    color: #1c3b2b; 
+    cursor: pointer; 
+    padding: 15px;
+    border-radius: 40px;
+    font-size: 16px; 
+    font-weight: 900;
+    opacity: 0.7; 
+}
+  
+#top-button:hover {
+    background-color: #555;
+}
+
+/* Footer */
+footer {
+    background: var(--background-colorG);
+    background: var(--background-liner-gradientGB);
+    margin-top: 0px;
+    color: #fff;
+    text-align: center;
+    padding: 60px 0;
+}
+
+footer img {
+    display: block;
+    float: left;
+    text-indent: -4999px;
+    width: 75px;
+    height: 75px;
+    border-radius: 20px;
+}
+
+footer .footer-left {
+    float: left;
+    text-align: left;
+    margin-top: 5px;
+    margin-left: 50px;
+}
+
+footer p {
+    font-size: 17px;
+    margin: 5px;
+}
+
+footer p.copyright {
+    font-family: 'Arimo', sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+footer .footer-links {
+    color: #777;
+}
+
+footer .footer-links a {
+    color: #777;
+    margin: 0 20px;
+}
+
+footer .footer-links a:hover {
+    color: #5dae87;
+}
+
+footer .footer-links a:first-of-type {
+    margin: 0 20px 0 0;
+}
+
+@media only screen and (max-width: 960px) {
+
+    footer .footer-left, footer img {
+        float: none;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    footer img {
+        margin: 10px auto 40px auto;
+    }
+
+    footer .footer-links a {
+        margin: 0 5px !important;
+        font-size: 14px;
+    }
+}
+
+/* Sitemap */
+.svgBox a {
+    fill: black;
+    font-size: 100%;
+    font-weight: bold;
+    text-anchor: middle;
+}
+
+.svgBox a:hover {
+    fill: #42966e;
+}
+
+line {
+    stroke: #f5f4f4;
+    stroke-width: 4;
+}
+

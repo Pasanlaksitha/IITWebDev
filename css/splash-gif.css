@@ -1,0 +1,60 @@
+html {
+    min-height: 100%;
+}
+
+body{
+    background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(28, 59, 43, 1) 60%, rgba(28, 59, 43, 1) 100%);
+    /*background: linear-gradient(180deg, rgba(28, 59, 43, 1) 100%, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 40%);*/
+    margin: 0;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-attachment: fixed;
+
+}
+
+.loadingContainer{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100vh;
+    width: 200px;
+    height: 200px;
+}
+h1, h2, h3, h5 {
+    color: white;
+    text-align: center;
+}
+h5{
+    font-size: medium;
+}
+.project{
+    padding: 90px;
+    margin-bottom: 50px;
+}
+.mission{
+    padding: 30px;
+    margin-top: 180px;
+}
+.team span{
+    height: 120px;
+    width: 120px;
+    background-color: white;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0px 4px 0px 4px;
+}
+.team{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+.names span{
+    height: 20px;
+    width: 40px;
+    display: flex;
+
+}

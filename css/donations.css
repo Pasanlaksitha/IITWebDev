@@ -1,0 +1,116 @@
+/* Reset default margin and padding */
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Global Styles */
+body {
+    display: block;
+
+    font-family: 'Poppins', sans-serif; /* Apply Poppins font to the whole document */
+    color: #333; /* Default text color */
+}
+
+main {
+    padding: 200px;
+    background-image: url(https://images.unsplash.com/photo-1558791985-4241e4011215?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+}
+
+.donation-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff; /* White background color for the form */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Box shadow for the form */
+}
+
+.donation-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.donation-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.donation-form input[type="text"],
+.donation-form input[type="email"],
+.donation-form input[type="tel"],
+.donation-form textarea,
+.donation-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.donation-form select {
+    appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23000000" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px top 50%;
+    background-size: 24px auto;
+}
+
+.donation-form textarea {
+    resize: none; /* Disable textarea resizing */
+}
+
+.donation-form button[type="submit"] {
+    background-color: #007bff; /* Blue submit button */
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.donation-form button[type="submit"]:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.hidden {
+    display: none;
+}
+
+/* Thank you message styling */
+#thank-you {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#thank-you h2 {
+    color: #007bff; /* Blue heading color */
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#thank-you p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+/* Additional styles for responsiveness */
+@media (max-width: 768px) {
+    #thank-you h2 {
+        font-size: 20px;
+    }
+
+    #thank-you p {
+        font-size: 16px;
+    }
+}
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .donation-form {
+        padding: 20px;
+    }
+}
