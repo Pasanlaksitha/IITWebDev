@@ -12,14 +12,15 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // hide the splash screen
+    // hides the splash
     function hideSplash() {
         setTimeout(() => {
             intro.style.top = '-100%';
             logoHeader.classList.add('fade');
-        }, 3000); // Adjust the duration as needed
+        }, 3000);
     }
 
     animateLogo();
     hideSplash();
+
 });

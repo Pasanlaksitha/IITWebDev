@@ -38,3 +38,23 @@ p {
     line-height: 1.4;
     margin: 20px 0;
 }
+
+/* Blog Page */
+.blog, .page-editor {
+    padding: 50px;
+    color: var(--text-colorW);
+    position: relative;
+    background: var(--background-colorB);
+    background: var(--background-liner-gradientBG);
+}
+
+.blog img {
+    width: 100%;
+    margin-top: 5%;
+    height: auto;
+    border-radius: 7px;
+}
+
+.blog p, .page-editor p{
+    text-align: justify;
+}

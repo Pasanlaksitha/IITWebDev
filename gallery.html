@@ -2,146 +2,381 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Gallery</title>
-    <link rel="stylesheet" href="css/gallery.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project GAIA - Gallery</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/gallery-sitemap.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/widgets/navigation.css">
-    <link rel="stylesheet" href="css/blur-card.css">
-    <link rel="stylesheet" href="css/splash.css">
 
+    <!-- Swiper CSS is an external library used for the image carousel -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <!-- Swiper JS is an external library used for the image carousel -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="js/splash.js"></script>
-
 </head>
 <body>
+    <!-- Header -->
     <header>
-        <h1>GAIA</h1>
+        <a href="#"><img src="assets/icons/nav-logo.png" id="nav-logo" alt="Logo"></a>
+        <!-- Navigation links -->
         <nav>
-            <a href="index.html">Back to home</a>
+            <a href="home.html#home">Home</a>
+            <a href="home.html#about">About</a>
+            <a href="home.html#project">Projects</a>
+            <a href="home.html#blog">Blog</a>
+            <a href="form.html">Volunteer</a>
+            <a href="shop.html">Shop</a>
+            <a href="gallery.html" class="active">Gallery</a>
+            <a href="donations.html">Donate</a>
         </nav>
     </header>
-    <div class="elementor-widget-container">
-        <div class="elementor-image-carousel-wrapper swiper-container" dir="ltr">
-            <div class="elementor-image-carousel swiper-wrapper" aria-live="off">
-                <div class="swiper-slide">
-                    <a data-elementor-open-lightbox="no" href="" target="_blank">
-                        <figure class="swiper-slide-inner">
-                            <img decoding="async" class="swiper-slide-image" src="gallery/carousel/wildlife.jpg?" alt="Wildlife"/>
-                        </figure>
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a data-elementor-open-lightbox="no" href="" target="_blank">
-                        <figure class="swiper-slide-inner">
-                            <img decoding="async" class="swiper-slide-image" src="gallery/carousel/animal-care.jpg" alt="Animal Care"/>
-                        </figure>
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a data-elementor-open-lightbox="no" href="" target="_blank">
-                        <figure class="swiper-slide-inner">
-                            <img decoding="async" class="swiper-slide-image" src="gallery/carousel/forest-cleanup.jpg" alt="Forest Cleanup"/>
-                        </figure>
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a data-elementor-open-lightbox="no" href="" target="_blank">
-                        <figure class="swiper-slide-inner">
-                            <img decoding="async" class="swiper-slide-image" src="gallery/carousel/beach-cleanup.jpg" alt="Beach Cleanup"/>
-                        </figure>
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a data-elementor-open-lightbox="no" href="" target="_blank">
-                        <figure class="swiper-slide-inner">
-                            <img decoding="async" class="swiper-slide-image" src="gallery/carousel/awarenesss.jpg" alt="Awarenesss"/>
-                        </figure>
-                    </a>
-                </div>
-                <div class="swiper-pagination">
-                    <div class="elementor-swiper-button elementor-swiper-button-prev">
-                        <i class="eicon-chevron-left" aria-hidden="true"></i>
-                        <span class="elementor-screen-only">Previous</span>
+    <!-- Main Content -->
+    <main>
+        <!-- Image Carousel -->
+        <div class="elementor-widget-container">
+            <div class="elementor-image-carousel-wrapper swiper-container" dir="ltr">
+                <!-- Used an image carousel for the gallery to give a dynamic feel to the user -->
+                <div class="elementor-image-carousel swiper-wrapper" aria-live="off">
+                    <div class="swiper-slide">
+                        <a href="" data-elementor-open-lightbox="no" target="_blank">
+                            <figure class="swiper-slide-inner">
+                                <img decoding="async" class="swiper-slide-image" src="assets/gallery/gallery-images/carousel/wildlife.jpg" alt="Wildlife">
+                            </figure>
+                        </a>
                     </div>
-                    <div class="elementor-swiper-button elementor-swiper-button-next">
-                        <i class="eicon-chevron-right" aria-hidden="true"></i>
-                        <span class="elementor-screen-only">Next</span>
+                    <div class="swiper-slide">
+                        <a href="" data-elementor-open-lightbox="no" target="_blank">
+                            <figure class="swiper-slide-inner">
+                                <img decoding="async" class="swiper-slide-image" src="assets/gallery/gallery-images/carousel/beach-cleanup.jpg" alt="Beach Cleanup">
+                            </figure>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="" data-elementor-open-lightbox="no" target="_blank">
+                            <figure class="swiper-slide-inner">
+                                <img decoding="async" class="swiper-slide-image" src="assets/gallery/gallery-images/carousel/awarenesss.jpg" alt="Awarenesss">
+                            </figure>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-
-    <section id="gallery" class="card-section">
-
-        <h3 class="section-title">Gallery</h3>
-
-        <section class="blurcard-section">
-    
-            <div class="blurcard-grid">
-
-                <a class="blurcard" href="">
-                    <div class="blurcard-background"
-                         style="background-image: url(gallery/carousel/wildlife.jpg)"></div>
-                    <div class="blurcard-content">
-                        <p class="blurcard-category">Discover</p>
-                        <h3 class="blurcard-heading">Wildlife</h3>
-                    </div>
-                </a>
-    
-                <a class="blurcard" href="">
-                    <div class="blurcard-background"
-                         style="background-image: url(gallery/carousel/animal-care.jpg)"></div>
-                    <div class="blurcard-content">
-                        <p class="blurcard-category">Discover</p>
-                        <h3 class="blurcard-heading">Animal Care</h3>
-                    </div>
-                </a>
-    
-                <a class="blurcard" href="">
-                    <div class="blurcard-background"
-                         style="background-image: url(gallery/carousel/beach-cleanup.jpg)"></div>
-                    <div class="blurcard-content">
-                        <p class="blurcard-category">Discover</p>
-                        <h3 class="blurcard-heading">Cleanup Projects</h3>
-                    </div>
-                </a>
-
-                <a class="blurcard" href="">
-                    <div class="blurcard-background"
-                         style="background-image: url(gallery/carousel/awarenesss.jpg)"></div>
-                    <div class="blurcard-content">
-                        <p class="blurcard-category">Discover</p>
-                        <h3 class="blurcard-heading">Child Labour</h3>
-                    </div>
-                </a>
-    
+        <!-- This is the gallery menu section, which contains the blurcards, 
+            each blurcard links to a different section of the gallery -->
+        <section id="gallery" class="card-section">
+            <h3 class="section-title">Gallery</h3>
+            <section class="blurcard-section">
+                <div class="blurcard-grid">
+                    <a class="blurcard" href="#wildlife">
+                        <div class="blurcard__background"
+                            style="background-image: url(assets/gallery/blurcard/bc-wildlife.jpg)"></div>
+                        <div class="blurcard__content">
+                            <p class="blurcard__category">Discover</p>
+                            <h3 class="blurcard__heading">Wildlife In Yala</h3>
+                        </div>
+                    </a>
+                    <a class="blurcard" href="#animal-care">
+                        <div class="blurcard__background"
+                            style="background-image: url(assets/gallery/blurcard/bc-animal-care.jpg)"></div>
+                        <div class="blurcard__content">
+                            <p class="blurcard__category">Discover</p>
+                            <h3 class="blurcard__heading">Animal Care Projects</h3>
+                        </div>
+                    </a>
+                    <a class="blurcard" href="#volunteering">
+                        <div class="blurcard__background"
+                            style="background-image: url(assets/gallery/blurcard/bc-volunteering.jpeg)"></div>
+                        <div class="blurcard__content">
+                            <p class="blurcard__category">Discover</p>
+                            <h3 class="blurcard__heading">Cleanup Projects</h3>
+                        </div>
+                    </a>
+                    <a class="blurcard" href="#awareness">
+                        <div class="blurcard__background"
+                            style="background-image: url(assets/gallery/blurcard/bc-awareness.jpg)"></div>
+                        <div class="blurcard__content">
+                            <p class="blurcard__category">Discover</p>
+                            <h3 class="blurcard__heading">Awareness Projects</h3>
+                        </div>
+                    </a>
+                </div>
+            </section>
+        </section>
+        <!-- This is the sub-gallery section, each section contains a different set of images -->
+        <section id="wildlife" class="sub-gallery">
+            <h4 class="section-title">Wildlife in yala</h4>
+            <div class="thumbnails-container">
+                <!-- Thumbnail Images -->
+                <div class="thumbnail" data-description="Adorable young elephants exploring the lush landscapes of Yala National Park alongside their majestic elder.">
+                    <img src="assets/gallery/gallery-images/wildlife/1.jpg" alt="Image 1" class="thumbnail-image">
+                </div>
+                <div class="thumbnail" data-description="Two elephants gracefully strolling beside a serene pond, framed by the verdant beauty of Yala's forest.">
+                    <img src="assets/gallery/gallery-images/wildlife/2.avif" alt="Image 2" class="thumbnail-image">
+                </div>
+                <div class="thumbnail" data-description="Two affectionate elephants sharing a heartfelt embrace amidst a gathering of their kind near a tranquil lake in Yala's wilderness.">
+                    <img src="assets/gallery/gallery-images/wildlife/3.jpg" alt="Image 3" class="thumbnail-image">
+                </div>
+                <div class="thumbnail" data-description="A mesmerizing moment captured as a bird gracefully walks on the calm surface of the water in Yala's serene landscape.">
+                    <img src="assets/gallery/gallery-images/wildlife/4.jpg" alt="Image 4" class="thumbnail-image">
+                </div>
+                <div class="thumbnail" data-description="Energetic monkeys playfully frolicking on a dusty street, showcasing their vibrant personalities in Yala's natural habitat.">
+                    <img src="assets/gallery/gallery-images/wildlife/5.jpg" alt="Image 5" class="thumbnail-image">
+                </div>
+                <div class="thumbnail" data-description="Majestic eagle perched on a branch, observed closely by a neighboring bird in mid-flight, capturing a harmonious moment in Yala's skies.">
+                    <img src="assets/gallery/gallery-images/wildlife/6.jpg" alt="Image 6" class="thumbnail-image">
+                </div>
+                <div class="thumbnail" data-description="A majestic tiger delicately lapping up water from a pond, showcasing the serene and powerful essence of Yala's wildlife.">
+                    <img src="assets/gallery/gallery-images/wildlife/7.jpg" alt="Image 7" class="thumbnail-image">
+                </div>
+                <div class="thumbnail" data-description="A captivating scene of a sea turtle gently touching the water as it makes its way across the sandy beach, highlighting the beauty of marine life near Yala.">
+                    <img src="assets/gallery/gallery-images/wildlife/8.avif" alt="Image 8" class="thumbnail-image">
+                </div>
+                <div class="thumbnail" data-description="A mesmerizing family portrait of three tigers gazing curiously at the camera, embodying the majestic allure of Yala's iconic wildlife.">
+                    <img src="assets/gallery/gallery-images/wildlife/9.jpg" alt="Image 9" class="thumbnail-image">
+                </div>
+                <div class="thumbnail" data-description="A touching moment captured as a large elephant and a young calf playfully connect their trunks, showcasing the strong bonds within Yala's elephant families.">
+                    <img src="assets/gallery/gallery-images/wildlife/10.jpg" alt="Image 10" class="thumbnail-image">
+                </div>
+                <div class="thumbnail" data-description="Heartwarming scene of tourists releasing sea turtles into the ocean from the beach, with caring hands gently guiding them towards their marine home near Yala.">
+                    <img src="assets/gallery/gallery-images/wildlife/11.jpg" alt="Image 11" class="thumbnail-image">
+                </div>
+                <div class="thumbnail" data-description="A breathtaking view from afar captures a large elephant and a young calf standing side by side, highlighting the majestic presence of Yala's elephant families in the distance.">
+                    <img src="assets/gallery/gallery-images/wildlife/12.jpg" alt="Image 12" class="thumbnail-image">
+                </div>
+                <div class="thumbnail" data-description="A mesmerizing sight of birds soaring gracefully through the sky, adding to the natural beauty and vibrant ecosystem of Yala's wilderness.">
+                    <img src="assets/gallery/gallery-images/wildlife/13.jpg" alt="Image 13" class="thumbnail-image">
+                </div>
+                <div class="thumbnail" data-description="A poignant moment captured as a sea turtle carefully lays her eggs on the sandy beach, highlighting the critical nesting rituals that contribute to the conservation of marine life in Yala.">
+                    <img src="assets/gallery/gallery-images/wildlife/14.webp" alt="Image 14" class="thumbnail-image">
+                </div>
+                <div class="thumbnail" data-description="A captivating scene of a sea turtle making its journey back to the sea, showcasing the resilience and beauty of marine life in Yala's pristine coastal habitat.">
+                    <img src="assets/gallery/gallery-images/wildlife/15.jpg" alt="Image 15" class="thumbnail-image">
+                </div>
+                <div class="thumbnail" data-description="A curious deer pausing to gaze directly at the camera, capturing a serene moment in Yala's tranquil forest setting.">
+                    <img src="assets/gallery/gallery-images/wildlife/16.avif" alt="Image 16" class="thumbnail-image">
+                </div>
+                <div class="thumbnail" data-description="A heartwarming sight of a group of elephants huddled together in a loving embrace, exemplifying the close-knit bonds and familial connections within Yala's elephant communities.">
+                    <img src="assets/gallery/gallery-images/wildlife/17.jpg" alt="Image 17" class="thumbnail-image">
+                </div>
+                <div class="thumbnail" data-description="A playful family of monkeys interacting and exploring together, showcasing the lively and communal nature of Yala's diverse wildlife.">
+                    <img src="assets/gallery/gallery-images/wildlife/18.jpg" alt="Image 18" class="thumbnail-image">
+                </div>
+                <div class="thumbnail" data-description="A delightful scene of a herd of elephants gathering to enjoy a refreshing bath together, highlighting the joyful and communal moments in Yala's elephant sanctuaries.">
+                    <img src="assets/gallery/gallery-images/wildlife/19.jpg" alt="Image 19" class="thumbnail-image">
+                </div>
+                <div class="thumbnail" data-description="A close-knit family of monkeys, exhibiting playful interactions and bonds of kinship in the lush surroundings of Yala's forest.">
+                    <img src="assets/gallery/gallery-images/wildlife/20.jpg" alt="Image 20" class="thumbnail-image">
+                </div>
+                <div class="thumbnail" data-description="A group of elephants eagerly approaching a water source, preparing for a refreshing bath together in Yala's natural habitat.">
+                    <img src="assets/gallery/gallery-images/wildlife/21.jpg" alt="Image 21" class="thumbnail-image">
+                </div>
+                <div class="thumbnail" data-description="A family of three elephants leisurely walking along the road, showcasing the peaceful coexistence of wildlife and humans in Yala's protected environment.">
+                    <img src="assets/gallery/gallery-images/wildlife/22.jpg" alt="Image 22" class="thumbnail-image">
+                </div>
+                <div class="thumbnail" data-description="A graceful herd of deer peacefully grazing together, adding to the serene beauty of Yala's natural landscapes.">
+                    <img src="assets/gallery/gallery-images/wildlife/23.jpg" alt="Image 23" class="thumbnail-image">
+                </div>
+            </div>
+            <!-- Extended View
+                This section displays the image in full view with a description -->
+            <div class="extended-view">
+                <img class="extended-image" src="" alt="">
+                <div class="extended-description">
+                    <h6 class="extended-title">Description</h6>
+                    <p class="extended-text">Description</p>
+                </div>
             </div>
         </section>
-    
-    </section>
-
-
-
-
+        <section id="animal-care" class="sub-gallery">
+            <h4 class="section-title">Animal Care Projects</h4>
+            <div class="thumbnails-container">
+                <!-- Thumbnail Images -->
+                <div class="thumbnail" data-description="Dedicated nurse performing a delicate surgery on a monkey, showcasing our commitment to providing advanced veterinary care at our clinic.">
+                    <img src="assets/gallery/gallery-images/animal-care/1.jpg" alt="Image 1" class="thumbnail-image">
+                </div>
+                <div class="thumbnail" data-description="Caring staff member feeding milk to a young deer, ensuring the well-being and nourishment of wildlife in our vet clinic's care.">
+                    <img src="assets/gallery/gallery-images/animal-care/2.jpg" alt="Image 2" class="thumbnail-image">
+                </div>
+                <div class="thumbnail" data-description="Two compassionate volunteers feeding milk to a deer, fostering a connection and nurturing the health of wildlife at our vet clinic.">
+                    <img src="assets/gallery/gallery-images/animal-care/3.webp" alt="Image 3" class="thumbnail-image">
+                </div>
+                <div class="thumbnail" data-description="A young girl joyfully feeding food to a deer, symbolizing the importance of education and care in fostering compassion towards wildlife at our vet clinic.">
+                    <img src="assets/gallery/gallery-images/animal-care/4.jpg" alt="Image 4" class="thumbnail-image">
+                </div>
+                <div class="thumbnail" data-description="A young girl feeding nutritious food to monkeys, highlighting the harmonious bond and compassionate care provided at our vet clinic.">
+                    <img src="assets/gallery/gallery-images/animal-care/5.jpg" alt="Image 5" class="thumbnail-image">
+                </div>
+                <div class="thumbnail" data-description="A dedicated team of veterinarians performing a life-saving surgery on a wounded tiger, exemplifying our commitment to advanced medical care and conservation efforts at our specialized wildlife vet clinic.">
+                    <img src="assets/gallery/gallery-images/animal-care/6.avif" alt="Image 6" class="thumbnail-image">
+                </div>
+                <div class="thumbnail" data-description="Celebrating a successful recovery as a baby squirrel is nursed back to health, showcasing the specialized care and dedication of our vet clinic in rehabilitating wildlife.">
+                    <img src="assets/gallery/gallery-images/animal-care/7.jpeg" alt="Image 7" class="thumbnail-image">
+                </div>
+                <div class="thumbnail" data-description="A collaborative effort of experts and volunteers treating elephants in the wild, demonstrating our commitment to on-site medical interventions and conservation at our vet clinic.">
+                    <img src="assets/gallery/gallery-images/animal-care/8.jpg" alt="Image 8" class="thumbnail-image">
+                </div>
+                <div class="thumbnail" data-description="Two young elephants affectionately hugging a caretaker while eagerly requesting milk, illustrating the trust and nurturing environment provided by our vet clinic's dedicated team.">
+                    <img src="assets/gallery/gallery-images/animal-care/9.jpg" alt="Image 9" class="thumbnail-image">
+                </div>
+                <div class="thumbnail" data-description="A heartwarming moment as a caretaker gently feeds milk to a successfully rehabilitated baby squirrel, reflecting the compassionate care and rehabilitation efforts at our vet clinic.">
+                    <img src="assets/gallery/gallery-images/animal-care/10.png" alt="Image 10" class="thumbnail-image">
+                </div>
+                <div class="thumbnail" data-description="A young girl joyfully holding a fully recovered baby tiger, symbolizing the successful rehabilitation and compassionate care provided by our specialized vet clinic.">
+                    <img src="assets/gallery/gallery-images/animal-care/11.jpg" alt="Image 11" class="thumbnail-image">
+                </div>
+                <div class="thumbnail" data-description="Our esteemed Chairperson, Mrs. Evergreen, holding a rescued chimp, symbolizing our dedication to wildlife conservation and rehabilitation efforts at our vet clinic.">
+                    <img src="assets/gallery/gallery-images/animal-care/12.jpg" alt="Image 12" class="thumbnail-image">
+                </div>
+                <div class="thumbnail" data-description="A heartwarming scene of people, experts, and children interacting with a baby elephant, highlighting our educational outreach and conservation efforts at our specialized vet clinic.">
+                    <img src="assets/gallery/gallery-images/animal-care/13.jpg" alt="Image 13" class="thumbnail-image">
+                </div>
+                <div class="thumbnail" data-description="An orangutan giving a thumbs up while being held by young girl, Lily, symbolizing successful rehabilitation and the positive impact of our wildlife conservation initiatives at the vet clinic.">
+                    <img src="assets/gallery/gallery-images/animal-care/14.jpg" alt="Image 14" class="thumbnail-image">
+                </div>
+            </div>
+            <!-- Extended View -->
+            <div class="extended-view">
+                <img class="extended-image" src="" alt="">
+                <div class="extended-description">
+                    <h6 class="extended-title">Description</h6>
+                    <p class="extended-text">Description</p>
+                </div>
+            </div>
+        </section>
+        <section id="volunteering" class="sub-gallery">
+            <h4 class="section-title">Cleanup Projects</h4>
+            <div class="thumbnails-container">
+                <!-- Thumbnail Images -->
+                <div class="thumbnail" data-description="Project GreenSweep: Volunteers diligently collecting rubbish from the forest floor, captured from a higher angle, showcasing our commitment to preserving Yala's natural beauty through community-driven cleanup initiatives.">
+                    <img src="assets/gallery/gallery-images/volunteering/1.jpg" alt="Image 1" class="thumbnail-image">
+                </div>
+                <div class="thumbnail" data-description="Project CleanEarth: Dedicated volunteers collecting and removing dump, demonstrating our proactive approach to maintaining a clean and sustainable environment through organized cleanup projects.">
+                    <img src="assets/gallery/gallery-images/volunteering/2.jpg" alt="Image 2" class="thumbnail-image">
+                </div>
+                <div class="thumbnail" data-description="Project GreenHands: Volunteers actively collecting garbage, emphasizing our ongoing efforts to protect and preserve the natural beauty of Yala through community-led cleanup initiatives.">
+                    <img src="assets/gallery/gallery-images/volunteering/3.jpg" alt="Image 3" class="thumbnail-image">
+                </div>
+                <div class="thumbnail" data-description="Project GreenHands: A dedicated team of volunteers gathering and removing waste, showcasing our commitment to environmental stewardship and a cleaner, healthier Yala.">
+                    <img src="assets/gallery/gallery-images/volunteering/4.jpg" alt="Image 4" class="thumbnail-image">
+                </div>
+                <div class="thumbnail" data-description="Project PlasticPurge: Volunteers focused on collecting plastic waste, highlighting our targeted efforts to combat pollution and safeguard the ecosystem of Yala through dedicated cleanup projects.">
+                    <img src="assets/gallery/gallery-images/volunteering/5.jpg" alt="Image 5" class="thumbnail-image">
+                </div>
+                <div class="thumbnail" data-description="Project EcoRevive: Volunteers diligently collecting plastics and polythene from the forest, demonstrating our commitment to restoring and maintaining the pristine beauty of Yala's natural habitats through organized cleanup initiatives.">
+                    <img src="assets/gallery/gallery-images/volunteering/6.jpg" alt="Image 6" class="thumbnail-image">
+                </div>
+                <div class="thumbnail" data-description="Project ReGreen Earth: Volunteers actively participating in tree planting, symbolizing our dedication to rejuvenating and preserving Yala's ecosystems through sustainable reforestation efforts.">
+                    <img src="assets/gallery/gallery-images/volunteering/7.jpg" alt="Image 7" class="thumbnail-image">
+                </div>
+                <div class="thumbnail" data-description="Project ReGreen Earth: Volunteers passionately engaged in tree planting activities, embodying our mission to restore and enhance the natural beauty and biodiversity of Yala's landscapes through environmental conservation initiatives.">
+                    <img src="assets/gallery/gallery-images/volunteering/8.jpg" alt="Image 8" class="thumbnail-image">
+                </div>
+                <div class="thumbnail" data-description="Project OceanGuard: Hollywood actor Chris Hemsworth enthusiastically joins a beach cleanup project during his stay at our hotel, amplifying our commitment to marine conservation and inspiring global awareness for a cleaner environment.">
+                    <img src="assets/gallery/gallery-images/volunteering/9.jpg" alt="Image 9" class="thumbnail-image">
+                </div>
+                <div class="thumbnail" data-description="Volunteers joyfully participating in a beach cleanup project, reflecting the positive impact and community spirit fostered through our environmental conservation initiatives.">
+                    <img src="assets/gallery/gallery-images/volunteering/10.jpg" alt="Image 10" class="thumbnail-image">
+                </div>
+                <div class="thumbnail" data-description="A stunning beach art installation crafted from seashells featuring a seaturtle, jellyfish, and the message 'KEEP ME TRASH FREE', highlighting our creative approach to raising awareness for marine conservation during our cleanup projects.">
+                    <img src="assets/gallery/gallery-images/volunteering/11.jpeg" alt="Image 11" class="thumbnail-image">
+                </div>
+                <div class="thumbnail" data-description="A stunning beach art installation crafted from seashells featuring a seaturtle, jellyfish, and the message 'KEEP ME TRASH FREE', highlighting our creative approach to raising awareness for marine conservation during our cleanup projects.">
+                    <img src="assets/gallery/gallery-images/volunteering/12.jpg" alt="Image 12" class="thumbnail-image">
+                </div>
+                <div class="thumbnail" data-description="Project BlueSweep: Volunteers actively participating in beach cleaning, diligently removing plastics to protect marine life and promote a cleaner, healthier environment through our dedicated cleanup efforts.">
+                    <img src="assets/gallery/gallery-images/volunteering/13.jpg" alt="Image 13" class="thumbnail-image">
+                </div>
+                <div class="thumbnail" data-description="Project CoastalCare: A group of enthusiastic volunteers, many of whom are guests from our hotel Wild Trails, joining forces for a beach cleanup project, exemplifying our commitment to fostering environmental stewardship and community engagement.">
+                    <img src="assets/gallery/gallery-images/volunteering/14.jpg" alt="Image 14" class="thumbnail-image">
+                </div>
+                <div class="thumbnail" data-description="Project SeaGuardians: Our dedicated volunteers diligently collecting a significant amount of waste from the beach, emphasizing the importance of protecting marine life like sea turtles by ensuring a cleaner and safer environment through our beach cleanup initiatives.">
+                    <img src="assets/gallery/gallery-images/volunteering/15.png" alt="Image 15" class="thumbnail-image">
+                </div>
+                <div class="thumbnail" data-description="Project ShorelineHeroes: Volunteers actively cleaning the beach, demonstrating our commitment to preserving marine ecosystems and enhancing the beauty of our coastal environment through hands-on cleanup efforts.">
+                    <img src="assets/gallery/gallery-images/volunteering/16.jpg" alt="Image 16" class="thumbnail-image">
+                </div>
+                <div class="thumbnail" data-description="Project OceanUnity: On World Ocean Day, our volunteers formed the word 'Ocean' on the beach, with many tourists from our hotel WILD TRAILS participating. This collective effort symbolizes our project's success in raising awareness and fostering community involvement in marine conservation.">
+                    <img src="assets/gallery/gallery-images/volunteering/17.jpg" alt="Image 17" class="thumbnail-image">
+                </div>
+                <div class="thumbnail" data-description="Project CleanShores: A significant amount of plastic waste being removed from the beach by our dedicated volunteers, highlighting our ongoing commitment to combating marine pollution and protecting our coastal ecosystems.">
+                    <img src="assets/gallery/gallery-images/volunteering/18.webp" alt="Image 18" class="thumbnail-image">
+                </div>
+            </div>
+            <!-- Extended View -->
+            <div class="extended-view">
+                <img class="extended-image" src="" alt="">
+                <div class="extended-description">
+                    <h6 class="extended-title">Description</h6>
+                    <p class="extended-text">Description</p>
+                </div>
+            </div>
+        </section>
+        <section id="awareness" class="sub-gallery">
+            <h4 class="section-title">Awareness Projects</h4>
+            <div class="thumbnails-container">
+                <!-- Thumbnail Images -->
+                <div class="thumbnail" data-description="Primary school children smiling with joy after participating in our environmental awareness project at their school, reflecting our commitment to educating and inspiring the next generation of eco-conscious citizens.">
+                    <img src="assets/gallery/gallery-images/awareness/1.jpg" alt="Image 1" class="thumbnail-image">
+                </div>
+                <div class="thumbnail" data-description="A group of young children sitting attentively in a school hall wearing uniforms, engaged in our interactive environmental awareness session, highlighting our initiative to instill eco-friendly values and knowledge among the youth.">
+                    <img src="assets/gallery/gallery-images/awareness/2.jpg" alt="Image 2" class="thumbnail-image">
+                </div>
+                <div class="thumbnail" data-description="A group of school children smiling brightly after completing our engaging environmental awareness project at their school, showcasing our dedication to inspiring and empowering the next generation of environmental stewards.">
+                    <img src="assets/gallery/gallery-images/awareness/3.webp" alt="Image 3" class="thumbnail-image">
+                </div>
+                <div class="thumbnail" data-description="A group of adorable primary level girls posing happily for a snapshot after participating in our environmental awareness project at their school, reflecting the joy and enthusiasm generated through our educational initiatives.">
+                    <img src="assets/gallery/gallery-images/awareness/4.jpg" alt="Image 4" class="thumbnail-image">
+                </div>
+                <div class="thumbnail" data-description="Global icon Priyanka Chopra Jonas joining hands with us at Wild Trails Hotel to support our environmental awareness project, underscoring our commitment to promoting sustainability and inspiring positive change through collaborative efforts.">
+                    <img src="assets/gallery/gallery-images/awareness/5.jpg" alt="Image 5" class="thumbnail-image">
+                </div>
+                <div class="thumbnail" data-description="School children participating in a Shramadana Campaign to clean up garbage after our awareness program, showcasing their proactive involvement and commitment to maintaining a cleaner and greener environment.">
+                    <img src="assets/gallery/gallery-images/awareness/6.jpg" alt="Image 6" class="thumbnail-image">
+                </div>
+                <div class="thumbnail" data-description="Conducting a paper-based awareness campaign at Devi Balika Vidyalaya, engaging students in interactive learning and encouraging them to make eco-friendly choices for a sustainable future.">
+                    <img src="assets/gallery/gallery-images/awareness/7.jpg" alt="Image 7" class="thumbnail-image">
+                </div>
+                <div class="thumbnail" data-description="Project YouthGreenDrive: Hosting an awareness camp for the youth at Jaffna University, Sri Lanka, followed by active participation in a Shramadana to clean and beautify the surroundings, fostering a sense of responsibility and environmental stewardship among the next generation.">
+                    <img src="assets/gallery/gallery-images/awareness/8.jpg" alt="Image 8" class="thumbnail-image">
+                </div>
+                <div class="thumbnail" data-description="Project TinyGreenHands: A group of enthusiastic pre-schoolers actively participating in a Shramadana, instilling early values of community service and environmental care through hands-on involvement.">
+                    <img src="assets/gallery/gallery-images/awareness/9.jpg" alt="Image 9" class="thumbnail-image">
+                </div>
+                <div class="thumbnail" data-description="Project WildAware: Tourist children from Hotel Wild Trails actively engaging in an interactive awareness camp in the wild, fostering a deeper connection to nature and promoting responsible tourism and environmental stewardship.">
+                    <img src="assets/gallery/gallery-images/awareness/10.jpg" alt="Image 10" class="thumbnail-image">
+                </div>
+                <div class="thumbnail" data-description="School children taking part in a Shramadana, actively contributing to the cleanliness and beautification of their community, instilling values of environmental responsibility from a young age.">
+                    <img src="assets/gallery/gallery-images/awareness/11.jpg" alt="Image 11" class="thumbnail-image">
+                </div>
+                <div class="thumbnail" data-description="A large group of tourist children from Hotel Wild Trails actively engaging in an interactive awareness camp in the wild, fostering a deeper appreciation for nature and promoting sustainable tourism practices.">
+                    <img src="assets/gallery/gallery-images/awareness/12.jpg" alt="Image 12" class="thumbnail-image">
+                </div>
+            </div>
+            <!-- Extended View -->
+            <div class="extended-view">
+                <img class="extended-image" src="" alt="">
+                <div class="extended-description">
+                    <h6 class="extended-title">Description</h6>
+                    <p class="extended-text">Description</p>
+                </div>
+            </div>
+        </section>
+        <!-- Back to top button -->
+        <button onclick="topFunction()" id="top-button" title="Go to top" style="font-weight: lighter;">Back to Top &uarr;</button>
+    </main>
+    <!-- Footer -->
     <footer>
         <div class="wrapper">
-            <a class="logo" href="#">cknc<img src="assets/icon/logo.png" alt="Logo"></a>
+            <a class="logo" href="#"><img src="assets/icons/hotel-logo.png" alt=""></a>
             <div class="footer-left">
-                <p class="copyright">Gaia Team</p>
-                <p class="footer-links"><a href="#">Contact Us</a> I <a href="#">Terms &amp; Conditions</a> I<a href="#">Privacy</a>
-                </p>
-            </div>
-            <div class="footer-right">
-                <a href="#" class="logo facebook">Facebook</a>
-                <a href="#" class="logo twitter">Facebook</a>
-                <a href="#" class="logo google">Facebook</a>
+                <p class="copyright">GAIA Team</p>
+                <p class="footer-links"><a href="team.html">About Us</a> &vert; <a href="feedback.html">Feedback</a> &vert; <a href="sitemap.html">Sitemap</a></p>
             </div>
             <div class="clear"></div>
         </div>
     </footer>
-    <script src="js/gallery.js"></script>
-    <script src="js/parallax.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="js/gallery-sitemap.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

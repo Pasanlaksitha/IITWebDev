@@ -1,37 +1,268 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Shop</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project GAIA - Gift Shop</title>
     <link rel="stylesheet" href="css/shop.css" />
-  </head>
-  <body class="">
-    <div class="container">
-      <header>
-        <h1>Your Shopping Cart</h1>
-        <div class="shopping">
-          <img src="assets/shoppingBag.jpg" alt="shopping" />
-          <span class="quantity">0</span>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
+        :root {
+            --background-colorG: #1c3b2b;
+            --background-colorB: black;
+            --text-colorW: #f1f1f1;
+
+            --button-color: #f1f1f1;
+            --button-color-hover: #f1f1f1;
+            --button-text-color-green: #5a7240;
+            --button-text-color-white: #ffffff;
+            --button-text-color-black: #000000;
+
+            --background-liner-gradientBG: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 40%, rgba(28, 59, 43, 1) 100%);
+            --background-liner-gradientGB: linear-gradient(180deg, rgba(28, 59, 43, 1) 100%, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 40%);
+
+            --border-radiusUlt: 999px;
+            --border-radiusHigh: 24px;
+            --border-radiusLow: 7px;
+        }
+        body{
+            display: block;
+        }
+        html{
+            scroll-behavior: smooth;
+            margin: -4% 0 0 0;
+            padding: 0;
+            display: block;
+        }
+        body{
+            margin: 0;
+            background-color: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        header{
+            background-color: #1c3b2b;
+            padding: 60px 50px 50px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: static!important;
+            width: 100%;
+            z-index: 100;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100px;
+            padding: 0 4%;
+            position: fixed;
+            width: 100%;
+            z-index: 100;
+        }
+
+        header nav {
+            display: flex;
+            gap: 30px;
+        }
+
+        #nav-logo {
+            width: 200px;
+            height: auto;
+            opacity: 0.7;
+        }
+
+        header nav a {
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: 600;
+            padding: 8px 16px;
+            border-radius: 99px;
+            transition: 0.3s;
+            color: var(--button-text-color-white);
+            opacity: 0.7;
+        }
+
+        header nav a.active {
+            background: var(--button-text-color-white);
+            color: var(--button-text-color-green);
+        }
+
+        header nav a:hover {
+            background: #9dffd3;
+            opacity: 0.7;
+        }
+
+        header nav:hover > a:not(:hover) {
+            background: none;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                height: 80px; /* Adjust header height for smaller screens */
+            }
+        }
+
+        .cart h1 {
+            color: black;
+            font-weight: bold;
+            margin: 0 0 0 25%;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            font-family: "Montserrat", Helvetica, Arial, sans-serif, "Imprint MT Shadow";
+        }
+        .cart {
+            position: fixed;
+            top: 0;
+            left: 100%;
+            color: black;
+            width: 500px;
+            background-image: url("assets/forest3.jpg");
+            background-color: black;
+            height: 100vh;
+            transition: 0.5s;
+        }
+        footer{
+            position: static;
+            display: flex;
+        }
+
+        footer {
+            background: var(--background-colorG);
+            background: var(--background-liner-gradientGB);
+            margin-top: 0px;
+            color: #fff;
+            text-align: center;
+            padding: 60px 0;
+        }
+
+        footer img {
+            display: block;
+            float: left;
+            text-indent: -4999px;
+            width: 75px;
+            height: 75px;
+            border-radius: 20px;
+        }
+
+        footer .footer-left {
+            float: left;
+            text-align: left;
+            margin-top: 5px;
+            margin-left: 50px;
+        }
+
+        footer p {
+            font-size: 17px;
+            margin: 5px;
+        }
+
+        footer p.copyright {
+            font-family: 'Arimo', sans-serif;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        footer .footer-links {
+            color: #777;
+        }
+
+        footer .footer-links a {
+            color: #777;
+            margin: 0 20px;
+        }
+
+        footer .footer-links a:hover {
+            color: #5dae87;
+        }
+
+        footer .footer-links a:first-of-type {
+            margin: 0 20px 0 0;
+        }
+
+        @media only screen and (max-width: 960px) {
+
+            footer .footer-left, footer img {
+                float: none;
+                text-align: center;
+                margin: 0 auto;
+            }
+
+            footer img {
+                margin: 10px auto 40px auto;
+            }
+
+            footer .footer-links a {
+                margin: 0 5px !important;
+                font-size: 14px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <a href="#"><img src="assets/icons/nav-logo.png" id="nav-logo" alt="Logo"></a>
+        <!-- Navigation links -->
+        <nav>
+            <a href="home.html#home">Home</a>
+            <a href="home.html#about">About</a>
+            <a href="home.html#project">Projects</a>
+            <a href="home.html#blog">Blog</a>
+            <a href="form.html">Volunteer</a>
+            <a href="shop.html" class="active">Shop</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="donations.html">Donate</a>
+            <div class="shopping">
+                <img src="assets/icons8-cart-80.png" alt="shopping" />
+                <span class="quantity">0</span>
+            </div>
+        </nav>
+    </header>
+    <!-- Main Content -->
+    <main>
+        <section>
+            <div class="container">
+                <div class="list"></div>
+            </div>
+            
+            <div class="cart">
+                <h1>Shopping Cart</h1>
+                <ul class="listCard"></ul>
+            
+                <div class="checkout">
+                    <div class="total">Net Total: 0</div>
+                    <h2>
+                    <button class="proceedCheckout" id="checkout">
+                        CheckOut
+                    </button>
+                    </h2>
+                </div>
+                <div class="closeShopping">Close Cart</div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer>
+        <div class="wrapper">
+            <a class="logo" href="#"><img src="assets/icons/hotel-logo.png" alt=""></a>
+            <div class="footer-left">
+                <p class="copyright">GAIA Team</p>
+                <p class="footer-links"><a href="team.html">About Us</a> &vert; <a href="feedback.html">Feedback</a> &vert; <a href="sitemap.html">Sitemap</a></p>
+            </div>
+            <div class="clear"></div>
         </div>
-      </header>
-
-      <div class="list"></div>
-    </div>
-
-    <div class="cart">
-      <h1>Shopping Cart</h1>
-      <ul class="listCard"></ul>
-
-      <div class="checkout">
-        <div class="total">Net Total: 0</div>
-        <div class="proceedCheckout">
-          <a href="checkoutPage.html">CheckOut</a>
-        </div>
-      </div>
-      <div class="closeShopping">Close</div>
-    </div>
-
-    <script src="script/shop.js"></script>
-  </body>
+    </footer>
+    <script src="js/shop.js"></script>
+</body>
 </html>

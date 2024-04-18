@@ -2,225 +2,34 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project GAIA</title>
-
-<!--    <link rel="stylesheet" href="css/parallax.css" >-->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/widgets/navigation.css">
-    <link rel="stylesheet" href="css/blur-card.css">
+    <!--TODO: splash screen setup Nilasi-->
     <link rel="stylesheet" href="css/splash.css">
-
     <script src="js/splash.js"></script>
-
-
+    <meta http-equiv="refresh" content="2.5; url=splash-gif.html" />
+    <script>
+        setTimeout(function() {
+            window.location.href = "splash-gif.html";
+        }, 3000); // Redirect back to index.html after 2.5 seconds (adjust the delay as needed)
+    </script>
 </head>
 <body>
 
-<header>
-
-    <a href="index.html"><img src="assets/logo/Untitled-1-Recovered-Recovered.png" id="nav-logo" alt=""></a>
-    <nav>
-        <a href="#home" class="active">Home</a>
-        <a href="#about">About</a>
-        <a href="#project">Projects</a>
-        <a href="#blog">Blog</a>
-    </nav>
-</header>
-
-<!--HOME HERE-->
-<section id="home" class="home">
-    <img src="assets/parallax/sky.png" class="mount2">
-    <img src="assets/parallax/back.png" class="mount1">
-    <img src="assets/parallax/bush2.png" class="bush2">
-
-    <h1 class="title">GAIA</h1>
-
-    <img src="assets/parallax/front.png" class="bush1">
-    <img class="leaf2" src="assets/parallax/bush1.png">
-    <img src="assets/parallax/bush.png" class="leaf1">
-</section>
+<div class='intro'>
+    <h1 class='logo-header'>
+        <span class='logo'>Empowering & Connecting Youth,<br>Serving Wildlife</span>
+    </h1>
+    <h4>
+        <span class='logo'>Team: </span>
+        <span class='logo'>Nilasi Jayathilake</span>
+        <span class='logo'>Pasan Laksitha</span>
+        <span class='log'>Dasun Perera</span>
+        <span class='logo'>Mahima Sandaken</span>
+    </h4>
 
 
-<section class="about">
-    <h1>Overview</h1>
-    <br>
-    <p>
-        Project GAIA, spearheaded by WILD TRAILS - Hotel & Spa, stands 
-        as a beacon of wildlife conservation adjacent to the captivating 
-        Yala National Park in Sri Lanka. Rooted in the principles of 
-        sustainability, our initiative is a multifaceted endeavor that 
-        addresses the pressing challenges facing the region's diverse 
-        fauna and ecosystems.
-    </p>
-    <br>
-    <p>
-        Central to Project GAIA is our state-of-the-art Wildlife Vet 
-        Clinic, where our dedicated team provides essential medical care 
-        and rehabilitation services for the park's wildlife. Beyond 
-        medical interventions, we are passionate about fostering 
-        harmonious coexistence between humans and wildlife through 
-        educational programs and awareness campaigns. These initiatives 
-        target school children and youth, aiming to instill a deeper 
-        understanding and appreciation for nature and conservation.
-    </p>
-    <br>
-    <p>
-        In addition to our conservation efforts, Project GAIA actively 
-        engages the community through volunteer opportunities, including 
-        forest and beach cleanup initiatives. These programs not only 
-        contribute to the preservation of the park's natural beauty but 
-        also offer enriching experiences for participants, from hands-on 
-        involvement in conservation projects to immersive wildlife 
-        tours. Explore our website to learn more about how you can join 
-        us in making a positive impact through Project GAIA.
-    </p>
-</section>
+</div>
 
-<!--ABOUT US HERE-->
-
-
-<section id="about" class="text-section">
-    <div class="wrapper"><a name="aboutus"></a>
-        <div class="image align-left">
-            <img src="assets/Gaia%20Logo.jpg" alt="logo" class="align-left">
-        </div>
-        <div class="text align-left">
-            <h2>Our Mission</h2>
-            <p><i>"Empowering and Connecting Youth. Serving the wildlife, towards a sustainable Future"</i></p>
-        </div>
-        <div class="clear"></div>
-    </div>
-</section>
-
-
-<!--OUR PROJECTS -->
-
-
-<section id="project" class="card-section">
-    <div class="wrapper">
-        <h3>Our Projects</h3>
-        <p class="subtitle">'Gaia' A Sanctuary For All Wildlife</p>
-        <ul class="card-list">
-            <li>
-                <div class="image-container">
-                    <img src="./assets/icon/donate.gif" alt="Donate" style="width:48px;height:48px;">
-                </div>
-                <h5>Donate</h5>
-                <p>All donations fo into the welfare of the animals. Your donations are welcome, and highly regarded
-                    by our team. We make sure every penny goes into the animal's medications, food or into rescuing
-                    animals who are in danger. </p>
-                <a href="#">Learn More</a>
-            </li>
-            <li>
-                <div class="image-container">
-                    <img src="./assets/icon/overpopulation.gif" alt="volunteer" style="width:48px;height:48px;">
-                </div>
-                <h5>Volunteer</h5>
-                <p>Whether you want to volunteer in our vet clinic or for beach cleanups. We at Gaia welcome
-                    all volunteers. We have volunteers working with us throughout the Year, and they are the foundation
-                    of our project.<br> It's nit just volunteering, we have fun too!</p>
-                <a href="#">Apply for Volunteering</a> <!-- TODO: Link Dasun's application Page(p)-->
-            </li>
-            <li>
-                <div class="image-container">
-                    <img src="./assets/icon/gift.gif" alt="gift" style="width:48px;height:48px;">
-                </div>
-                <h5>Gift Shop</h5>
-                <p>Our gift shop consist of a curated collection of merchandise. Original prints inspired from Yala
-                    animals. Our volunteers work. You can buy T-Shirts to Handmade Jewellery, and Art.<br> Everything
-                    you
-                    buy from here, goes into the volunteers fund.</p>
-                <a href="shop.html">Continue to shop</a> <!-- TODO: Link Nilasi's Shopping Page(p)-->
-            </li>
-            <div class="clear"></div>
-        </ul>
-    </div>
-    <div class="buttons">
-        <a href="shop.html" class="button-1">Try Now</a>
-    </div>
-</section>
-
-<!--BLOG CARD SECTION-->
-
-<section id="blog" class="card-section">
-
-    <section class="blurcard-section">
-
-        <div class="blurcard-grid">
-            <a class="blurcard" href="blog1.html">
-                <div class="blurcard-background"
-                     style="background-image: url(assets/xsfgsdg.jpg)"></div>
-                <div class="blurcard-content">
-                    <h3 class="blurcard-heading">ORIGIN STORY</h3>
-                </div>
-            </a>
-
-            <a class="blurcard" href="blog2.html">
-                <div class="blurcard-background"
-                     style="background-image: url(https://servicesatpar.weebly.com/uploads/1/1/9/2/119226956/environmental-volunteering_orig.jpg)"></div>
-                <div class="blurcard-content">
-                    <h3 class="blurcard-heading">VOLUNTEER STORIES</h3>
-                </div>
-            </a>
-            <a class="blurcard" href="blog3.html">
-                <div class="blurcard-background"
-                     style="background-image: url(assets/Untitled-1.jpg)"></div>
-                <div class="blurcard-content">
-                    <h3 class="blurcard-heading">LIFE ON LAND</h3>
-                </div>
-            </a>
-
-            <a class="blurcard" href="blog4.html">
-                <div class="blurcard-background"
-                     style="background-image: url(https://images.unsplash.com/photo-1554265352-d7fd5129be15?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)"></div>
-                <div class="blurcard-content">
-                    <h3 class="blurcard-heading">Beach Cleanups</h3>
-                </div>
-            </a>
-
-        </div>
-    </section>
-
-</section>
-
-
-
-<!--SUBSCRIBE FOR NEWSLETTER-->
-
-
-<section class="form-section"><a name="subscribe"></a>
-    <h3>Subscribe for Newsletter</h3>
-    <p class="subtitle">Stay up to date with us</p>
-    <!--    FIXME : change placeholder color -->
-    <form action="" method="post">
-        <input type="email" placeholder="Email Address" required>
-        <button type="submit" title="Submit">Submit</button>
-    </form>
-</section>
-
-<!--FOOTER HERE-->
-
-<footer id="footer">
-    <div class="wrapper_footer">
-
-        <div class="footer-left">
-            <img src="assets/logo/logo.png">
-            <img src="assets/logo/projectlogo.jpg">
-
-            <p class="footer-nav"><a href="index.html">HOME </a> | <a href="shop.html">SHOP</a> | <a
-                    href="volunteer.html">VOLUNTEER REGISTER</a> | <a href="#">GALLERY</a> | <a href="team.html">OUR
-                TEAM</a>|<a href="feedback.html">FEEDBACK</a></p>
-
-            <p class="footer-links"><a href="#">Contact Us</a> I <a href="#">Terms &amp; Conditions</a> I<a href="#">Privacy</a>
-            </p>
-        </div>
-        <div class="clear"></div>
-    </div>
-</footer>
-
-
-<script src="js/parallax.js"></script>
 
 </body>
 </html>
